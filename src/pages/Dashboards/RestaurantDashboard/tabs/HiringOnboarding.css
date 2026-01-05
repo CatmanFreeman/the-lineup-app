@@ -1,0 +1,721 @@
+/* src/pages/Dashboards/RestaurantDashboard/tabs/HiringOnboarding.css */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+   .hiring-onboarding {
+    color: #fff;
+    min-height: 100%;
+    padding: 16px;
+  }
+  
+  .ho-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ho-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .ho-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+    width: 44px; /* Touch-friendly */
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    align-self: flex-end;
+  }
+  
+  .ho-close-btn:hover {
+    opacity: 0.7;
+  }
+  
+  .ho-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+  }
+  
+  .ho-nav-btn {
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .ho-nav-btn:hover {
+    color: #fff;
+  }
+  
+  .ho-nav-btn.active {
+    color: #4ade80;
+    border-bottom-color: #4ade80;
+  }
+  
+  .ho-content {
+    min-height: 400px;
+  }
+  
+  .ho-loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .ho-view {
+    padding: 0;
+  }
+  
+  .ho-view-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .ho-view-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+  }
+  
+  .ho-view-header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+  }
+  
+  .ho-btn-primary {
+    padding: 12px 20px;
+    background: rgba(74, 222, 128, 0.2);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    width: 100%;
+  }
+  
+  .ho-btn-primary:hover:not(:disabled) {
+    background: rgba(74, 222, 128, 0.3);
+    border-color: rgba(74, 222, 128, 0.6);
+  }
+  
+  .ho-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .ho-btn-secondary {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    width: 100%;
+  }
+  
+  .ho-btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .ho-btn-small {
+    padding: 8px 14px;
+    background: rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+    min-height: 36px; /* Touch-friendly */
+  }
+  
+  .ho-btn-small:hover {
+    background: rgba(56, 189, 248, 0.3);
+  }
+  
+  .ho-btn-remove {
+    padding: 8px;
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: all 0.2s;
+    min-width: 44px; /* Touch-friendly */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ho-btn-remove:hover {
+    background: rgba(239, 68, 68, 0.3);
+  }
+  
+  .ho-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .ho-filters button {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .ho-filters button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .ho-filters button.active {
+    background: rgba(74, 222, 128, 0.2);
+    border-color: rgba(74, 222, 128, 0.4);
+    color: #4ade80;
+  }
+  
+  /* Packages - Mobile: Single column */
+  .ho-packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .ho-package-card {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .ho-package-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .ho-package-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  
+  .ho-package-header h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+  }
+  
+  .ho-package-employee {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .ho-status-badge {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+  
+  .ho-progress {
+    margin-bottom: 12px;
+  }
+  
+  .ho-progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  
+  .ho-progress-fill {
+    height: 100%;
+    background: #4ade80;
+    transition: width 0.3s;
+  }
+  
+  .ho-progress-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .ho-package-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .ho-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+  }
+  
+  /* Modal */
+  .ho-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 16px;
+  }
+  
+  .ho-modal {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ho-modal-large {
+    max-width: 100%;
+  }
+  
+  .ho-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ho-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .ho-modal-body {
+    padding: 16px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .ho-modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Form */
+  .ho-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .ho-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .ho-form-group input,
+  .ho-form-group select,
+  .ho-form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    min-height: 44px; /* Touch-friendly */
+    box-sizing: border-box;
+  }
+  
+  .ho-form-group input:focus,
+  .ho-form-group select:focus,
+  .ho-form-group textarea:focus {
+    outline: none;
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .ho-form-group-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .ho-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .ho-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+  }
+  
+  .ho-checklist-input {
+    flex: 1;
+    margin: 0;
+  }
+  
+  .ho-checklist-detail {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* ===============================
+     TABLET (640px+)
+     =============================== */
+  
+  @media (min-width: 640px) {
+    .hiring-onboarding {
+      padding: 20px;
+    }
+  
+    .ho-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .ho-close-btn {
+      align-self: auto;
+    }
+  
+    .ho-view-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .ho-btn-primary,
+    .ho-btn-secondary {
+      width: auto;
+    }
+  
+    .ho-package-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .ho-package-meta {
+      flex-direction: row;
+      gap: 16px;
+    }
+  
+    .ho-form-group-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .ho-modal-footer {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+  
+  /* ===============================
+     DESKTOP (768px+)
+     =============================== */
+  
+  @media (min-width: 768px) {
+    .ho-packages-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  
+    .ho-modal {
+      max-width: 600px;
+    }
+  
+    .ho-modal-large {
+      max-width: 900px;
+    }
+  
+    .ho-modal-header {
+      padding: 20px 24px;
+    }
+  
+    .ho-modal-body {
+      padding: 24px;
+    }
+  
+    .ho-modal-footer {
+      padding: 20px 24px;
+    }
+  }
+  .ho-predefined-items-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 4px;
+  }
+  
+  .ho-predefined-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f3f4f6;
+    transition: background 0.2s;
+  }
+  
+  .ho-predefined-item:hover {
+    background: #f9fafb;
+  }
+  
+  .ho-predefined-item:last-child {
+    border-bottom: none;
+  }
+  
+  .ho-predefined-item-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+    margin-bottom: 4px;
+  }
+  
+  .ho-predefined-item-desc {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
+  .ho-required-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  
+  .ho-form-group {
+    position: relative;
+  }
+  
+  .ho-form-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  /* Documents Grid View */
+.ho-documents-grid-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+  }
+  
+  .ho-documents-grid {
+    display: grid;
+    grid-template-columns: 200px repeat(11, 140px);
+    min-width: fit-content;
+  }
+  
+  .ho-doc-grid-header {
+    display: contents;
+  }
+  
+  .ho-doc-grid-row {
+    display: contents;
+  }
+  
+  .ho-doc-grid-cell {
+    padding: 12px;
+    border-right: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+  }
+  
+  .ho-doc-grid-cell-sticky {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 10;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+    justify-content: flex-start;
+  }
+  
+  .ho-doc-grid-cell-header {
+    background: #f9fafb;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    min-height: 80px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .ho-doc-grid-cell-clickable {
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .ho-doc-grid-cell-clickable:hover {
+    background: #f3f4f6;
+  }
+  
+  .ho-doc-employee-name {
+    font-size: 13px;
+  }
+  
+  .ho-doc-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .ho-doc-status-approved {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .ho-doc-status-pending {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .ho-doc-status-needs-update {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .ho-doc-status-missing {
+    background: #f3f4f6;
+    color: #6b7280;
+  }
+  
+  .ho-doc-group-header {
+    grid-column: 1 / -1;
+    padding: 12px 16px;
+    background: #f9fafb;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid #e5e7eb;
+    border-right: none;
+  }
+  
+  .ho-required-indicator {
+    color: #ef4444;
+    margin-left: 2px;
+  }
+  
+  .ho-doc-status-missing.ho-doc-grid-cell-clickable:hover {
+    background: #fee2e2;
+  }
+  
+  .ho-doc-status-approved.ho-doc-grid-cell-clickable:hover {
+    background: #a7f3d0;
+  }
+  
+  .ho-doc-status-pending.ho-doc-grid-cell-clickable:hover {
+    background: #fde68a;
+  }
+  
+  .ho-doc-status-needs-update.ho-doc-grid-cell-clickable:hover {
+    background: #fecaca;
+  }
+  
+  @media (max-width: 768px) {
+    .ho-documents-grid {
+      grid-template-columns: 150px repeat(11, 100px);
+      font-size: 11px;
+    }
+  
+    .ho-doc-grid-cell {
+      padding: 8px;
+      min-height: 50px;
+    }
+  
+    .ho-doc-grid-cell-header {
+      font-size: 10px;
+      min-height: 60px;
+    }
+  }

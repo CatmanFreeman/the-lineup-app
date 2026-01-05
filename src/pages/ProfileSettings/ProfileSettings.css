@@ -1,0 +1,507 @@
+.profile-settings {
+  all: revert;
+}
+.profile-settings-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+
+  padding: 24px 12px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-back-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  color: #4da3ff;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.profile-back-link:hover {
+  color: #60a5fa;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 760px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.profile-title {
+  font-size: 34px;
+  margin: 0 0 12px 0;
+}
+
+.not-signed-in {
+  padding: 18px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.profile-photo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 18px 0;
+}
+
+.profile-photo {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+}
+
+.change-photo-btn {
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.change-photo-btn input {
+  display: none;
+}
+
+.tipshare-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.tipshare-link-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgba(77, 163, 255, 0.2);
+  border: 2px solid #4da3ff;
+  border-radius: 8px;
+  color: #4da3ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.tipshare-link-btn:hover {
+  background: rgba(77, 163, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.profile-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.profile-section h2 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.profile-section input,
+.profile-section textarea,
+.profile-section select {
+  width: 520px;
+  max-width: 100%;
+  display: block;
+  background: #ffffff;
+  color: #001836;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.profile-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.profile-section label select {
+  margin-bottom: 10px;
+}
+
+.profile-section textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+/* =========================================
+   THIS IS THE FIX: CUISINES + PREFERENCES
+   ========================================= */
+
+/* Your page already uses .checkbox-grid, so we fix THAT */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+  row-gap: 8px; /* tighter rows */
+  margin-top: 10px;
+}
+
+/* Each item: checkbox + text locked together */
+.checkbox-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  line-height: 1.2 !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+  width: 100%;
+}
+
+/* checkbox sizes - positioned on left */
+.checkbox-item input[type="checkbox"] {
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* text next to checkbox - positioned after checkbox */
+.checkbox-text {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  line-height: 1.2 !important;
+  font-size: 13px !important;
+  flex-shrink: 1 !important;
+}
+
+/* Address blocks */
+.address-block {
+  margin-bottom: 12px;
+}
+
+.address-subtitle {
+  margin: 8px 0 10px 0;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Vehicle blocks */
+.vehicle-block {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.vehicle-block input {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  background: #ffffff;
+  color: #001836;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.vehicle-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.vehicle-form-row input {
+  margin-bottom: 0;
+}
+
+.remove-vehicle-btn {
+  background: transparent;
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+  align-self: end;
+}
+
+.remove-vehicle-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+@media (max-width: 700px) {
+  .vehicle-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .remove-vehicle-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+/* Buttons */
+.add-address-btn {
+  background: transparent;
+  color: #4da3ff;
+  border: 1px solid rgba(77, 163, 255, 0.55);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.save-profile-btn {
+  background: #4da3ff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+/* Mobile: Keep 2 columns on all screen sizes */
+@media (max-width: 420px) {
+  .checkbox-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 6px;
+  }
+}
+/* FORCE PROFILE PAGE BACKGROUND TO MATCH HOME */
+body,
+.profile-settings,
+.profile-settings-page,
+.profile-container {
+  background: radial-gradient(
+    circle at center,
+    #001836 0%,
+    #000c1b 100%
+  ) !important;
+}
+/* FORCE CHANGE PHOTO TO BE ACTIVE + WHITE */
+.change-photo,
+.change-photo-link,
+.profile-photo-action,
+.profile-photo a,
+.profile-photo span {
+  color: #ffffff !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+.change-photo:hover,
+.change-photo-link:hover,
+.profile-photo-action:hover,
+.profile-photo a:hover,
+.profile-photo span:hover {
+  color: #2f80ed !important;
+}
+/* FORCE SAVE PROFILE BUTTON STYLE */
+.save-profile-btn,
+button.save-profile,
+button[type="submit"] {
+  background-color: #2f80ed !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.save-profile-btn:hover,
+button.save-profile:hover,
+button[type="submit"]:hover {
+  background-color: #3a8df0 !important;
+}
+.profile-card {
+  background: rgba(0, 0, 0, 0.35); /* was 0.55 */
+}
+
+/* Payment Methods Styles */
+.payment-methods-list {
+  margin-bottom: 16px;
+}
+
+.payment-method-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.payment-method-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.payment-method-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+}
+
+.payment-method-brand-name {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.payment-method-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.payment-method-number {
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.payment-method-expiry {
+  opacity: 0.7;
+  font-size: 13px;
+}
+
+.payment-method-default-badge {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.payment-method-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.payment-method-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.payment-method-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.payment-method-btn-primary {
+  background: #4da3ff;
+  color: #ffffff;
+}
+
+.payment-method-btn-primary:hover:not(:disabled) {
+  background: #3a8df0;
+}
+
+.payment-method-btn-secondary {
+  background: transparent;
+  color: #4da3ff;
+  border: 1px solid rgba(77, 163, 255, 0.5);
+}
+
+.payment-method-btn-secondary:hover:not(:disabled) {
+  background: rgba(77, 163, 255, 0.1);
+}
+
+.payment-method-btn-danger {
+  background: transparent;
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.5);
+}
+
+.payment-method-btn-danger:hover:not(:disabled) {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.add-card-form {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.add-card-form input {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 12px;
+}
+
+.card-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .payment-method-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-method-info {
+    width: 100%;
+  }
+
+  .payment-method-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .card-form-row {
+    grid-template-columns: 1fr;
+  }
+}

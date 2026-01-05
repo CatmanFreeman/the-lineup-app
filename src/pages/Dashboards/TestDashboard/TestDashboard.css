@@ -1,0 +1,80 @@
+.test-dashboard {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: white;
+  padding: 40px 20px;
+}
+
+.test-dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.test-dashboard h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.test-dashboard-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+}
+
+.dashboard-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+}
+
+.dashboard-link-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s;
+}
+
+.dashboard-link-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-link-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dashboard-link-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.dashboard-link-card p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.dashboard-link-btn {
+  display: inline-block;
+  background: #4da3ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.dashboard-link-btn:hover {
+  background: #3b8fef;
+}
+

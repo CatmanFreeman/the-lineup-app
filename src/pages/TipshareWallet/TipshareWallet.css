@@ -1,0 +1,957 @@
+/* TipShare Wallet Page Styles */
+
+.tipshare-wallet-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: #ffffff;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tipshare-wallet-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tipshare-wallet-container {
+  position: relative;
+}
+
+.tipshare-back-link-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #4da3ff;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.tipshare-back-link-top:hover {
+  color: #6bb3ff;
+}
+
+.tipshare-wallet-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+.tipshare-wallet-logo {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.tipshare-dollar {
+  color: #22c55e;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.tipshare-view-toggle-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.tipshare-view-toggle-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tipshare-view-toggle-btn:hover {
+  color: #ffffff;
+  border-color: #4da3ff;
+}
+
+.tipshare-view-toggle-btn.active {
+  background: #4da3ff;
+  border-color: #4da3ff;
+  color: #ffffff;
+}
+
+/* Balance Section (Employee) */
+.tipshare-balance-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
+
+.section-title .tipshare-dollar {
+  color: #22c55e;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.balance-loading {
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.balance-current-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.balance-deposit-withdrawal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.balance-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-card-full-width {
+  grid-column: 1 / -1;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.balance-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.balance-amount-small {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.balance-value {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.balance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.balance-date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0;
+}
+
+.balance-empty {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+.withdrawal-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.withdrawal-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.withdrawal-buttons-container {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+}
+
+.withdrawal-btn {
+  flex: 1;
+  padding: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.withdrawal-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #4da3ff;
+}
+
+.withdrawal-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.withdrawal-btn-instant {
+  border-color: #4da3ff;
+}
+
+.withdrawal-btn-free {
+  border-color: #22c55e;
+}
+
+.withdrawal-btn-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.withdrawal-btn-fee {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.withdrawal-error {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  border-radius: 6px;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.withdrawal-success {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  border-radius: 6px;
+  color: #86efac;
+  font-size: 14px;
+}
+
+/* Transactions Section */
+.tipshare-transactions-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.transactions-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.transaction-type-toggle {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.toggle-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.toggle-btn.active {
+  background: #4da3ff;
+  color: #ffffff;
+}
+
+.date-filter-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.date-filter-group label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.date-filter-input {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.clear-date-filter-btn {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-date-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transaction-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.transaction-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-type {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.highlight {
+  color: #4da3ff;
+}
+
+.transaction-note {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  margin: 4px 0;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+.transaction-amount {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.amount-positive {
+  color: #22c55e;
+}
+
+.amount-negative {
+  color: #ef4444;
+}
+
+.thank-you-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  border-radius: 4px;
+  color: #86efac;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.thank-you-btn {
+  padding: 8px 16px;
+  background: #4da3ff;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.thank-you-btn:hover {
+  background: #3d8fef;
+}
+
+/* Send Tip Section */
+.tipshare-send-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.tipshare-send-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.handle-input,
+.restaurant-search-input,
+.amount-input,
+.note-input {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.handle-input::placeholder,
+.restaurant-search-input::placeholder,
+.amount-input::placeholder,
+.note-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.handle-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.restaurant-autocomplete-wrapper {
+  position: relative;
+}
+
+.restaurant-suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: rgba(0, 24, 54, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.restaurant-suggestion-item {
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.restaurant-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.restaurant-suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.restaurant-staff-list {
+  margin-top: 16px;
+}
+
+.staff-list-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.staff-accordion {
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.staff-accordion-header {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.accordion-title {
+  flex: 1;
+  text-align: left;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.staff-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.staff-list-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.staff-list-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(77, 163, 255, 0.5);
+}
+
+.staff-list-item.selected {
+  border-color: #4da3ff;
+  background: rgba(77, 163, 255, 0.1);
+}
+
+.staff-list-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.staff-list-avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #4da3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.staff-list-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.staff-list-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.staff-list-role {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.staff-list-handle {
+  font-size: 12px;
+  color: #22c55e;
+  font-family: monospace;
+}
+
+.searched-staff-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(77, 163, 255, 0.1);
+  border: 2px solid #4da3ff;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.staff-card-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.staff-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.staff-card-photo-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #4da3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.staff-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.staff-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.staff-card-position {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.staff-card-restaurant {
+  font-size: 12px;
+  color: #4da3ff;
+}
+
+.char-count {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.error-message {
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  border-radius: 6px;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.success-message {
+  padding: 12px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  border-radius: 6px;
+  color: #86efac;
+  font-size: 14px;
+}
+
+.send-tip-btn {
+  padding: 14px 28px;
+  background: #4da3ff;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.send-tip-btn:hover:not(:disabled) {
+  background: #3d8fef;
+  transform: translateY(-2px);
+}
+
+.send-tip-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #001836;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.diner-message-display {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.thank-you-suggestions {
+  margin-bottom: 20px;
+}
+
+.suggestions-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.suggestion-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestion-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #4da3ff;
+}
+
+.suggestion-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.response-sent-notice {
+  padding: 12px;
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  border-radius: 6px;
+  color: #86efac;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.sent-response-display {
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-style: italic;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #4da3ff;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3d8fef;
+}
+
+.btn-secondary:disabled,
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .balance-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .withdrawal-buttons-container {
+    grid-template-columns: 1fr;
+  }
+
+  .transactions-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .staff-list-grid {
+    grid-template-columns: 1fr;
+  }
+}

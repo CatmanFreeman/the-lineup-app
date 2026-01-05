@@ -1,0 +1,394 @@
+/* src/pages/Badges/PointsPage.css */
+
+.points-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.points-back-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #4da3ff;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.points-back-link:hover {
+  color: #6bb3ff;
+}
+
+.points-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.points-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.points-header h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+.points-login-prompt {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.points-login-prompt h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.points-login-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #4da3ff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.points-login-btn:hover {
+  background: #3d8fef;
+}
+
+.points-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.points-tab {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+
+.points-tab:hover {
+  color: #ffffff;
+}
+
+.points-tab.active {
+  color: #4da3ff;
+  border-bottom-color: #4da3ff;
+}
+
+.points-content {
+  min-height: 400px;
+}
+
+.points-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+}
+
+.points-display-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.points-current {
+  margin-bottom: 20px;
+}
+
+.points-milestone {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.points-milestone-message {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.points-milestone-message--close {
+  color: #51cf66;
+  font-weight: 600;
+}
+
+.points-milestone-message--normal {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.points-milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.points-milestone-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.points-milestone-progress-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+.points-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.points-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4da3ff 0%, #3d8fef 100%);
+  transition: width 0.3s ease;
+}
+
+.points-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.points-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.points-notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.points-notification {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.points-notification:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.points-notification-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.points-notification-content {
+  flex: 1;
+}
+
+.points-notification-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.points-notification-message {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+}
+
+.points-notification-time {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.points-opportunities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.points-opportunity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.points-opportunity:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #4da3ff;
+  transform: translateY(-2px);
+}
+
+.points-opportunity-content {
+  flex: 1;
+}
+
+.points-opportunity-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.points-opportunity-description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.points-opportunity-points {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4da3ff;
+  margin-left: 16px;
+}
+
+.points-transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.points-transaction {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.points-transaction-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.points-transaction-content {
+  flex: 1;
+}
+
+.points-transaction-reason {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.points-transaction-time {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.points-transaction-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.points-transaction-amount--earned {
+  color: #51cf66;
+}
+
+.points-store-link {
+  text-align: center;
+  padding: 30px;
+  background: rgba(77, 163, 255, 0.1);
+  border: 2px solid rgba(77, 163, 255, 0.3);
+  border-radius: 12px;
+}
+
+.points-store-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #4da3ff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+
+.points-store-btn:hover {
+  background: #3d8fef;
+  transform: translateY(-2px);
+}
+
+.points-store-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.points-badges-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.points-badges-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .points-header h1 {
+    font-size: 36px;
+  }
+
+  .points-opportunities {
+    grid-template-columns: 1fr;
+  }
+
+  .points-container {
+    padding-top: 80px;
+  }
+}
+

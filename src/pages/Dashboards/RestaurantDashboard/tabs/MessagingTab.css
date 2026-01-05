@@ -1,0 +1,284 @@
+/* src/pages/Dashboards/RestaurantDashboard/tabs/MessagingTab.css */
+
+.messaging-tab {
+  width: 100%;
+  min-height: 600px;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: #fff;
+}
+
+.messaging-container {
+  display: flex;
+  height: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.messaging-sidebar {
+  width: 300px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.messaging-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.messaging-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.messaging-new-btn {
+  padding: 6px 12px;
+  background: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.messaging-new-btn:hover {
+  background: #6bb3ff;
+}
+
+.messaging-new-conversation {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(77, 163, 255, 0.05);
+}
+
+.messaging-recipient-select {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.messaging-recipient-select option {
+  background: #121826;
+  color: #fff;
+}
+
+.messaging-new-textarea {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.messaging-new-textarea:focus {
+  outline: none;
+  border-color: #4da3ff;
+}
+
+.messaging-new-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.messaging-conversations-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.messaging-conversation-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.messaging-conversation-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.messaging-conversation-item.active {
+  background: rgba(77, 163, 255, 0.15);
+  border-left: 3px solid #4da3ff;
+}
+
+.messaging-conversation-item.unread {
+  background: rgba(77, 163, 255, 0.08);
+}
+
+.messaging-conversation-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.messaging-conversation-preview {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messaging-unread-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #4da3ff;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.messaging-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.messaging-messages-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.messaging-messages-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.messaging-messages-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.messaging-message {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  word-wrap: break-word;
+}
+
+.messaging-message.me {
+  align-self: flex-end;
+  background: #4da3ff;
+  color: white;
+}
+
+.messaging-message.other {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.messaging-message-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.messaging-message-time {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.messaging-input-area {
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 8px;
+}
+
+.messaging-input {
+  flex: 1;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.messaging-input:focus {
+  outline: none;
+  border-color: #4da3ff;
+}
+
+.messaging-send-btn {
+  padding: 10px 20px;
+  background: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+.messaging-send-btn:hover:not(:disabled) {
+  background: #6bb3ff;
+}
+
+.messaging-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.messaging-cancel-btn {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.messaging-cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.messaging-empty,
+.messaging-empty-main {
+  padding: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.messaging-loading {
+  padding: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+

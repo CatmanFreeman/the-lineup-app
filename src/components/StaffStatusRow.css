@@ -1,0 +1,80 @@
+/* ===== ROW LAYOUT (LOCKED) ===== */
+.staff-status-row {
+  display: grid;
+  grid-template-columns: 1fr auto 32px;
+  column-gap: 14px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* ===== STAFF INFO ===== */
+.staff-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.staff-role {
+  font-size: 13px;
+  opacity: 0.85;
+  color: #ffffff;
+}
+
+/* ===== STATUS PILL COLUMN ===== */
+.status-pill-col {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ===== STATUS PILL ===== */
+.status-pill {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Status colors (examples – adjust if needed) */
+.status-pill.onShift {
+  background: #2ecc71;
+  color: #000;
+}
+
+.status-pill.late {
+  background: #f1c40f;
+  color: #000;
+}
+
+.status-pill.noShow {
+  background: #e74c3c;
+  color: #000;
+}
+
+.status-pill.onBreak {
+  background: #3498db;
+  color: #000;
+}
+
+.status-pill.calledOut {
+  background: #e67e22;
+  color: #000;
+}
+
+/* ===== ICON COLUMN (THIS IS THE FIX) ===== */
+.status-icon-col {
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-icon-col img {
+  width: 18px;
+  height: 18px;
+}

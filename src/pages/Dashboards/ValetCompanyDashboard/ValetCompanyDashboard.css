@@ -1,0 +1,937 @@
+/* Valet Company Dashboard Styles - Mirrors Company Dashboard */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+.companyDash {
+  min-height: 100vh;
+  color: #ffffff;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  padding: 16px 12px 32px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.companyDash-back-link-top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  color: #4da3ff;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.companyDash-back-link-top:hover {
+  color: #60a5fa;
+}
+
+.companyDash__header {
+  max-width: 100%;
+  margin: 0 auto 14px;
+  padding: 8px 4px 0;
+}
+
+.companyDash__titleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.companyDash__headerLogo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.companyDash__titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.companyDash__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.companyDash__subtitle {
+  font-size: 12px;
+  opacity: 0.78;
+  line-height: 1.4;
+}
+
+.companyDash__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.companyDash__tab {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.28);
+  color: rgba(255, 255, 255, 0.92);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyDash__tab:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.26);
+  background: rgba(0, 0, 0, 0.40);
+}
+
+.companyDash__tab.is-active {
+  background: rgba(37, 99, 235, 0.85);
+  border-color: rgba(37, 99, 235, 0.95);
+}
+
+.companyDash__main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 8px 4px 0;
+}
+
+.companyDash__panel {
+  width: 100%;
+}
+
+.companyDash__sectionHeader {
+  margin: 8px 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.companyDash__sectionTitle {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.companyDash__sectionHint {
+  font-size: 12px;
+  opacity: 0.78;
+}
+
+.panelCard {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+}
+
+.emptyState {
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.emptyState__title {
+  font-weight: 900;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.emptyState__sub {
+  opacity: 0.74;
+  font-size: 12px;
+}
+
+/* Button styles */
+.companyDash__btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.companyDash__btn--primary {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.companyDash__btn--primary:hover {
+  background: #2563eb;
+}
+
+.companyDash__btn--secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.companyDash__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.companyDash__btn--danger {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.companyDash__btn--danger:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+/* Valet-specific form styles */
+.valet-company-location-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.valet-company-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.valet-company-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.valet-company-form-group input,
+.valet-company-form-group select {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.valet-company-form-group input:focus,
+.valet-company-form-group select:focus {
+  outline: none;
+  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.valet-company-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.valet-company-upgrade-hint {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 6px;
+  color: #f59e0b;
+  font-size: 12px;
+}
+
+.valet-company-locations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.valet-company-location-card {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.valet-company-location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.valet-company-location-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.valet-company-location-type {
+  margin: 4px 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: capitalize;
+}
+
+.valet-company-location-address {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.valet-company-upgrade-card {
+  padding: 24px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+}
+
+.valet-company-upgrade-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-company-upgrade-card p {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modal styles */
+.valet-company-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 16px;
+}
+
+.valet-company-modal {
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.valet-company-modal h2 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-company-modal p {
+  margin: 0 0 24px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.valet-company-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* ===============================
+   TABLET LARGE (768px+)
+   =============================== */
+
+@media (min-width: 768px) {
+  .companyDash {
+    padding: 20px 16px 40px;
+  }
+
+  .companyDash__header {
+    padding: 10px 6px 0;
+  }
+
+  .companyDash__title {
+    font-size: 32px;
+  }
+
+  .companyDash__tabs {
+    gap: 10px;
+  }
+
+  .companyDash__tab {
+    padding: 7px 12px;
+  }
+}
+
+/* Location and Driver Cards */
+.valet-locations-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.valet-location-summary-item {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.valet-locations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.valet-location-card {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.valet-location-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.valet-location-card-header h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.valet-location-card-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.valet-location-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valet-location-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.valet-location-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-drivers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.valet-driver-location-group {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.valet-driver-location-group h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.valet-drivers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.valet-driver-card {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.valet-driver-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.valet-driver-card-email {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2px;
+}
+
+.valet-driver-card-phone {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Location Metrics Cards */
+.valet-location-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.valet-location-metric-card {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.valet-location-metric-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valet-location-metric-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-location-metric-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.valet-location-metric-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valet-location-metric-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.valet-location-metric-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-location-metric-drivers {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valet-location-metric-drivers-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+}
+
+.valet-location-metric-drivers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.valet-location-metric-driver {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.valet-location-metric-driver-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.valet-location-metric-driver-phone {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.valet-location-metric-drivers-empty {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* Upcoming Cars Section */
+.valet-location-upcoming-cars {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valet-location-upcoming-cars-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.valet-location-upcoming-cars-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.valet-location-upcoming-cars-count {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.valet-location-upcoming-cars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.valet-location-upcoming-car {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.valet-location-upcoming-car-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.valet-location-upcoming-car-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.valet-location-upcoming-car-time {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.valet-location-upcoming-car-details {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.valet-location-upcoming-car-plate {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3b82f6;
+  font-family: monospace;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.valet-location-upcoming-car-info {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.valet-location-upcoming-car-paid {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 10px;
+  padding: 2px 6px;
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.valet-location-upcoming-cars-empty {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* Financial Periods */
+.valet-financial-periods-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.valet-financial-period-card {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.valet-financial-period-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valet-financial-period-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-financial-period-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.valet-financial-period-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.valet-financial-period-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valet-financial-period-metric-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.valet-financial-period-metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-financial-period-metric-value--primary {
+  font-size: 24px;
+  color: #22c55e;
+}
+
+.kpiCard__subtext {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.companyDash__sectionSubtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* Pre-Bookings List */
+.valet-pre-bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.valet-pre-booking-card {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.valet-pre-booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valet-pre-booking-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valet-pre-booking-title strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.valet-pre-booking-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.valet-pre-booking-status[data-status="PENDING"] {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.valet-pre-booking-status[data-status="ARRIVED"] {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.valet-pre-booking-status[data-status="ACTIVE"] {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.valet-pre-booking-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.valet-pre-booking-payment-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.valet-pre-booking-payment-status {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.valet-pre-booking-payment-status[data-status="succeeded"] {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.valet-pre-booking-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.valet-pre-booking-detail {
+  display: flex;
+  gap: 8px;
+}
+
+.valet-pre-booking-detail-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  min-width: 60px;
+}
+
+.valet-pre-booking-detail-value {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===============================
+   TABLET (768px+)
+   =============================== */
+
+@media (min-width: 768px) {
+  .valet-locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valet-location-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===============================
+   DESKTOP (980px+)
+   =============================== */
+
+@media (min-width: 980px) {
+  .companyDash {
+    padding: 22px 18px 46px;
+  }
+
+  .companyDash__header {
+    max-width: 1200px;
+  }
+
+  .companyDash__main {
+    max-width: 1200px;
+    padding: 8px 6px 0;
+  }
+
+  .companyDash__title {
+    font-size: 40px;
+  }
+
+  .valet-locations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,239 @@
+/* Valet Tip Page Styles */
+
+.valet-tip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+}
+
+.valet-tip-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
+
+.valet-tip-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tip-subtitle {
+  margin: 0 0 24px 0;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.ticket-info {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.ticket-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.tip-amounts {
+  margin-bottom: 24px;
+}
+
+.tip-amounts label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.preset-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.preset-btn {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preset-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.preset-btn.active {
+  background: #4da3ff;
+  border-color: #4da3ff;
+  color: #fff;
+}
+
+.custom-amount {
+  margin-top: 16px;
+}
+
+.custom-amount label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.custom-amount input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.custom-amount input:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.custom-amount input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.tip-note {
+  margin-bottom: 24px;
+}
+
+.tip-note label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.tip-note textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.tip-note textarea:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tip-note textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.tip-error {
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  color: #fca5a5;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.tip-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tip-submit-btn,
+.tip-skip-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tip-submit-btn {
+  background: #4da3ff;
+  color: #fff;
+}
+
+.tip-submit-btn:hover:not(:disabled) {
+  background: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.tip-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tip-skip-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tip-skip-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tip-info {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.success-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-message h2 {
+  color: #10b981;
+  margin-bottom: 12px;
+}
+
+.valet-tip-loading,
+.valet-tip-error {
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.valet-tip-error {
+  color: #fca5a5;
+}
+
+
+
+
+
+
+
+

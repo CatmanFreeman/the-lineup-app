@@ -1,0 +1,86 @@
+/* src/components/ProfileToggle/ProfileToggle.css */
+
+.profile-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.profile-toggle-label {
+  display: flex;
+  align-items: center;
+}
+
+.profile-mode-indicator {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.profile-mode-indicator[data-mode="work"] {
+  color: #4a9eff;
+}
+
+.profile-mode-indicator[data-mode="diner"] {
+  color: #4ade80;
+}
+
+.profile-toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.profile-toggle-switch.work-mode {
+  background: #4a9eff;
+  border-color: #4a9eff;
+}
+
+.profile-toggle-switch.diner-mode {
+  background: #4ade80;
+  border-color: #4ade80;
+}
+
+.profile-toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-toggle-switch.work-mode .profile-toggle-slider {
+  transform: translateX(24px);
+}
+
+.profile-toggle-switch.diner-mode .profile-toggle-slider {
+  transform: translateX(0);
+}
+
+.profile-mode-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  flex: 1;
+}
+
+
+
+
+
+
+
+

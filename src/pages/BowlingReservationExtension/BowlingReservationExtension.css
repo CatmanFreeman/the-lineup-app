@@ -1,0 +1,173 @@
+.bowling-extension-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.bowling-extension-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.bowling-extension-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.bowling-extension-header h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.bowling-extension-info {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.bowling-extension-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.bowling-extension-info strong {
+  color: #60a5fa;
+}
+
+.bowling-extension-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bowling-extension-options > p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.bowling-extension-time-options {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.bowling-extension-time-btn {
+  flex: 1;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bowling-extension-time-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.bowling-extension-time-btn.selected {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #60a5fa;
+}
+
+.bowling-extension-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bowling-extension-btn--primary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.bowling-extension-btn--primary:hover {
+  background: #2563eb;
+}
+
+.bowling-extension-btn--decline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bowling-extension-btn--decline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.bowling-extension-btn--extend {
+  background: #10b981;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.bowling-extension-btn--extend:hover:not(:disabled) {
+  background: #059669;
+}
+
+.bowling-extension-btn--extend:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bowling-extension-error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.bowling-extension-error p {
+  margin: 0;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.bowling-extension-success {
+  text-align: center;
+  padding: 24px;
+}
+
+.bowling-extension-success h2 {
+  margin: 0 0 16px 0;
+  color: #10b981;
+}
+
+.bowling-extension-success p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bowling-extension-message {
+  text-align: center;
+}
+
+.bowling-extension-message p {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+

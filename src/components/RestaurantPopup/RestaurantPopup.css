@@ -1,0 +1,201 @@
+/* -------------------------------------------------------
+   src/components/RestaurantPopup/RestaurantPopup.css
+   Complete updated file – no omissions
+------------------------------------------------------- */
+
+/* OVERLAY — centered on screen */
+.popup-overlay {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+/* MAIN CARD */
+.popup-card {
+  background: rgba(0, 0, 0, 0.92);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 12px 18px 16px 18px;
+  min-width: 320px;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* HEADER */
+.popup-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.popup-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 4px;
+  object-fit: contain;
+  object-position: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin-right: 10px;
+  background: #ffffff;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.popup-title-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.popup-title-link {
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  flex: 1;
+}
+
+.popup-title-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.popup-cuisine {
+  margin-top: 2px;
+  font-size: 13px;
+  color: #f0f0f0;
+}
+
+/* OPEN/CLOSED */
+.popup-open-status {
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.popup-open-status.open {
+  color: #4da3ff;
+}
+
+.popup-open-status.closed {
+  color: #ff4d4d;
+}
+
+/* RATINGS + ICON ROW */
+.popup-ratings {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.rating-label {
+  font-weight: 600;
+}
+
+.rating-star {
+  color: #ffd700;
+}
+
+.rating-value {
+  font-weight: 600;
+}
+
+/* Inline icons (Reserve + ToGo) */
+.popup-tools-inline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.popup-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.togo-icon {
+  width: 48px;      /* 50% larger than original */
+  height: 48px;
+  opacity: 0.95;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.togo-icon:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+/* LINKS */
+.popup-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.popup-link,
+.popup-link-button {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-link:hover,
+.popup-link-button:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* FAVORITE HEART */
+.popup-favorite-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.popup-favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.popup-favorite-btn .heart {
+  font-size: 18px;
+  color: #888;
+  transition: color 0.2s;
+  opacity: 0.6;
+}
+
+.popup-favorite-btn .heart-on {
+  font-size: 18px;
+  color: #ff6b9d;
+  opacity: 1;
+}

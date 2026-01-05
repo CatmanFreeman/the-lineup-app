@@ -1,0 +1,638 @@
+/* Bowling Lane Management Tab Styles */
+
+.bowling-tab {
+  padding: 24px;
+  color: #fff;
+}
+
+.bowling-tab__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.bowling-tab__header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.bowling-tab__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.bowling-tab__loading,
+.bowling-tab__error {
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.bowling-tab__error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.bowling-tab__nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bowling-tab__nav button {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.bowling-tab__nav button:hover {
+  color: #fff;
+}
+
+.bowling-tab__nav button.active {
+  color: #4da3ff;
+  border-bottom-color: #4da3ff;
+}
+
+.bowling-tab__lanes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.bowling-tab__lane-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.bowling-tab__lane-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bowling-tab__lane-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bowling-tab__lane-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.bowling-tab__lane-notes {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 8px 0;
+}
+
+.bowling-tab__lane-reservation {
+  padding: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 6px;
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.bowling-tab__lane-actions {
+  margin-top: 12px;
+}
+
+.bowling-tab__reservations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bowling-tab__reservation-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.bowling-tab__reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bowling-tab__reservation-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bowling-tab__reservation-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(59, 130, 246, 0.2);
+  color: #4da3ff;
+}
+
+.bowling-tab__reservation-details {
+  margin: 12px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bowling-tab__reservation-details p {
+  margin: 4px 0;
+}
+
+.bowling-tab__empty {
+  padding: 48px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bowling-tab__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.bowling-tab__modal-content {
+  background: #1a1f2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.bowling-tab__modal-content h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bowling-tab__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bowling-tab__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bowling-tab__form input,
+.bowling-tab__form select,
+.bowling-tab__form textarea {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.bowling-tab__form input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bowling-tab__form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.bowling-tab__modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Time Picker Styles */
+.bowling-time-picker-trigger {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bowling-time-picker-trigger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bowling-time-picker {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  max-height: 300px;
+}
+
+.bowling-time-picker-hours,
+.bowling-time-picker-minutes {
+  flex: 1;
+}
+
+.bowling-time-picker-label {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.bowling-time-picker-scroll {
+  max-height: 250px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.bowling-time-picker-item {
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 2px 0;
+  scroll-snap-align: center;
+  transition: all 0.2s;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bowling-time-picker-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.bowling-time-picker-item.selected {
+  background: rgba(59, 130, 246, 0.3);
+  color: #4da3ff;
+  font-weight: 700;
+}
+
+/* Party Size Picker Styles */
+.bowling-party-size-trigger {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bowling-party-size-trigger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bowling-party-size-picker {
+  margin-top: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  max-height: 300px;
+}
+
+.bowling-party-size-scroll {
+  max-height: 250px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.bowling-party-size-item {
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 2px 0;
+  scroll-snap-align: center;
+  transition: all 0.2s;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bowling-party-size-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.bowling-party-size-item.selected {
+  background: rgba(59, 130, 246, 0.3);
+  color: #4da3ff;
+  font-weight: 700;
+}
+
+/* Scrollbar styling */
+.bowling-time-picker-scroll::-webkit-scrollbar,
+.bowling-party-size-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bowling-time-picker-scroll::-webkit-scrollbar-track,
+.bowling-party-size-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.bowling-time-picker-scroll::-webkit-scrollbar-thumb,
+.bowling-party-size-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.bowling-time-picker-scroll::-webkit-scrollbar-thumb:hover,
+.bowling-party-size-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Inventory Styles */
+.bowling-tab__inventory {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bowling-inventory-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.bowling-inventory-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bowling-inventory-section-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bowling-inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.bowling-inventory-item {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bowling-inventory-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bowling-inventory-details h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bowling-condition-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.bowling-condition-excellent {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.bowling-condition-good {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.bowling-condition-fair {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.bowling-condition-poor {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.bowling-condition-needs_replacement {
+  background: rgba(139, 92, 246, 0.2);
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.bowling-inventory-notes {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 8px 0 0 0;
+}
+
+.bowling-shoe-edition {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 4px 0;
+}
+
+.bowling-condition-history {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bowling-history-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 6px;
+}
+
+.bowling-history-entry {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 4px 0;
+}
+
+.bowling-inventory-actions {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.bowling-pins-display {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.bowling-pins-count h4 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.bowling-pins-history {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bowling-photo-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Shoe Rentals Styles */
+.bowling-shoe-rentals {
+  margin-top: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.bowling-shoe-rentals label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bowling-shoe-rental-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.bowling-shoe-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.bowling-shoe-rental-item input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.bowling-shoe-rental-item select {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Payment Section Styles */
+.bowling-payment-section {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.bowling-payment-section h4 {
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.bowling-payment-section label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.bowling-payment-section label:last-of-type {
+  margin-bottom: 0;
+}
+
+.bowling-payment-section input[type="checkbox"] {
+  margin-right: 8px;
+  width: auto;
+}
+

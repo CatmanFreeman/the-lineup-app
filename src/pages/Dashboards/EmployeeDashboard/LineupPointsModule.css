@@ -1,0 +1,285 @@
+/* Lineup Points Module Styles */
+
+.lineup-points-module {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lineup-points-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lineup-points-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lineup-points-link {
+  font-size: 11px;
+  color: #4da3ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.lineup-points-link:hover {
+  color: #6bb3ff;
+  text-decoration: underline;
+}
+
+.lineup-points-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lineup-points-loading {
+  padding: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+/* Current Points Display */
+.lineup-points-display-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lineup-points-current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+/* Milestone Progress */
+.lineup-points-milestone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lineup-points-milestone-message {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.lineup-points-milestone-message--close {
+  color: #4da3ff;
+}
+
+.lineup-points-milestone-message--normal {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lineup-points-milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.lineup-points-milestone-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.lineup-points-milestone-need {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lineup-points-milestone-progress-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.lineup-points-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.lineup-points-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4da3ff 0%, #3b8fef 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Section Styling */
+.lineup-points-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lineup-points-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Notifications */
+.lineup-points-notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lineup-points-notification {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(77, 163, 255, 0.1);
+  border: 1px solid rgba(77, 163, 255, 0.2);
+  border-radius: 8px;
+}
+
+.lineup-points-notification-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.lineup-points-notification-content {
+  flex: 1;
+}
+
+.lineup-points-notification-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.lineup-points-notification-message {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+}
+
+.lineup-points-notification-time {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Opportunities */
+.lineup-points-opportunities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lineup-points-opportunity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.lineup-points-opportunity:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.lineup-points-opportunity-content {
+  flex: 1;
+}
+
+.lineup-points-opportunity-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.lineup-points-opportunity-description {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.3;
+}
+
+.lineup-points-opportunity-points {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4da3ff;
+  padding: 4px 8px;
+  background: rgba(77, 163, 255, 0.1);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* Transactions */
+.lineup-points-transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lineup-points-transaction {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+}
+
+.lineup-points-transaction-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.lineup-points-transaction-content {
+  flex: 1;
+}
+
+.lineup-points-transaction-reason {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2px;
+}
+
+.lineup-points-transaction-time {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lineup-points-transaction-amount {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lineup-points-transaction-amount--earned {
+  color: #10b981;
+}
+

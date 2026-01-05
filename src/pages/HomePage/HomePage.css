@@ -1,0 +1,537 @@
+/* GLOBAL MOBILE-FIRST: app sits on a navy gradient */
+.homepage-root {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* Mobile shell: ~390–420px */
+.homepage-shell {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: transparent;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ROW 1 — LOGO */
+.row-one {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0 16px 0;
+}
+
+.homepage-logo {
+  width: 315px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* ROW 2 — FILTER BAR (slightly shorter) */
+.row-two {
+  width: 100%;
+  height: 30px;
+  background: #0f1620;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.row-two-section {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  padding: 0 12px;
+}
+
+.row-two-text {
+  text-align: center;
+}
+
+/* ICONS – 16px tall, natural width so fork isn't stretched */
+.filter-icon {
+  height: 16px;
+  width: auto;
+  margin-left: 20px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* white vertical separators */
+.row-two-section + .row-two-section {
+  border-left: 1px solid #ffffff;
+}
+
+/* DROPDOWNS */
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  left: 8px;
+  background: #121826;
+  border: 1px solid #333;
+  border-top: none;
+  width: 220px;
+  z-index: 1001;
+  padding: 4px 0;
+  border-radius: 0 0 6px 6px;
+  max-height: calc(100vh - 196px);
+  overflow-y: auto;
+}
+
+/* Cuisines dropdown - reduce by 40px */
+.row-two-section:first-child .dropdown-menu {
+  max-height: calc(100vh - 246px - 40px);
+}
+
+/* Rating dropdown - ensure wide enough for stars and prevent overflow on mobile */
+.row-two-section:last-child .dropdown-menu {
+  width: 240px;
+  min-width: 200px;
+  max-width: calc(100vw - 16px);
+  left: 8px;
+  box-sizing: border-box;
+}
+
+/* Ensure rating dropdown doesn't overflow on small screens */
+@media (max-width: 420px) {
+  .row-two-section:last-child .dropdown-menu {
+    width: calc(100vw - 16px);
+    max-width: 240px;
+  }
+}
+
+.dropdown-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background: #1e2633;
+}
+
+/* Gold stars for rating dropdown */
+.rating-star-item {
+  text-align: left !important;
+  padding: 12px 16px !important;
+  min-height: 40px !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  cursor: pointer !important;
+  color: #ffd700 !important;
+  font-family: Arial, sans-serif !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  white-space: nowrap !important;
+}
+
+.rating-star-item:hover {
+  background: #1e2633 !important;
+}
+
+/* ROW 3 — USER BAR */
+  .row-three {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 50px !important;
+  width: 100% !important;
+  padding: 20px 5px 20px 12px !important;
+  min-height: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 999 !important;
+  background: transparent !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+/* Login link - RIGHT SIDE, 5px from right edge - WHITE BOLD UNDERLINED */
+.row-three .login-link,
+.row-three a.login-link {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+  position: absolute !important;
+  right: 5px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
+  z-index: 999 !important;
+  display: inline-block !important;
+}
+
+/* Ensure login link does NOT appear outside row-three */
+.homepage-shell > .login-link,
+.restaurant-list-wrapper .login-link,
+.map-container .login-link {
+  display: none !important;
+}
+
+.row-three .login-link:link,
+.row-three .login-link:visited,
+.row-three .login-link:hover,
+.row-three .login-link:active,
+.row-three .login-link:focus {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* Rating star items in dropdown - stars are now in JSX content */
+
+.row-three a.login-link:link,
+.row-three a.login-link:visited,
+.row-three a.login-link:hover,
+.row-three a.login-link:active,
+.row-three a.login-link:focus {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* User bubble container - Points on LEFT, ProfileToggle (if employee), Username on RIGHT, container aligned RIGHT */
+.user-bubble-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* ProfileToggle styling in row-three */
+.row-three .profile-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.row-three .profile-toggle .profile-mode-indicator {
+  font-size: 12px;
+}
+
+.row-three .profile-toggle .profile-toggle-switch {
+  width: 44px;
+  height: 24px;
+}
+
+.row-three .profile-toggle .profile-toggle-slider {
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+}
+
+.row-three .profile-toggle .profile-toggle-switch.work-mode .profile-toggle-slider {
+  transform: translateX(20px);
+}
+
+.row-three .profile-toggle .profile-mode-description {
+  display: none; /* Hide description in row-three to save space */
+}
+
+/* Remove light blue pill background from PointsDisplay in row-three */
+.row-three .points-display,
+.row-three .points-display-small,
+.row-three .points-display-normal,
+.row-three .points-display-large {
+  background: transparent !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: #ffffff !important;
+}
+
+.row-three .points-value,
+.row-three .points-label {
+  color: #ffffff !important;
+}
+
+.user-bubble {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.user-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 6px;
+  min-width: 180px;
+  z-index: 1000;
+  padding: 4px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.user-menu-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.user-menu-item:hover {
+  background: #1e2633;
+}
+
+.row-three-left,
+.row-three-center,
+.row-three-right {
+  flex: 1;
+}
+
+/* Reviews dropdown */
+.row-three-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reviews-trigger {
+  position: relative;
+}
+
+.reviews-link {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Reviews dropdown menu */
+.reviews-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 6px;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.reviews-menu-item {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reviews-menu-item:hover {
+  background: #1e2633;
+}
+
+/* Badges row – stay on one line, no early wrapping */
+.row-three-center {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-badges {
+  margin-right: 10px;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.user-badges span {
+  margin: 0 2px;
+}
+
+/* User bubble */
+.row-three-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #111a26;
+  padding: 4px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+.user-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Green pill – no wrapping, lowercase pts */
+.points-pill {
+  background: #2ecc71;
+  padding: 2px 10px;
+  border-radius: 16px;
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  text-transform: lowercase;
+}
+
+/* user dropdown menu */
+.user-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 6px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.user-menu-item {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-menu-item:hover {
+  background: #1e2633;
+}
+a:not(.login-link),
+a:not(.login-link):visited,
+a:not(.login-link):hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ROW 4 — AD BAR TICKER */
+.ad-bar {
+  width: 100%;
+  height: 35px;
+  background: #000000;
+  color: #ffffff;
+  overflow: hidden;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  box-sizing: border-box;
+}
+
+.ad-bar-inner {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  line-height: 35px;
+  font-size: 14px;
+  animation: ticker 15s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ROW 5 — MAP */
+.map-container {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+/* Normalize Link styling inside user dropdown */
+.user-menu-item {
+  display: block;
+  padding: 10px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* Hover state */
+.user-menu-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Remove visited / active link styling */
+.user-menu-item:visited,
+.user-menu-item:active,
+.user-menu-item:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* TipShare styling in menu */
+.tipshare-menu-item {
+  letter-spacing: 0;
+}
+
+.tipshare-menu-item .tipshare-dollar {
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 1em; /* Same font size as surrounding text */
+  margin: 0;
+  padding: 0;
+}

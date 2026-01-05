@@ -1,0 +1,605 @@
+.signup-page {
+  min-height: 100vh;
+  padding: 26px 16px 46px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(circle at 50% 18%, rgba(255,255,255,0.08), rgba(0,0,0,0.0) 45%),
+    linear-gradient(180deg, #111827 0%, #0b1220 100%);
+  color: #ffffff;
+}
+
+.signup-card {
+  width: min(820px, 92vw);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 24px 20px 22px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+}
+
+.signup-card h1 {
+  text-align: center;
+  margin: 6px 0 10px;
+  font-size: 40px;
+}
+
+.signup-subline {
+  text-align: center;
+  margin-bottom: 14px;
+  opacity: 0.92;
+}
+
+.signup-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.signup-link:visited {
+  color: #ffffff;
+}
+
+.signup-error {
+  margin: 10px 0 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 0, 0, 0.12);
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  color: #fff;
+  font-size: 14px;
+}
+
+.signup-section {
+  margin-top: 16px;
+}
+
+.signup-section h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  opacity: 0.95;
+}
+
+.subsection {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.subsection h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* White inputs */
+.signup-card input,
+.signup-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.92);
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #0b1220;
+}
+
+.signup-card textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.signup-submit,
+.primary-btn,
+.secondary-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.signup-submit,
+.primary-btn {
+  width: 100%;
+  padding: 14px 14px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.signup-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  padding: 10px 12px;
+  background: rgba(37,99,235,0.22);
+  color: #ffffff;
+  border: 1px solid rgba(37,99,235,0.50);
+  font-size: 14px;
+}
+
+.section-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section-row h2 {
+  margin: 0;
+}
+
+/* Logo block */
+.logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 6px 0 10px;
+  flex-wrap: wrap;
+}
+
+.logo-preview {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px; /* curved square */
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-placeholder {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+}
+
+.upload-link {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Restaurant cards */
+.restaurant-card {
+  margin-top: 12px;
+  padding: 14px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.restaurant-title {
+  font-weight: 800;
+  opacity: 0.95;
+}
+
+.danger-link {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.80);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.danger-link:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.restaurant-logo {
+  margin-top: 6px;
+}
+
+/* Cuisine grid (3 columns like other pages) */
+.signup-checkgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+}
+
+@media (min-width: 640px) {
+  .signup-checkgrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.signup-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.signup-check input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.signup-check span {
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.signup-check.disabled {
+  opacity: 0.45;
+}
+
+.cuisine-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.cuisine-hint {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Terms */
+.signup-terms {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* keep tight */
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.signup-terms input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+}
+
+.terms-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  padding: 18px;
+}
+
+.modal-card {
+  width: min(520px, 92vw);
+  background: rgba(10, 14, 22, 0.98);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  color: #ffffff;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  font-size: 14px;
+  opacity: 0.92;
+  margin-bottom: 14px;
+}
+
+/* === HOURS OF OPERATION GRID === */
+.hours-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.hours-hint {
+  font-size: 12px;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.hours-grid {
+  display: grid;
+  gap: 10px;
+}
+
+/* NEW: left column is day+Open side-by-side */
+.hours-row {
+  display: grid;
+  grid-template-columns: 190px 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* Day + Open side-by-side */
+.hours-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hours-day {
+  font-weight: 800;
+  color: #ffffff;
+  opacity: 0.95;
+  padding-top: 0;
+}
+
+.hours-openword {
+  font-size: 12px;
+  opacity: 0.9;
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+}
+
+/* Time + AM/PM on same line */
+.hours-controls {
+  display: grid;
+  grid-template-columns: 1fr 74px; /* smaller dropdown */
+  gap: 10px;
+  align-items: center;
+}
+
+.hours-time,
+.hours-meridiem {
+  height: 44px; /* match your input height */
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.88);
+  color: #0b1220;
+  font-size: 15px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Mobile stacking */
+@media (max-width: 680px) {
+  .hours-row {
+    grid-template-columns: 1fr;
+  }
+  .hours-controls {
+    grid-template-columns: 1fr 80px;
+  }
+}
+
+/* === RESTAURANT IMAGE UPLOAD === */
+.images-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.images-hint {
+  font-size: 12px;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.restaurant-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.restaurant-image-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.35);
+}
+
+.restaurant-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-remove-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0,0,0,0.75);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.restaurant-image-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  background: rgba(255,255,255,0.05);
+}
+/* === HOURS DROPDOWN UNIFORMITY FIX === */
+
+.hours-controls {
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  gap: 10px;
+  align-items: center;
+}
+
+.hours-time,
+.hours-meridiem {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.92);
+  color: #0b1220;
+  font-size: 15px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Keep all rows perfectly level */
+.hours-row {
+  align-items: center;
+}
+
+/* Mobile safety */
+@media (max-width: 680px) {
+  .hours-controls {
+    grid-template-columns: 1fr 80px;
+  }
+}
+.hours-time {
+  text-align: center;
+  text-align-last: center;
+  font-weight: 700;
+}
+.logo-preview.logo-clickable {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.logo-preview.logo-clickable:hover {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.12);
+}
+
+.logo-placeholder {
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.terms-section {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 12px;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.terms-link {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  padding: 0;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 16px;
+}
+.logo-clickable {
+  cursor: pointer;
+}
+
+.logo-placeholder {
+  border: 2px dashed rgba(255,255,255,0.35);
+  border-radius: 10px;
+  height: 110px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.logo-clickable:hover .logo-placeholder {
+  border-color: #3b82f6;
+  background: rgba(59,130,246,0.15);
+}
+.signup-terms.single-line {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  color: #ffffff;
+}
+
+.signup-terms.single-line label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.terms-link.white {
+  color: #ffffff;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

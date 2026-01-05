@@ -1,0 +1,120 @@
+/* Same navy gradient as other pages */
+.profile-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: white;
+  padding: 20px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Mobile-first centered column */
+.profile-inner {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 20px 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* PHOTO */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-bottom: 15px;
+}
+
+/* NAME */
+.profile-name {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 5px 0 10px 0;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* ROLE + RATING */
+.profile-role-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.profile-role {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.profile-rating {
+  font-size: 20px;
+  color: gold;
+}
+
+.star-gold {
+  color: gold;
+  font-size: 22px;
+}
+
+/* ICONS ROW */
+.profile-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* SECTIONS */
+.profile-section {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.empty-text {
+  opacity: 0.8;
+}
+
+/* FOOTER LINKS */
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.profile-link {
+  color: #4eaaff;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+.profile-icon-clickable {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.profile-icon-clickable:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}

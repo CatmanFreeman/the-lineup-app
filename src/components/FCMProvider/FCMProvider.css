@@ -1,0 +1,74 @@
+/* src/components/FCMProvider/FCMProvider.css */
+
+.fcm-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  max-width: 350px;
+  z-index: 10000;
+  cursor: pointer;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fcm-notification-content {
+  padding-right: 24px;
+}
+
+.fcm-notification-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.fcm-notification-body {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.fcm-notification-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.fcm-notification-close:hover {
+  color: #333;
+}
+
+
+
+
+
+
+
+

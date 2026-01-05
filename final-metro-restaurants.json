@@ -1,0 +1,1142 @@
+[
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.990209118626215,
+    "lng": -90.1510447627379,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.966715465334257,
+    "lng": -90.16006235098938,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.943848005497898,
+    "lng": -90.14902901601897,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.983362657048286,
+    "lng": -90.15774177642582,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.944437428749307,
+    "lng": -90.17021832095251,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.97030061156156,
+    "lng": -90.13002219438143,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.98677973339656,
+    "lng": -90.14228305838813,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.962037444029882,
+    "lng": -90.16289377884561,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.9890349543229,
+    "lng": -90.15106995402259,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.962987487524693,
+    "lng": -90.15492511478604,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.970459230792596,
+    "lng": -90.16945705352032,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.990734869494272,
+    "lng": -90.1365801791478,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.978794030494818,
+    "lng": -90.1559040504594,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.989592439302452,
+    "lng": -90.13939206829322,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Jefferson Hwy",
+      "line2": "",
+      "city": "Jefferson",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 29.989869556168227,
+    "lng": -90.1409158896698,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.931858808532603,
+    "lng": -90.20195513522941,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.92062376045257,
+    "lng": -90.21713350441878,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.92883315352879,
+    "lng": -90.19689771420087,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.939453468784187,
+    "lng": -90.2195610277902,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.95545542635561,
+    "lng": -90.18203190947375,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.954479157811868,
+    "lng": -90.19388572661566,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.938264823668188,
+    "lng": -90.22120067310196,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.941082143016693,
+    "lng": -90.20542884988056,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.958505387451325,
+    "lng": -90.19885214840932,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.934364278366782,
+    "lng": -90.19262920879889,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.9342254981671,
+    "lng": -90.20665963276848,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.964501780343134,
+    "lng": -90.21290499470864,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.941384740172538,
+    "lng": -90.21641458716691,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.963743444221453,
+    "lng": -90.19257132550568,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Hickory Ave",
+      "line2": "",
+      "city": "Harahan",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.923865481896698,
+    "lng": -90.21310083789758,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.93990004860003,
+    "lng": -90.23129576227838,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.94447780222596,
+    "lng": -90.19881786887268,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.973672773270472,
+    "lng": -90.24115914914965,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.96988477308803,
+    "lng": -90.22941409644592,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.962178903791514,
+    "lng": -90.19299213147876,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.970207557958865,
+    "lng": -90.2314048146256,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.945269212718213,
+    "lng": -90.20383518518693,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.97737203861768,
+    "lng": -90.2308036442529,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.972476537624242,
+    "lng": -90.20376910439794,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.94624369847343,
+    "lng": -90.23994672349056,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.97948344805139,
+    "lng": -90.21323655006705,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.98534925852458,
+    "lng": -90.22592711939082,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.95205603762514,
+    "lng": -90.19602894869396,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.96217821899051,
+    "lng": -90.22802296827203,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 River Rd",
+      "line2": "",
+      "city": "River Ridge",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.9454585306765,
+    "lng": -90.21065369341271,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.955293119055685,
+    "lng": -90.20330719479952,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.940151808397637,
+    "lng": -90.18148567890137,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.950519436775693,
+    "lng": -90.19185863369076,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.958171503071267,
+    "lng": -90.1732237268218,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.954193499180242,
+    "lng": -90.18631293886888,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.947984960947803,
+    "lng": -90.18539757912149,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.972098864267178,
+    "lng": -90.20644451203322,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.944413660074172,
+    "lng": -90.1623662311441,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.940651438998568,
+    "lng": -90.17539148019081,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.95962234291459,
+    "lng": -90.20143773491068,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.971784655011696,
+    "lng": -90.1913379935026,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.96761378787065,
+    "lng": -90.16463228928949,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.947008247381785,
+    "lng": -90.20124252687617,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.95145271551573,
+    "lng": -90.20939763576894,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Clearview Pkwy",
+      "line2": "",
+      "city": "Elmwood",
+      "state": "LA",
+      "zip": "70123"
+    },
+    "lat": 29.94148803657685,
+    "lng": -90.20468560970723,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  }
+]

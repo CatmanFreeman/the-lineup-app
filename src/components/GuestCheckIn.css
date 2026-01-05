@@ -1,0 +1,196 @@
+/* Guest Check-In Styles */
+
+.guest-checkin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 20px;
+}
+
+.checkin-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
+
+.checkin-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.checkin-subtitle {
+  margin: 0 0 24px 0;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.valet-option {
+  margin-bottom: 24px;
+}
+
+.valet-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.valet-checkbox:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.valet-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #4da3ff;
+}
+
+.valet-checkbox span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.valet-info {
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-camera {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.btn-primary {
+  background: #4da3ff;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-camera {
+  background: #10b981;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.btn-camera:hover {
+  background: #059669;
+}
+
+.btn-checkin {
+  margin-top: 8px;
+}
+
+.upload-area {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.ticket-preview {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.ticket-preview img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.ticket-number-input {
+  margin: 24px 0;
+}
+
+.ticket-number-input label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.ticket-number-input input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.ticket-number-input input:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.ticket-number-input input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.checkin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.help-text {
+  margin-top: 16px;
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,265 @@
+/* src/pages/Dashboards/EmployeeDashboard/QuickActionsTab.css */
+
+.quick-actions {
+  padding: 20px;
+  color: #fff;
+}
+
+.quick-actions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.quick-actions-header h2 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.quick-actions-subtitle {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  background: #4da3ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: #6bb3ff;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.quick-actions-loading {
+  text-align: center;
+  padding: 60px;
+  color: #888;
+  font-size: 16px;
+}
+
+.quick-actions-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.summary-card {
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.summary-card:hover {
+  border-color: #4da3ff;
+  transform: translateY(-2px);
+}
+
+.summary-icon {
+  font-size: 32px;
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.upcoming-section,
+.all-reservations-section {
+  margin-bottom: 32px;
+}
+
+.upcoming-section h3,
+.all-reservations-section h3 {
+  font-size: 18px;
+  margin: 0 0 16px 0;
+  color: #fff;
+}
+
+.reservations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reservation-card {
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.reservation-card:hover {
+  border-color: #4da3ff;
+  background: #1a2a3a;
+}
+
+.reservation-card.soon {
+  border-color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.reservation-card.past {
+  opacity: 0.6;
+}
+
+.reservation-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.time-display {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.time-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.reservation-info {
+  flex: 1;
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.reservation-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.status-badge {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.reservation-details {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.has-notes {
+  color: #fbbf24;
+  margin-left: 8px;
+}
+
+.reservation-preferences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.preference-tag {
+  background: rgba(77, 163, 255, 0.2);
+  border: 1px solid rgba(77, 163, 255, 0.4);
+  color: #4da3ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.no-upcoming {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+.quick-actions-info {
+  background: rgba(77, 163, 255, 0.1);
+  border: 1px solid rgba(77, 163, 255, 0.3);
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+.quick-actions-info p {
+  margin: 0;
+  color: #a5d4ff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .quick-actions-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .quick-actions-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-card {
+    flex-direction: column;
+  }
+
+  .reservation-time {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+

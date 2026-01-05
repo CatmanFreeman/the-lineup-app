@@ -1,0 +1,309 @@
+/* src/components/TipShareModal.css */
+
+.ts-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+  }
+  
+  .ts-modal {
+    background: #1f2937;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .ts-modal-header {
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ts-modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .ts-close-btn {
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  
+  .ts-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  .ts-modal-body {
+    padding: 24px;
+  }
+  
+  .ts-employee-info {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .ts-employee-label {
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .ts-employee-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .ts-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .ts-amount-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .ts-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+  }
+  
+  .ts-preset-amounts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .ts-preset-btn {
+    padding: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .ts-preset-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .ts-preset-btn-active {
+    background: rgba(59, 130, 246, 0.25);
+    border-color: rgba(59, 130, 246, 0.6);
+    color: #60a5fa;
+  }
+  
+  .ts-custom-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .ts-custom-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ts-currency {
+    position: absolute;
+    left: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+  }
+  
+  .ts-custom-input {
+    width: 100%;
+    padding: 16px 16px 16px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+  
+  .ts-custom-input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .ts-custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .ts-note-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .ts-note-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.2s;
+  }
+  
+  .ts-note-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .ts-note-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .ts-note-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+  }
+  
+  .ts-error {
+    padding: 12px;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #ef4444;
+    font-size: 14px;
+  }
+  
+  .ts-success {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .ts-success-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: rgba(16, 185, 129, 0.2);
+    border: 2px solid rgba(16, 185, 129, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #10b981;
+  }
+  
+  .ts-success h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .ts-success p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .ts-modal-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .ts-btn {
+    flex: 1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .ts-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .ts-btn-primary {
+    background: #3b82f6;
+    color: #ffffff;
+  }
+  
+  .ts-btn-primary:hover:not(:disabled) {
+    background: #2563eb;
+  }
+  
+  .ts-btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .ts-btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .ts-modal {
+      max-width: 100%;
+      border-radius: 16px 16px 0 0;
+      max-height: 95vh;
+    }
+  
+    .ts-preset-amounts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

@@ -1,0 +1,84 @@
+// src/components/PointsDisplay.css
+
+.points-display {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: #4da3ff !important;
+  background-color: #4da3ff !important;
+  color: #ffffff !important;
+  padding: 4px 8px !important; /* Increased by 10% from 3.08px, with horizontal padding for expansion */
+  border-radius: 16px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  cursor: default !important;
+  border: none !important;
+  box-sizing: border-box !important;
+  min-width: fit-content !important;
+  width: auto !important; /* Ensure it expands with content */
+}
+
+.points-display-small {
+  font-size: 16px !important;
+  padding: 4px 8px !important; /* Increased by 10% */
+  gap: 6px !important;
+}
+
+.points-display-normal {
+  font-size: 14px !important;
+  padding: 4px 8px !important; /* Increased by 10% */
+  gap: 6px !important;
+}
+
+.points-display-large {
+  font-size: 18px !important;
+  padding: 4px 8px !important; /* Increased by 10% */
+  gap: 6px !important;
+}
+
+.points-label {
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+}
+
+.points-value {
+  font-size: 1.1em !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+}
+
+.points-unit {
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+}
+
+.points-loading {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .points-display-normal {
+    font-size: 12px !important;
+    padding: 10px 20px !important;
+    gap: 16px !important;
+  }
+  
+  .points-display-small {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    gap: 16px !important;
+  }
+}

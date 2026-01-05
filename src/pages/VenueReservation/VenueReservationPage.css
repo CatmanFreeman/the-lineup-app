@@ -1,0 +1,207 @@
+.venue-reservation-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  padding: 24px 12px;
+  color: #fff;
+}
+
+.venue-reservation-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.venue-reservation-header {
+  margin-bottom: 32px;
+}
+
+.venue-reservation-header h1 {
+  font-size: 32px;
+  margin: 0 0 8px 0;
+}
+
+.venue-reservation-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 16px 0;
+}
+
+.venue-reservation-back {
+  background: transparent;
+  border: none;
+  color: #4da3ff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.venue-reservation-back:hover {
+  text-decoration: underline;
+}
+
+.venue-reservation-error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.venue-reservation-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.venue-reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="datetime-local"],
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.venue-member-item {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.venue-member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.venue-member-remove {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.venue-member-remove:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.venue-add-member-btn {
+  background: rgba(77, 163, 255, 0.2);
+  border: 1px solid rgba(77, 163, 255, 0.3);
+  color: #4da3ff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.venue-add-member-btn:hover {
+  background: rgba(77, 163, 255, 0.3);
+}
+
+.venue-reservation-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.venue-reservation-btn-secondary,
+.venue-reservation-btn-primary {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.venue-reservation-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.venue-reservation-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.venue-reservation-btn-primary {
+  background: #a855f7;
+  border: none;
+  color: #fff;
+}
+
+.venue-reservation-btn-primary:hover:not(:disabled) {
+  background: #9333ea;
+}
+
+.venue-reservation-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .venue-reservation-container {
+    padding: 0;
+  }
+
+  .venue-reservation-header h1 {
+    font-size: 24px;
+  }
+
+  .venue-reservation-actions {
+    flex-direction: column;
+  }
+}
+

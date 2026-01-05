@@ -1,0 +1,143 @@
+/* src/pages/Signup/SignupSelection.css */
+
+.signup-selection-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.signup-selection-logo {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+.signup-selection-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.signup-selection-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.signup-selection-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.signup-selection-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.signup-selection-option {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.signup-selection-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.signup-selection-option-icon {
+  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.signup-selection-option-content {
+  flex: 1;
+}
+
+.signup-selection-option-content h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.signup-selection-option-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 0;
+}
+
+.signup-selection-footer {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signup-selection-footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 0;
+}
+
+.signup-selection-link {
+  color: #4a9eff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-selection-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .signup-selection-card {
+    padding: 32px 24px;
+  }
+
+  .signup-selection-option {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .signup-selection-option-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+

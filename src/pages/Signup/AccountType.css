@@ -1,0 +1,31 @@
+.account-type-page {
+  min-height: 100vh;
+   background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.account-type-options button {
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.account-type-options button:disabled {
+  background: #374151;
+  cursor: not-allowed;
+}

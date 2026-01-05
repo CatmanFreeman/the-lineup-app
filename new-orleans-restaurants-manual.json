@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Commander's Palace",
+    "address": {
+      "line1": "1403 Washington Avenue",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9256,
+    "lng": -90.0814,
+    "phone": "(504) 899-8221",
+    "website": "https://www.commanderspalace.com",
+    "cuisines": ["Creole", "Fine Dining"],
+    "liveRating": 4.6
+  },
+  {
+    "name": "Antoine's Restaurant",
+    "address": {
+      "line1": "713 St Louis Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9581,
+    "lng": -90.0647,
+    "phone": "(504) 581-4422",
+    "website": "https://www.antoines.com",
+    "cuisines": ["Creole", "French"],
+    "liveRating": 4.3
+  },
+  {
+    "name": "Galatoire's Restaurant",
+    "address": {
+      "line1": "209 Bourbon Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9578,
+    "lng": -90.0667,
+    "phone": "(504) 525-2021",
+    "website": "https://www.galatoires.com",
+    "cuisines": ["Creole", "French"],
+    "liveRating": 4.5
+  },
+  {
+    "name": "Arnaud's Restaurant",
+    "address": {
+      "line1": "813 Bienville Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70112"
+    },
+    "lat": 29.9561,
+    "lng": -90.0681,
+    "phone": "(504) 523-5433",
+    "website": "https://www.arnaudsrestaurant.com",
+    "cuisines": ["Creole", "French"],
+    "liveRating": 4.4
+  },
+  {
+    "name": "Brennan's Restaurant",
+    "address": {
+      "line1": "417 Royal Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9572,
+    "lng": -90.0647,
+    "phone": "(504) 525-9711",
+    "website": "https://www.brennansneworleans.com",
+    "cuisines": ["Creole", "Fine Dining"],
+    "liveRating": 4.5
+  },
+  {
+    "name": "Cafe du Monde",
+    "address": {
+      "line1": "800 Decatur Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70116"
+    },
+    "lat": 29.9583,
+    "lng": -90.0625,
+    "phone": "(504) 525-4544",
+    "website": "https://www.cafedumonde.com",
+    "cuisines": ["Café", "Desserts"],
+    "liveRating": 4.2
+  },
+  {
+    "name": "Acme Oyster House",
+    "address": {
+      "line1": "724 Iberville Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9567,
+    "lng": -90.0672,
+    "phone": "(504) 522-5973",
+    "website": "https://www.acmeoyster.com",
+    "cuisines": ["Seafood", "Creole"],
+    "liveRating": 4.3
+  },
+  {
+    "name": "Mother's Restaurant",
+    "address": {
+      "line1": "401 Poydras Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9506,
+    "lng": -90.0681,
+    "phone": "(504) 523-9656",
+    "website": "https://www.mothersrestaurant.net",
+    "cuisines": ["Po' Boys", "Southern"],
+    "liveRating": 4.4
+  },
+  {
+    "name": "Dooky Chase's Restaurant",
+    "address": {
+      "line1": "2301 Orleans Avenue",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70119"
+    },
+    "lat": 29.9681,
+    "lng": -90.0814,
+    "phone": "(504) 821-0600",
+    "website": "https://www.dookychaserestaurant.com",
+    "cuisines": ["Creole", "Soul Food"],
+    "liveRating": 4.6
+  },
+  {
+    "name": "Willie Mae's Scotch House",
+    "address": {
+      "line1": "2401 St Ann Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70119"
+    },
+    "lat": 29.9686,
+    "lng": -90.0803,
+    "phone": "(504) 822-9503",
+    "cuisines": ["Southern", "Soul Food"],
+    "liveRating": 4.5
+  },
+  {
+    "name": "Cochon",
+    "address": {
+      "line1": "930 Tchoupitoulas Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9458,
+    "lng": -90.0708,
+    "phone": "(504) 588-2123",
+    "website": "https://www.cochonrestaurant.com",
+    "cuisines": ["Cajun", "Southern"],
+    "liveRating": 4.6
+  },
+  {
+    "name": "Emeril's New Orleans",
+    "address": {
+      "line1": "800 Tchoupitoulas Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9478,
+    "lng": -90.0703,
+    "phone": "(504) 528-9393",
+    "website": "https://www.emerilsrestaurants.com/emerils-new-orleans",
+    "cuisines": ["Creole", "Fine Dining"],
+    "liveRating": 4.5
+  },
+  {
+    "name": "Drago's Seafood Restaurant",
+    "address": {
+      "line1": "2 Poydras Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9503,
+    "lng": -90.0686,
+    "phone": "(504) 584-3911",
+    "website": "https://www.dragosrestaurant.com",
+    "cuisines": ["Seafood", "Creole"],
+    "liveRating": 4.4
+  },
+  {
+    "name": "The Court of Two Sisters",
+    "address": {
+      "line1": "613 Royal Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9575,
+    "lng": -90.0653,
+    "phone": "(504) 522-7261",
+    "website": "https://www.courtoftwosisters.com",
+    "cuisines": ["Creole", "Jazz Brunch"],
+    "liveRating": 4.2
+  },
+  {
+    "name": "K-Paul's Louisiana Kitchen",
+    "address": {
+      "line1": "416 Chartres Street",
+      "line2": "",
+      "city": "New Orleans",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 29.9564,
+    "lng": -90.0658,
+    "phone": "(504) 524-7394",
+    "website": "https://www.kpauls.com",
+    "cuisines": ["Cajun", "Creole"],
+    "liveRating": 4.3
+  }
+]
+

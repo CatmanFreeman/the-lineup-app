@@ -1,0 +1,38 @@
+/* src/pages/Arrival/ArrivalCheckInPage.css */
+
+.arrival-checkin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrival-checkin-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.arrival-checkin-container h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.arrival-checkin-loading {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 40px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+.shift-focus-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.shift-focus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shift-focus-header h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.focus-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.focus-actions {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: #ffffff;
+}

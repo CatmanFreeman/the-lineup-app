@@ -1,0 +1,2852 @@
+[
+  {
+    "name": "Ruth's Chris Steak House",
+    "address": {
+      "line1": "3633 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70002"
+    },
+    "lat": 30.004689188926548,
+    "lng": -90.17891725017043,
+    "cuisines": [
+      "Steakhouse",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Drago's Seafood Restaurant",
+    "address": {
+      "line1": "3232 N Arnoult Rd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70002"
+    },
+    "lat": 30.021529450300367,
+    "lng": -90.17679503369553,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Lake Ave",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 29.99123689162538,
+    "lng": -90.1976712640183,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Clearview Pkwy",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70121"
+    },
+    "lat": 30.008924581036986,
+    "lng": -90.20053674588087,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 30.01895069836441,
+    "lng": -90.15462985990284,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Sal & Sam's",
+    "address": {
+      "line1": "2000 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70002"
+    },
+    "lat": 30.021169633494388,
+    "lng": -90.1793371929792,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Metairie Rd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 29.975103996816664,
+    "lng": -90.19831056760822,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Navarre Ave",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 30.02085199441696,
+    "lng": -90.19217570332687,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Dante St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 30.002539358128757,
+    "lng": -90.1750223730167,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Robert E Lee Blvd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70006"
+    },
+    "lat": 29.99562545797933,
+    "lng": -90.15910813566404,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Metairie Rd",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 30.019392625869145,
+    "lng": -90.18132139039187,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Lakeshore Dr",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70006"
+    },
+    "lat": 30.005131443683275,
+    "lng": -90.17359538872444,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Hammond Hwy",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70001"
+    },
+    "lat": 30.011749995999214,
+    "lng": -90.19827902562346,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Canal St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70119"
+    },
+    "lat": 30.012368585654094,
+    "lng": -90.1813145634829,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Magazine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70115"
+    },
+    "lat": 29.985301078218065,
+    "lng": -90.15843260825963,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's",
+    "address": {
+      "line1": "723 Dante St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70005"
+    },
+    "lat": 29.986446059516524,
+    "lng": -90.16685997604623,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Esplanade Ave",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70119"
+    },
+    "lat": 29.996487413453195,
+    "lng": -90.18156461724169,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Bienville St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70119"
+    },
+    "lat": 30.0207412250789,
+    "lng": -90.16719720077886,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Hagan Ave",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70119"
+    },
+    "lat": 30.005869502840955,
+    "lng": -90.18681191439444,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Rum House",
+    "address": {
+      "line1": "3128 Magazine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70115"
+    },
+    "lat": 30.014011886173236,
+    "lng": -90.15945701196517,
+    "cuisines": [
+      "Caribbean",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Surrey's Cafe & Juice Bar",
+    "address": {
+      "line1": "1418 Magazine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70130"
+    },
+    "lat": 30.01604002752702,
+    "lng": -90.1544195992638,
+    "cuisines": [
+      "Breakfast",
+      "Brunch"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Joey K's Restaurant",
+    "address": {
+      "line1": "3001 Magazine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70115"
+    },
+    "lat": 29.98066924390338,
+    "lng": -90.1807481530857,
+    "cuisines": [
+      "Creole",
+      "Casual"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Petite Grocery",
+    "address": {
+      "line1": "4238 Magazine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70115"
+    },
+    "lat": 29.997869670993264,
+    "lng": -90.20105399922117,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Coquette",
+    "address": {
+      "line1": "2800 Magazine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70115"
+    },
+    "lat": 29.99887174551508,
+    "lng": -90.17570682575234,
+    "cuisines": [
+      "Contemporary",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Clancy's",
+    "address": {
+      "line1": "6100 Annunciation St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70118"
+    },
+    "lat": 30.02259202132267,
+    "lng": -90.16413170688338,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Pascal's Manale",
+    "address": {
+      "line1": "1838 Napoleon Ave",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70115"
+    },
+    "lat": 29.973195078850686,
+    "lng": -90.19982544102021,
+    "cuisines": [
+      "Italian",
+      "Seafood"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Joint",
+    "address": {
+      "line1": "701 Mazant St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70117"
+    },
+    "lat": 29.980189385790585,
+    "lng": -90.16312898230875,
+    "cuisines": [
+      "Barbecue",
+      "Southern"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Bacchanal Wine",
+    "address": {
+      "line1": "600 Poland Ave",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70117"
+    },
+    "lat": 29.991003185225193,
+    "lng": -90.18260813785439,
+    "cuisines": [
+      "Wine Bar",
+      "Mediterranean"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Elizabeth's Restaurant",
+    "address": {
+      "line1": "601 Gallier St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70117"
+    },
+    "lat": 29.976990594718693,
+    "lng": -90.20011271981859,
+    "cuisines": [
+      "Creole",
+      "Breakfast"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Satsuma Cafe",
+    "address": {
+      "line1": "3218 Dauphine St",
+      "line2": "",
+      "city": "Metairie",
+      "state": "LA",
+      "zip": "70117"
+    },
+    "lat": 30.011997247162462,
+    "lng": -90.18085474958774,
+    "cuisines": [
+      "Café",
+      "Breakfast"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's Cheesecake Bistro",
+    "address": {
+      "line1": "1001 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.981099313463904,
+    "lng": -90.25053655474099,
+    "cuisines": [
+      "American",
+      "Desserts"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.993195632421322,
+    "lng": -90.26304571534844,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.005768460972803,
+    "lng": -90.22411480454518,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.987274645048977,
+    "lng": -90.26471141292139,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Sal & Sam's",
+    "address": {
+      "line1": "2000 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.99357177995271,
+    "lng": -90.26494526612382,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.991415175758057,
+    "lng": -90.24703285667294,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.96924105617355,
+    "lng": -90.24305974219172,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.982310853594527,
+    "lng": -90.25651492486666,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.97793804902007,
+    "lng": -90.22907888429256,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.98636086110091,
+    "lng": -90.24137920726852,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.977673968438555,
+    "lng": -90.23192349657529,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.0006436091475,
+    "lng": -90.24721617478028,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.00642009951428,
+    "lng": -90.25230709606667,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.018064287442044,
+    "lng": -90.26556734657169,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.017993721343228,
+    "lng": -90.24478773787266,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.982667549092305,
+    "lng": -90.24029592495589,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Rum House",
+    "address": {
+      "line1": "3128 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.01608300014954,
+    "lng": -90.23362549664462,
+    "cuisines": [
+      "Caribbean",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Surrey's Cafe & Juice Bar",
+    "address": {
+      "line1": "1418 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.00643192159065,
+    "lng": -90.26343894030805,
+    "cuisines": [
+      "Breakfast",
+      "Brunch"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Joey K's Restaurant",
+    "address": {
+      "line1": "3001 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 30.00480403046071,
+    "lng": -90.22228665232696,
+    "cuisines": [
+      "Creole",
+      "Casual"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Petite Grocery",
+    "address": {
+      "line1": "4238 Veterans Memorial Blvd",
+      "line2": "",
+      "city": "Kenner",
+      "state": "LA",
+      "zip": "70062"
+    },
+    "lat": 29.9775573847985,
+    "lng": -90.25750423771572,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Wine Market Bistro",
+    "address": {
+      "line1": "730 Lafitte St",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.37880133303643,
+    "lng": -90.0881857568033,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Lakehouse",
+    "address": {
+      "line1": "910 Lafitte St",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.379778772380508,
+    "lng": -90.07015352344915,
+    "cuisines": [
+      "American",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Rivershack Tavern",
+    "address": {
+      "line1": "3445 River Rd",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.380830910141064,
+    "lng": -90.07076607168895,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Old Rail Brewing Company",
+    "address": {
+      "line1": "201 N Columbia St",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.34301190127155,
+    "lng": -90.05331165062503,
+    "cuisines": [
+      "American",
+      "Brewery"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Sunset Bar & Grill",
+    "address": {
+      "line1": "1900 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.37646849900266,
+    "lng": -90.07026163726974,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe DuBois",
+    "address": {
+      "line1": "300 Girod St",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.34106833041768,
+    "lng": -90.0754851739774,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Beach House",
+    "address": {
+      "line1": "2000 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.35654271867163,
+    "lng": -90.06145402795694,
+    "cuisines": [
+      "Seafood",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Benedict's Restaurant",
+    "address": {
+      "line1": "1144 Lafitte St",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.341861234407496,
+    "lng": -90.05364509630768,
+    "cuisines": [
+      "American",
+      "Breakfast"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Middendorf's Restaurant",
+    "address": {
+      "line1": "30160 Hwy 51",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.339788768566518,
+    "lng": -90.05731438090552,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Provence",
+    "address": {
+      "line1": "25020 Hwy 190",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.38000043225193,
+    "lng": -90.06652778656901,
+    "cuisines": [
+      "French",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Trey Yuen Cuisine of China",
+    "address": {
+      "line1": "600 N Causeway Blvd",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.344058385881645,
+    "lng": -90.04302810398963,
+    "cuisines": [
+      "Chinese",
+      "Asian"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Sal & Sam's",
+    "address": {
+      "line1": "2000 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.345029222362335,
+    "lng": -90.04586197453548,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.378594226680825,
+    "lng": -90.08586883897213,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.348337850737202,
+    "lng": -90.04277195376406,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.375247845711726,
+    "lng": -90.06275174744032,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.37568323870377,
+    "lng": -90.08906322945563,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.346918842405127,
+    "lng": -90.05199124911776,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.377191587124283,
+    "lng": -90.04156904118281,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.363791957247265,
+    "lng": -90.08941763828214,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Lakeshore Dr",
+      "line2": "",
+      "city": "Mandeville",
+      "state": "LA",
+      "zip": "70448"
+    },
+    "lat": 30.36237832299698,
+    "lng": -90.04427622078029,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Palace Cafe",
+    "address": {
+      "line1": "1120 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.267788674558012,
+    "lng": -89.76594116042223,
+    "cuisines": [
+      "Creole",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Trey Yuen Cuisine of China",
+    "address": {
+      "line1": "600 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.288333723292162,
+    "lng": -89.79065389712058,
+    "cuisines": [
+      "Chinese",
+      "Asian"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.272537143296123,
+    "lng": -89.75817737345947,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.295879665871386,
+    "lng": -89.77476740267437,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.258700749971997,
+    "lng": -89.79512738399234,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.292516219729414,
+    "lng": -89.80426801135428,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.27085554566794,
+    "lng": -89.79968891221534,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.274481907092852,
+    "lng": -89.7785526429372,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.279264084141086,
+    "lng": -89.76863101450323,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.256179317866167,
+    "lng": -89.80422056054248,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.277012561729194,
+    "lng": -89.80329150462761,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.26494985228538,
+    "lng": -89.77397466595835,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.257612437146154,
+    "lng": -89.7837040629868,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.280951637029137,
+    "lng": -89.7964587242606,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.261943809874555,
+    "lng": -89.78876598515427,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.261765853074593,
+    "lng": -89.80377213335035,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.29176618516904,
+    "lng": -89.7685229020782,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Rum House",
+    "address": {
+      "line1": "3128 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.27035501397513,
+    "lng": -89.7935059457253,
+    "cuisines": [
+      "Caribbean",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Surrey's Cafe & Juice Bar",
+    "address": {
+      "line1": "1418 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.28115274275218,
+    "lng": -89.76794727012751,
+    "cuisines": [
+      "Breakfast",
+      "Brunch"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Joey K's Restaurant",
+    "address": {
+      "line1": "3001 Gause Blvd",
+      "line2": "",
+      "city": "Slidell",
+      "state": "LA",
+      "zip": "70458"
+    },
+    "lat": 30.25409908594249,
+    "lng": -89.78828596976227,
+    "cuisines": [
+      "Creole",
+      "Casual"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Provence",
+    "address": {
+      "line1": "25020 Hwy 190",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.45636254787103,
+    "lng": -90.10675126403889,
+    "cuisines": [
+      "French",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.479749184840955,
+    "lng": -90.11531966649672,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.482932502681184,
+    "lng": -90.10875206903663,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.499272436612536,
+    "lng": -90.1199949896079,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.491226180130283,
+    "lng": -90.08932992122729,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.465514112878274,
+    "lng": -90.10830648909037,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.48280367353308,
+    "lng": -90.09743643928365,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.49377955787893,
+    "lng": -90.10958600750733,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.47888039466044,
+    "lng": -90.12337426245071,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.477304584709188,
+    "lng": -90.10181486197168,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.499316019507166,
+    "lng": -90.11862731967719,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.46507062104832,
+    "lng": -90.0777474921108,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.499017014271363,
+    "lng": -90.08151553494166,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.45171784284439,
+    "lng": -90.12491495254753,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.499708033045245,
+    "lng": -90.12370239109727,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.479672220246453,
+    "lng": -90.10738130533375,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Rum House",
+    "address": {
+      "line1": "3128 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.48436047718295,
+    "lng": -90.09179464538389,
+    "cuisines": [
+      "Caribbean",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Surrey's Cafe & Juice Bar",
+    "address": {
+      "line1": "1418 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.46431315754133,
+    "lng": -90.1063095853284,
+    "cuisines": [
+      "Breakfast",
+      "Brunch"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Joey K's Restaurant",
+    "address": {
+      "line1": "3001 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.476958714228157,
+    "lng": -90.10851220844707,
+    "cuisines": [
+      "Creole",
+      "Casual"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Petite Grocery",
+    "address": {
+      "line1": "4238 N Columbia St",
+      "line2": "",
+      "city": "Covington",
+      "state": "LA",
+      "zip": "70433"
+    },
+    "lat": 30.48858819099869,
+    "lng": -90.12388431837456,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Sal & Sam's",
+    "address": {
+      "line1": "2000 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.929626811504296,
+    "lng": -90.15787501106426,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.916679587677095,
+    "lng": -90.13993857696715,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.886367977212988,
+    "lng": -90.12070156867225,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.921705312172183,
+    "lng": -90.15227605654266,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.89623342024262,
+    "lng": -90.13369146401996,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.915268857878605,
+    "lng": -90.12358283702068,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.897259265775393,
+    "lng": -90.14971279220966,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.912221697268333,
+    "lng": -90.15335233126508,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.914193978324555,
+    "lng": -90.1661397483847,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.883598563611663,
+    "lng": -90.16248235288346,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.885423952178506,
+    "lng": -90.14223798997337,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.890304676794663,
+    "lng": -90.15469426174504,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.888488395494715,
+    "lng": -90.12119447485041,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.892273991779415,
+    "lng": -90.13035223459839,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.893731097772076,
+    "lng": -90.1492409511877,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.925449073048323,
+    "lng": -90.12678616004207,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Rum House",
+    "address": {
+      "line1": "3128 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.88369752818182,
+    "lng": -90.15994853654875,
+    "cuisines": [
+      "Caribbean",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Surrey's Cafe & Juice Bar",
+    "address": {
+      "line1": "1418 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.89893729336303,
+    "lng": -90.16033976674932,
+    "cuisines": [
+      "Breakfast",
+      "Brunch"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Joey K's Restaurant",
+    "address": {
+      "line1": "3001 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.900189050886517,
+    "lng": -90.12528238462322,
+    "cuisines": [
+      "Creole",
+      "Casual"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Petite Grocery",
+    "address": {
+      "line1": "4238 Westbank Expy",
+      "line2": "",
+      "city": "Westwego",
+      "state": "LA",
+      "zip": "70094"
+    },
+    "lat": 29.91510017554504,
+    "lng": -90.11946202406804,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Chimes Restaurant",
+    "address": {
+      "line1": "115 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.878178291237248,
+    "lng": -90.00504696691677,
+    "cuisines": [
+      "American",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Navarre",
+    "address": {
+      "line1": "800 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.83846288614783,
+    "lng": -90.01337770303788,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Ralph & Kacoo's",
+    "address": {
+      "line1": "519 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.87363324600535,
+    "lng": -89.98178898001488,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Deanie's Seafood Restaurant",
+    "address": {
+      "line1": "1713 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.870150673317738,
+    "lng": -89.98804748750764,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Copeland's of New Orleans",
+    "address": {
+      "line1": "1001 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.830533291246255,
+    "lng": -90.00190485588118,
+    "cuisines": [
+      "Creole",
+      "American"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "R&O's",
+    "address": {
+      "line1": "216 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.877839008154247,
+    "lng": -90.0093546990362,
+    "cuisines": [
+      "Seafood",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Blue Crab Restaurant",
+    "address": {
+      "line1": "7900 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.83838468710188,
+    "lng": -90.00570482520382,
+    "cuisines": [
+      "Seafood",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Brigtsen's Restaurant",
+    "address": {
+      "line1": "723 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.868476419068067,
+    "lng": -90.02314499301708,
+    "cuisines": [
+      "Creole",
+      "Fine Dining"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Crepe Nanou",
+    "address": {
+      "line1": "1410 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.833410978935316,
+    "lng": -90.00665394535477,
+    "cuisines": [
+      "French",
+      "Crepes"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe B",
+    "address": {
+      "line1": "700 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.845681425165367,
+    "lng": -90.02141633677009,
+    "cuisines": [
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Mandina's Restaurant",
+    "address": {
+      "line1": "3800 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.870186429296698,
+    "lng": -89.99301804882553,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Taqueria Corona",
+    "address": {
+      "line1": "5932 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.840349461896473,
+    "lng": -89.98980692593344,
+    "cuisines": [
+      "Mexican",
+      "Tex-Mex"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Cafe Degas",
+    "address": {
+      "line1": "3127 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.857054165407447,
+    "lng": -90.01674578185964,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Liuzza's Restaurant",
+    "address": {
+      "line1": "3636 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.85514796636011,
+    "lng": -90.02156129585782,
+    "cuisines": [
+      "Creole",
+      "Po' Boys"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Parkway Bakery and Tavern",
+    "address": {
+      "line1": "538 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.85321907390172,
+    "lng": -90.02533063170814,
+    "cuisines": [
+      "Po' Boys",
+      "Sandwiches"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "The Rum House",
+    "address": {
+      "line1": "3128 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.857533383811386,
+    "lng": -89.99543888550454,
+    "cuisines": [
+      "Caribbean",
+      "Bar"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Surrey's Cafe & Juice Bar",
+    "address": {
+      "line1": "1418 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.872140586625527,
+    "lng": -90.0014443822329,
+    "cuisines": [
+      "Breakfast",
+      "Brunch"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Joey K's Restaurant",
+    "address": {
+      "line1": "3001 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.86672311482081,
+    "lng": -90.00581231569976,
+    "cuisines": [
+      "Creole",
+      "Casual"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "La Petite Grocery",
+    "address": {
+      "line1": "4238 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.840237183065433,
+    "lng": -90.01669665007773,
+    "cuisines": [
+      "French",
+      "Bistro"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  },
+  {
+    "name": "Sal & Sam's",
+    "address": {
+      "line1": "2000 Belle Chasse Hwy",
+      "line2": "",
+      "city": "Belle Chasse",
+      "state": "LA",
+      "zip": "70037"
+    },
+    "lat": 29.87617681487641,
+    "lng": -90.00927448460394,
+    "cuisines": [
+      "Italian",
+      "Creole"
+    ],
+    "phone": null,
+    "website": null,
+    "liveRating": null
+  }
+]

@@ -1,0 +1,136 @@
+/* src/pages/Arrival/ArrivalWaitingListPage.css */
+
+.arrival-waitinglist-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrival-waitinglist-container {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.arrival-waitinglist-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.arrival-waitinglist-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.arrival-waitinglist-header h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.arrival-waitinglist-rating {
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.arrival-waitinglist-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.arrival-waitinglist-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.arrival-waitinglist-party-size {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.arrival-waitinglist-party-size label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.arrival-waitinglist-party-size select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.arrival-waitinglist-party-size select:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.arrival-waitinglist-join-btn {
+  background: #4a9eff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.arrival-waitinglist-join-btn:hover:not(:disabled) {
+  background: #6bb0ff;
+}
+
+.arrival-waitinglist-join-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.arrival-waitinglist-view-lineup-btn {
+  background: none;
+  border: none;
+  color: #4a9eff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.arrival-waitinglist-view-lineup-btn:hover {
+  color: #6bb0ff;
+}
+
+.arrival-waitinglist-loading {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 40px;
+}
+
+
+
+
+
+
+
+

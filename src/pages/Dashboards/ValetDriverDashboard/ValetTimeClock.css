@@ -1,0 +1,106 @@
+/* src/pages/Dashboards/ValetDriverDashboard/ValetTimeClock.css */
+
+.valet-timeclock {
+  padding: 12px;
+}
+
+.valet-timeclock-status {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.valet-timeclock-status-indicator {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.valet-timeclock-status-active {
+  background: rgba(96, 165, 250, 0.2);
+  border: 2px solid #60a5fa;
+  color: #60a5fa;
+}
+
+.valet-timeclock-status-inactive {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.valet-timeclock-elapsed {
+  margin-top: 16px;
+}
+
+.valet-timeclock-elapsed-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.valet-timeclock-elapsed-time {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.valet-timeclock-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.valet-timeclock-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 120px;
+}
+
+.valet-timeclock-btn-in {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.valet-timeclock-btn-in:hover:not(:disabled) {
+  background: #60a5fa;
+}
+
+.valet-timeclock-btn-out {
+  background: #ef4444;
+  color: #fff;
+}
+
+.valet-timeclock-btn-out:hover:not(:disabled) {
+  background: #f87171;
+}
+
+.valet-timeclock-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.valet-timeclock-geofence-warning {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #ef4444;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+

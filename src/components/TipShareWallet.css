@@ -1,0 +1,1370 @@
+/* src/components/TipShareWallet.css */
+
+.tsw-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .tsw-loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+  }
+  
+  /* Balance Card */
+  .tsw-balance-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .tsw-balance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .tsw-balance-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .tsw-tipshare-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tsw-tipshare-dollar {
+    color: #22c55e;
+  }
+  
+  .tsw-withdraw-btn {
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .tsw-withdraw-btn:hover:not(:disabled) {
+    background: #2563eb;
+  }
+  
+  .tsw-withdraw-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .tsw-balance-amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+  
+  .tsw-balance-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .tsw-balance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .tsw-balance-item:last-child {
+    border-bottom: none;
+  }
+  
+  .tsw-balance-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .tsw-balance-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  /* Transactions */
+  .tsw-transactions {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  
+  .tsw-section-title {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .tsw-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+  }
+  
+  .tsw-transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .tsw-transaction-item {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+  }
+  
+  .tsw-transaction-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .tsw-transaction-info {
+    flex: 1;
+  }
+  
+  .tsw-transaction-type {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+  
+  .tsw-transaction-note {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 4px;
+  }
+  
+  .tsw-transaction-date {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .tsw-transaction-amount {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+  }
+  
+  .tsw-amount-positive {
+    color: #10b981;
+  }
+  
+  .tsw-amount-negative {
+    color: #ef4444;
+  }
+  
+  .tsw-transaction-fee {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 4px;
+  }
+  
+  .tsw-transaction-status {
+    margin-top: 8px;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .tsw-status-pending {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+  }
+  
+  .tsw-status-processed {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+  }
+  
+  .tsw-status-failed {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+  }
+  
+  /* Modal */
+  .tsw-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+  }
+  
+  .tsw-modal {
+    background: #1f2937;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  
+  .tsw-modal-header {
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tsw-modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .tsw-close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  .tsw-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  .tsw-modal-body {
+    padding: 24px;
+  }
+  
+  .tsw-withdraw-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .tsw-option-btn {
+    padding: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+  }
+  
+  .tsw-option-btn:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+  }
+  
+  .tsw-option-active {
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(59, 130, 246, 0.1);
+  }
+  
+  .tsw-option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+  .tsw-option-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .tsw-option-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border-radius: 4px;
+  }
+  
+  .tsw-option-desc {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .tsw-withdraw-amount {
+    margin-bottom: 20px;
+  }
+  
+  .tsw-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+  }
+  
+  .tsw-amount-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tsw-currency {
+    position: absolute;
+    left: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+  }
+  
+  .tsw-amount-input {
+    width: 100%;
+    padding: 16px 16px 16px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+  
+  .tsw-amount-input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .tsw-amount-hint {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+  }
+  
+  .tsw-fee-breakdown {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .tsw-fee-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .tsw-fee-total {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 8px;
+    padding-top: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .tsw-error {
+    padding: 12px;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #ef4444;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .tsw-modal-footer {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .tsw-btn {
+    flex: 1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .tsw-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .tsw-btn-primary {
+    background: #3b82f6;
+    color: #ffffff;
+  }
+  
+  .tsw-btn-primary:hover:not(:disabled) {
+    background: #2563eb;
+  }
+  
+  .tsw-btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .tsw-btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Send Money Module */
+  .tsw-send-money-module {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 32px;
+  }
+
+  /* Send Money Button */
+  .tsw-send-btn {
+    padding: 10px 20px;
+    background: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tsw-send-btn:hover {
+    background: #059669;
+  }
+
+  .tsw-send-btn-primary {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  .tsw-diner-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin: 16px 0;
+    line-height: 1.5;
+  }
+
+  /* Send Modal Large */
+  .tsw-send-modal-large {
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Search Wrapper */
+  .tsw-search-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .tsw-search-wrapper .tsw-handle-input {
+    flex: 1;
+  }
+
+  /* Restaurant Search */
+  .tsw-restaurant-search-wrapper {
+    position: relative;
+  }
+
+  .tsw-restaurant-search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+
+  .tsw-restaurant-search-input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .tsw-restaurant-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    background: #1f2937;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .tsw-restaurant-suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  .tsw-restaurant-suggestion-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Department Buttons */
+  .tsw-department-buttons {
+    display: flex;
+    gap: 12px;
+  }
+
+  .tsw-department-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tsw-department-btn:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+  }
+
+  .tsw-department-btn.tsw-department-active {
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+  }
+
+  /* Restaurant Staff List */
+  .tsw-restaurant-staff-list {
+    margin-top: 20px;
+  }
+
+  .tsw-staff-list-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .tsw-staff-accordion {
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .tsw-staff-accordion-header {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tsw-staff-accordion-header:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .tsw-accordion-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .tsw-accordion-icon {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+  }
+
+  /* Staff List */
+  .tsw-staff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .tsw-staff-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tsw-staff-list-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .tsw-staff-list-item-selected {
+    border-color: rgba(16, 185, 129, 0.6);
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  .tsw-staff-list-item-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .tsw-staff-list-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .tsw-staff-list-avatar-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #60a5fa;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .tsw-staff-list-info {
+    flex: 1;
+  }
+
+  .tsw-staff-list-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+
+  .tsw-staff-list-handle {
+    font-size: 13px;
+    color: #22c55e;
+    font-family: monospace;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .tsw-staff-list-role {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .tsw-staff-list-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: #10b981;
+    flex-shrink: 0;
+  }
+
+  /* Staff Cards Grid */
+  .tsw-staff-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 16px 0;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .tsw-staff-card-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tsw-staff-card-wrapper.tsw-staff-card-selected .tsw-staff-card {
+    border-color: rgba(16, 185, 129, 0.6);
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  .tsw-staff-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .tsw-staff-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .tsw-staff-card-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .tsw-staff-card-avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #60a5fa;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .tsw-staff-card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 4px;
+  }
+
+  .tsw-staff-card-handle {
+    font-size: 12px;
+    color: #22c55e;
+    font-family: monospace;
+    font-weight: 600;
+  }
+
+  .tsw-staff-card-role {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: -4px;
+  }
+
+  .tsw-staff-card-checkbox-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .tsw-staff-card-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #10b981;
+  }
+
+  .tsw-staff-card-handle-missing {
+    font-size: 11px;
+    color: rgba(239, 68, 68, 0.8);
+    font-style: italic;
+  }
+
+  .tsw-staff-accordion-content {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .tsw-staff-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .tsw-staff-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .tsw-staff-selected {
+    border-color: rgba(16, 185, 129, 0.5);
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  .tsw-staff-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .tsw-select-staff-btn {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .tsw-select-staff-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .tsw-select-staff-btn.tsw-selected {
+    background: #10b981;
+    border-color: #10b981;
+  }
+
+  .tsw-staff-handle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: monospace;
+  }
+
+  .tsw-selected-count {
+    padding: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #10b981;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  /* Selected Staff Section */
+  .tsw-selected-staff-section {
+    margin-top: 24px;
+    padding: 16px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+  }
+
+  .tsw-selected-staff-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .tsw-selected-staff-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .tsw-selected-count-badge {
+    padding: 4px 12px;
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #10b981;
+  }
+
+  .tsw-selected-staff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tsw-selected-staff-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+
+  .tsw-selected-staff-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .tsw-selected-staff-info {
+    flex: 1;
+  }
+
+  .tsw-selected-staff-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2px;
+  }
+
+  .tsw-selected-staff-handle {
+    font-size: 12px;
+    color: #22c55e;
+    font-family: monospace;
+    margin-bottom: 2px;
+  }
+
+  .tsw-selected-staff-restaurant {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .tsw-remove-staff-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #ef4444;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .tsw-remove-staff-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.6);
+  }
+
+  .tsw-staff-card-handle-missing {
+    font-size: 11px;
+    color: rgba(239, 68, 68, 0.8);
+    font-style: italic;
+  }
+
+  .tsw-staff-card-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tsw-staff-card-checkbox-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+  }
+
+  .tsw-staff-card-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: #10b981;
+  }
+
+  /* Withdrawal Options - Two Prominent Buttons */
+  .tsw-withdrawal-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .tsw-withdraw-option-btn {
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+  }
+
+  .tsw-withdraw-option-btn:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .tsw-withdraw-instant {
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+
+  .tsw-withdraw-instant:hover {
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  .tsw-withdraw-free {
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+
+  .tsw-withdraw-free:hover {
+    border-color: rgba(16, 185, 129, 0.6);
+    background: rgba(16, 185, 129, 0.1);
+  }
+
+  .tsw-withdraw-option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .tsw-withdraw-option-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .tsw-withdraw-option-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  .tsw-withdraw-option-badge-free {
+    font-size: 12px;
+    padding: 4px 10px;
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  .tsw-withdraw-option-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Send Money Form */
+  .tsw-send-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tsw-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tsw-handle-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+
+  .tsw-handle-input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .tsw-handle-hint {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 4px;
+  }
+
+  /* TipShare Handle Header in Modal */
+  .tsw-tipshare-handle-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .tsw-tipshare-logo-modal {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tsw-tipshare-dollar-modal {
+    color: #22c55e;
+  }
+
+  .tsw-handle-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .tsw-handle-input-modal {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.2s;
+    margin-bottom: 12px;
+  }
+
+  .tsw-handle-input-modal:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .tsw-handle-input-modal::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+  }
+
+  .tsw-search-btn-modal {
+    width: 100%;
+    padding: 12px 24px;
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+
+  .tsw-search-btn-modal:hover {
+    background: #2563eb;
+  }
+
+  .tsw-search-btn {
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .tsw-search-btn:hover {
+    background: #2563eb;
+  }
+
+  .tsw-searched-staff {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  .tsw-staff-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tsw-staff-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .tsw-staff-details {
+    flex: 1;
+  }
+
+  .tsw-staff-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+
+  .tsw-staff-role {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+  }
+
+  .tsw-staff-restaurant {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .tsw-note-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.2s;
+  }
+
+  .tsw-note-input:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .tsw-note-hint {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+  }
+
+  .tsw-success-message {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .tsw-success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+  }
+
+  .tsw-success-message h4 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .tsw-success-message p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .tsw-balance-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .tsw-balance-amount {
+      font-size: 36px;
+    }
+
+    .tsw-transaction-main {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tsw-transaction-amount {
+      text-align: left;
+    }
+
+    .tsw-withdrawal-options {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .tsw-withdraw-option-btn {
+      padding: 16px;
+    }
+  }

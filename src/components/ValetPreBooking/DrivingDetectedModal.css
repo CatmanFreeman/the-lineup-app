@@ -1,0 +1,188 @@
+/* src/components/ValetPreBooking/DrivingDetectedModal.css */
+
+.driving-detected-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 20px;
+}
+
+.driving-detected-modal {
+  background: #1a1a1a;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.driving-detected-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.driving-detected-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.driving-detected-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.driving-detected-close:hover {
+  opacity: 1;
+}
+
+.driving-detected-body {
+  padding: 24px;
+}
+
+.driving-detected-question {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.driving-detected-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.driving-detected-restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.driving-detected-restaurant-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.driving-detected-restaurant-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.driving-detected-restaurant-info {
+  flex: 1;
+}
+
+.driving-detected-restaurant-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.driving-detected-restaurant-distance {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.driving-detected-restaurant-valet {
+  margin: 0;
+  font-size: 12px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.driving-detected-restaurant-arrow {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.driving-detected-btn {
+  background: #4a9eff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.driving-detected-btn:hover {
+  background: #6bb0ff;
+}
+
+.driving-detected-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.driving-detected-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.driving-detected-loading,
+.driving-detected-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.driving-detected-empty p {
+  margin: 0 0 20px 0;
+}
+
+
+
+
+
+
+
+

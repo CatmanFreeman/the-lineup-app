@@ -1,0 +1,197 @@
+/* src/pages/Dashboards/RestaurantDashboard/tabs/ValetAuthorizationsTab.css */
+
+.valet-auth-tab {
+  padding: 24px;
+  color: #fff;
+}
+
+.valet-auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.valet-auth-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.valet-auth-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin: 0;
+}
+
+.valet-auth-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.valet-auth-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.valet-auth-btn-primary {
+  background: #4a9eff;
+  border-color: #4a9eff;
+}
+
+.valet-auth-btn-primary:hover {
+  background: #6bb0ff;
+}
+
+.valet-auth-btn-success {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.valet-auth-btn-success:hover {
+  background: #12d48a;
+}
+
+.valet-auth-btn-danger {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.valet-auth-btn-danger:hover {
+  background: #f87171;
+}
+
+.valet-auth-request-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.valet-auth-request-form h3 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.valet-auth-form-note {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px 0;
+  font-size: 14px;
+}
+
+.valet-auth-form-group {
+  margin-bottom: 20px;
+}
+
+.valet-auth-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.valet-auth-form-group input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.valet-auth-form-group input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.valet-auth-section {
+  margin-bottom: 32px;
+}
+
+.valet-auth-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.valet-auth-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.valet-auth-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.valet-auth-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.valet-auth-card-header h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.valet-auth-meta {
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.valet-auth-status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.valet-auth-status-pending {
+  background: #ffa500;
+  color: #000;
+}
+
+.valet-auth-status-approved {
+  background: #10b981;
+  color: #fff;
+}
+
+.valet-auth-card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.valet-auth-card-actions .valet-auth-btn {
+  flex: 1;
+}
+
+.valet-auth-empty {
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.valet-auth-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+}
+

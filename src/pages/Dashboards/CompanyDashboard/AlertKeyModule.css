@@ -1,0 +1,100 @@
+/* Alert Key Module Styles */
+
+.alert-key-module {
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.alert-key-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.alert-key-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.alert-key-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.alert-key-toggle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4da3ff;
+  width: 24px;
+  text-align: center;
+}
+
+.alert-key-body {
+  padding: 12px 16px;
+  border-top: 1px solid #333;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.alert-key-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.alert-key-item:last-child {
+  margin-bottom: 0;
+}
+
+.alert-key-item .status-badge {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.alert-key-item .status-badge.operational {
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.5);
+}
+
+.alert-key-item .status-badge.warning {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+.alert-key-item .status-badge.error {
+  background: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+.alert-key-info {
+  flex: 1;
+}
+
+.alert-key-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.alert-key-desc {
+  font-size: 11px;
+  color: #888;
+}
+
+
+
+
+
+
+
+

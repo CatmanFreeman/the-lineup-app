@@ -1,0 +1,246 @@
+.bowling-reservation-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  padding: 24px 12px;
+  color: #fff;
+}
+
+.bowling-reservation-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.bowling-reservation-header {
+  margin-bottom: 32px;
+}
+
+.bowling-reservation-header h1 {
+  font-size: 32px;
+  margin: 0 0 8px 0;
+}
+
+.bowling-reservation-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 16px 0;
+}
+
+.bowling-reservation-back {
+  background: transparent;
+  border: none;
+  color: #4da3ff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.bowling-reservation-back:hover {
+  text-decoration: underline;
+}
+
+.bowling-reservation-error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.bowling-reservation-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bowling-reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.bowling-time-picker-trigger {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bowling-time-picker-trigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #4da3ff;
+}
+
+.bowling-time-picker {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.bowling-time-picker-hours,
+.bowling-time-picker-minutes {
+  flex: 1;
+}
+
+.bowling-time-picker-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.bowling-time-picker-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+.bowling-time-picker-item {
+  padding: 8px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bowling-time-picker-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bowling-time-picker-item.selected {
+  background: rgba(77, 163, 255, 0.3);
+  color: #4da3ff;
+  font-weight: 600;
+}
+
+.bowling-shoe-rental-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.bowling-shoe-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.bowling-shoe-rental-item input[type="text"],
+.bowling-shoe-rental-item select {
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.bowling-reservation-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bowling-reservation-btn-secondary,
+.bowling-reservation-btn-primary {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bowling-reservation-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.bowling-reservation-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bowling-reservation-btn-primary {
+  background: #4da3ff;
+  border: none;
+  color: #fff;
+}
+
+.bowling-reservation-btn-primary:hover:not(:disabled) {
+  background: #3a8df0;
+}
+
+.bowling-reservation-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .bowling-reservation-container {
+    padding: 0;
+  }
+
+  .bowling-reservation-header h1 {
+    font-size: 24px;
+  }
+
+  .bowling-reservation-actions {
+    flex-direction: column;
+  }
+}
+

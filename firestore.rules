@@ -1,0 +1,311 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getUserId() {
+      return request.auth.uid;
+    }
+    
+    // Check if user is staff at a restaurant
+    function isRestaurantStaff(restaurantId) {
+      return isAuthenticated() && 
+             exists(/databases/$(database)/documents/restaurants/$(restaurantId)/staff/$(getUserId()));
+    }
+    
+    // Check if user is the diner (owner) of a reservation
+    function isReservationOwner(reservationData) {
+      return isAuthenticated() && 
+             reservationData.dinerId == getUserId();
+    }
+    
+    // Check if user is company admin
+    function isCompanyAdmin(companyId) {
+      return isAuthenticated() && 
+             exists(/databases/$(database)/documents/companies/$(companyId)/users/$(getUserId()));
+    }
+    
+    // Check if schedule is published (handles case where schedule doesn't exist)
+    function isSchedulePublished(scheduleData) {
+      return scheduleData != null && scheduleData.status == "published";
+    }
+    
+    // ============================================
+    // RESERVATIONS LEDGER
+    // Path: restaurants/{restaurantId}/reservations/{reservationId}
+    // ============================================
+    match /restaurants/{restaurantId}/reservations/{reservationId} {
+      
+      // Diners can read their own reservations
+      allow read: if isAuthenticated() && 
+                     (resource != null && resource.data.dinerId == getUserId() || 
+                      isRestaurantStaff(restaurantId));
+      
+      // Diners can create reservations (must be the diner)
+      allow create: if isAuthenticated() && 
+                       request.resource.data.dinerId == getUserId() &&
+                       request.resource.data.sourceSystem in ["LINEUP", "OPENTABLE"] &&
+                       request.resource.data.partySize > 0 &&
+                       request.resource.data.partySize <= 50;
+      
+      // Diners can update metadata (server selection) on their own reservations
+      // But cannot change core fields (startAt, partySize, status, etc.)
+      allow update: if isAuthenticated() && 
+                       resource != null &&
+                       isReservationOwner(resource.data) &&
+                       // Only allow metadata updates
+                       request.resource.data.startAt == resource.data.startAt &&
+                       request.resource.data.partySize == resource.data.partySize &&
+                       request.resource.data.status == resource.data.status &&
+                       request.resource.data.dinerId == resource.data.dinerId &&
+                       request.resource.data.sourceSystem == resource.data.sourceSystem;
+      
+      // Restaurant staff can update status and add notes
+      allow update: if isRestaurantStaff(restaurantId) &&
+                       resource != null &&
+                       // Can update status, metadata, but not core reservation data
+                       request.resource.data.startAt == resource.data.startAt &&
+                       request.resource.data.partySize == resource.data.partySize &&
+                       request.resource.data.dinerId == resource.data.dinerId &&
+                       request.resource.data.sourceSystem == resource.data.sourceSystem;
+      
+      // Backend services (via service account) can do full updates
+      // Note: Service accounts bypass security rules, so this is for documentation
+      // In production, use Firebase Admin SDK with service account
+    }
+    
+    // ============================================
+    // WAITING LIST
+    // Path: restaurants/{restaurantId}/waitingList/{entryId}
+    // ============================================
+    match /restaurants/{restaurantId}/waitingList/{entryId} {
+      
+      // Restaurant staff can read/write waiting list
+      allow read, write: if isRestaurantStaff(restaurantId);
+      
+      // Backend services can write (materialization)
+      // Note: Service accounts bypass security rules
+    }
+    
+    // ============================================
+    // SCHEDULES
+    // Path: restaurants/{restaurantId}/schedules/{weekEndingISO}
+    // ============================================
+    match /restaurants/{restaurantId}/schedules/{weekEndingISO} {
+      
+      // Restaurant staff can read/write schedules
+      allow read, write: if isRestaurantStaff(restaurantId);
+      
+      // Employees can read published schedules
+      allow read: if isAuthenticated() && 
+                     (isRestaurantStaff(restaurantId) || 
+                      (resource != null && isSchedulePublished(resource.data)));
+      
+      // Employees cannot write schedules
+      allow write: if isRestaurantStaff(restaurantId);
+    }
+    
+    // ============================================
+    // STAFF COLLECTION
+    // Path: restaurants/{restaurantId}/staff/{staffId}
+    // ============================================
+    match /restaurants/{restaurantId}/staff/{staffId} {
+      
+      // Staff can read their own data
+      allow read: if isAuthenticated() && 
+                     (staffId == getUserId() || 
+                      isRestaurantStaff(restaurantId));
+      
+      // Only restaurant managers/admins can write staff data
+      // Note: This is a simplified check - you may want to add role-based checks
+      allow write: if isRestaurantStaff(restaurantId);
+    }
+    
+    // ============================================
+    // POS EVENTS
+    // Path: restaurants/{restaurantId}/posEvents/{eventId}
+    // ============================================
+    match /restaurants/{restaurantId}/posEvents/{eventId} {
+      
+      // Restaurant staff can read POS events
+      allow read: if isRestaurantStaff(restaurantId);
+      
+      // Only backend services can write POS events
+      // Note: Service accounts bypass security rules
+      // In production, use Firebase Admin SDK
+      allow write: if false; // Disable client writes - only backend can write
+    }
+    
+    // ============================================
+    // NOTIFICATIONS
+    // Path: notifications/{notificationId}
+    // ============================================
+    match /notifications/{notificationId} {
+      
+      // Users can read their own notifications
+      allow read: if isAuthenticated() && 
+                     resource != null &&
+                     resource.data.userId == getUserId();
+      
+      // Users can update read status
+      allow update: if isAuthenticated() && 
+                       resource != null &&
+                       resource.data.userId == getUserId() &&
+                       // Only allow updating read status
+                       request.resource.data.read == true &&
+                       request.resource.data.userId == resource.data.userId;
+      
+      // Backend services can create notifications
+      // Note: Service accounts bypass security rules
+    }
+    
+    // ============================================
+    // TIPSHARE TRANSACTIONS
+    // Path: users/{userId}/tipshare/transactions/{transactionId}
+    // ============================================
+    match /users/{userId}/tipshare/transactions/{transactionId} {
+      
+      // Users can read their own transactions
+      allow read: if isAuthenticated() && 
+                     userId == getUserId() &&
+                     resource != null;
+      
+      // Only backend services can create transactions
+      allow create: if false; // Disable client writes - only backend can write
+    }
+    
+    // ============================================
+    // TIPSHARE BALANCE
+    // Path: users/{userId}/tipshare/balance
+    // ============================================
+    match /users/{userId}/tipshare/balance {
+      
+      // Users can read their own balance
+      allow read: if isAuthenticated() && 
+                     userId == getUserId() &&
+                     resource != null;
+      
+      // Only backend services can update balance
+      allow write: if false; // Disable client writes - only backend can write
+    }
+    
+    // ============================================
+    // MESSAGING
+    // Path: conversations/{conversationId}
+    // ============================================
+    match /conversations/{conversationId} {
+      
+      // Users can read conversations they're part of
+      allow read: if isAuthenticated() && 
+                     resource != null &&
+                     (resource.data.participants != null && resource.data.participants[getUserId()] != null ||
+                      resource.data.senderId == getUserId() ||
+                      resource.data.recipientId == getUserId());
+      
+      // Users can create conversations
+      allow create: if isAuthenticated() && 
+                       request.resource.data.senderId == getUserId();
+      
+      // Users can update their own conversations (mark as read, etc.)
+      allow update: if isAuthenticated() && 
+                       resource != null &&
+                       (resource.data.senderId == getUserId() ||
+                        resource.data.recipientId == getUserId());
+    }
+    
+    match /conversations/{conversationId}/messages/{messageId} {
+      
+      // Users can read messages in conversations they're part of
+      allow read: if isAuthenticated() && 
+                     exists(/databases/$(database)/documents/conversations/$(conversationId)) &&
+                     resource != null &&
+                     (get(/databases/$(database)/documents/conversations/$(conversationId)).data.senderId == getUserId() ||
+                      get(/databases/$(database)/documents/conversations/$(conversationId)).data.recipientId == getUserId());
+      
+      // Users can create messages in conversations they're part of
+      allow create: if isAuthenticated() && 
+                       request.resource.data.senderId == getUserId() &&
+                       exists(/databases/$(database)/documents/conversations/$(conversationId)) &&
+                       (get(/databases/$(database)/documents/conversations/$(conversationId)).data.senderId == getUserId() ||
+                        get(/databases/$(database)/documents/conversations/$(conversationId)).data.recipientId == getUserId());
+    }
+    
+    // ============================================
+    // COMPANIES
+    // Path: companies/{companyId}/...
+    // ============================================
+    match /companies/{companyId}/restaurants/{restaurantId} {
+      
+      // Company admins can read/write
+      allow read, write: if isCompanyAdmin(companyId);
+      
+      // Restaurant staff can read their restaurant
+      allow read: if isRestaurantStaff(restaurantId);
+    }
+    
+    // ============================================
+    // USERS COLLECTION
+    // Path: users/{userId}
+    // ============================================
+    match /users/{userId} {
+      
+      // Users can read their own data
+      allow read: if isAuthenticated() && 
+                     userId == getUserId() &&
+                     resource != null;
+      
+      // Users can update their own data
+      allow update: if isAuthenticated() && 
+                       userId == getUserId() &&
+                       resource != null;
+      
+      // Users can create their own profile
+      allow create: if isAuthenticated() && userId == getUserId();
+    }
+    
+    // ============================================
+    // USER REMINDERS
+    // Path: users/{userId}/reminders/{reminderId}
+    // ============================================
+    match /users/{userId}/reminders/{reminderId} {
+      
+      // Users can read/write their own reminders
+      allow read, write: if isAuthenticated() && userId == getUserId();
+    }
+    
+    // ============================================
+    // REMINDERS
+    // Path: restaurants/{restaurantId}/reminders/{reminderId}
+    // ============================================
+    match /restaurants/{restaurantId}/reminders/{reminderId} {
+      
+      // Restaurant staff can read/write reminders
+      allow read, write: if isRestaurantStaff(restaurantId);
+    }
+    
+    // ============================================
+    // RESTAURANTS (PUBLIC DATA)
+    // Path: restaurants/{restaurantId}
+    // ============================================
+    match /restaurants/{restaurantId} {
+      
+      // Anyone can read restaurant public data
+      allow read: if true;
+      
+      // Only restaurant staff can write
+      allow write: if isRestaurantStaff(restaurantId);
+    }
+    
+    // ============================================
+    // DEFAULT: DENY ALL OTHER ACCESS
+    // ============================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

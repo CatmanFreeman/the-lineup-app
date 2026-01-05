@@ -1,0 +1,201 @@
+/* src/pages/Dashboards/ValetDriverDashboard/DriverClaimsTab.css */
+
+.driver-claims-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.driver-claims-tab-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+}
+
+.driver-claims-tab-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.driver-claims-filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.driver-claims-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.driver-claims-filter-btn.active {
+  background: #4a9eff;
+  border-color: #4a9eff;
+  color: #fff;
+}
+
+.driver-claims-tab-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.driver-claims-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.driver-claim-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.driver-claim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.driver-claim-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.driver-claim-meta {
+  margin: 4px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.driver-claim-status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.driver-claim-status-badge[data-status="PENDING"] {
+  background: rgba(255, 165, 0, 0.2);
+  border: 1px solid #ffa500;
+  color: #ffa500;
+}
+
+.driver-claim-status-badge[data-status="REVIEWING"] {
+  background: rgba(74, 158, 255, 0.2);
+  border: 1px solid #4a9eff;
+  color: #4a9eff;
+}
+
+.driver-claim-status-badge[data-status="RESOLVED"] {
+  background: rgba(74, 222, 128, 0.2);
+  border: 1px solid #4ade80;
+  color: #4ade80;
+}
+
+.driver-claim-status-badge[data-status="REJECTED"] {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.driver-claim-ratings {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.driver-claim-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.driver-claim-rating-stars {
+  font-size: 18px;
+}
+
+.driver-claim-description {
+  margin-bottom: 20px;
+}
+
+.driver-claim-description h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.driver-claim-description p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.driver-claim-photos {
+  margin-bottom: 20px;
+}
+
+.driver-claim-photos h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.driver-claim-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.driver-claim-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.driver-claim-photo:hover {
+  transform: scale(1.05);
+}
+
+.driver-claim-video {
+  margin-bottom: 20px;
+}
+
+.driver-claim-video h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.driver-claim-video-player {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+

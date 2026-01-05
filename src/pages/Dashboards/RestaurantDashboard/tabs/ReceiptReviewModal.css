@@ -1,0 +1,80 @@
+/* FULL SCREEN LOCK */
+.rrm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  pointer-events: all;
+  cursor: default;
+}
+
+/* MODAL */
+.rrm-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 420px;
+  max-width: 92vw;
+
+  background: #0b1220;
+  border-radius: 16px;
+  padding: 24px;
+
+  color: #ffffff;
+  opacity: 1;
+
+  z-index: 10001;
+  pointer-events: all;
+  cursor: default;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8);
+}
+
+/* CONTENT */
+.rrm-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rrm-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.rrm-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* ACTIONS */
+.rrm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.rrm-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.rrm-btn.ghost {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.rrm-btn.primary {
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+}

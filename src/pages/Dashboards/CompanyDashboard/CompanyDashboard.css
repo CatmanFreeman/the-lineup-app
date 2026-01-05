@@ -1,0 +1,1212 @@
+/* src/pages/Dashboards/CompanyDashboard/CompanyDashboard.css */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+   .companyDash {
+    min-height: 100vh;
+    color: #ffffff;
+    background: radial-gradient(circle at 50% 20%, #1f2937 0%, #020617 70%);
+    padding: 16px 12px 32px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .companyDash-back-link-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    color: #4da3ff;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .companyDash-back-link-top:hover {
+    color: #60a5fa;
+  }
+  
+  .companyDash__header {
+    max-width: 100%;
+    margin: 0 auto 14px;
+    padding: 8px 4px 0;
+  }
+  
+  .companyDash__titleRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .companyDash__headerLogo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px;
+    flex-shrink: 0;
+  }
+  
+  .companyDash__titleGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+  
+  .companyDash__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  
+  .companyDash__subtitle {
+    font-size: 12px;
+    opacity: 0.78;
+    line-height: 1.4;
+  }
+  
+  .companyDash__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .companyDash__tab {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(0, 0, 0, 0.28);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    min-height: 44px; /* Touch-friendly */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .companyDash__tab:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.26);
+    background: rgba(0, 0, 0, 0.40);
+  }
+  
+  .companyDash__tab.is-active {
+    background: rgba(37, 99, 235, 0.85);
+    border-color: rgba(37, 99, 235, 0.95);
+  }
+  
+  .companyDash__main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 8px 4px 0;
+  }
+  
+  .companyDash__panel {
+    width: 100%;
+  }
+  
+  .companyDash__sectionHeader {
+    margin: 8px 0 14px;
+  }
+  
+  .companyDash__sectionTitle {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .companyDash__sectionHint {
+    font-size: 12px;
+    opacity: 0.78;
+  }
+  
+  /* KPI Strip - Mobile: Single column */
+  .kpiStrip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 10px 0 14px;
+  }
+  
+  .kpiCard {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.40);
+    min-height: 92px;
+  }
+  
+  .kpiCard__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .kpiCard__label {
+    font-size: 12px;
+    opacity: 0.82;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+  
+  .kpiCard__valueRow {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  
+  .kpiCard__value {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+  }
+  
+  .kpiCard__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .kpiCard__sub {
+    font-size: 12px;
+    opacity: 0.72;
+  }
+  
+  .kpiCard__delta {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.86;
+    white-space: nowrap;
+  }
+  
+  .kpiCard__delta.is-good {
+    color: rgba(34, 197, 94, 0.95);
+  }
+  
+  .kpiCard__delta.is-warn {
+    color: rgba(245, 158, 11, 0.95);
+  }
+  
+  .kpiCard__delta.is-bad {
+    color: rgba(239, 68, 68, 0.95);
+  }
+  
+  .kpiCard__delta.is-neutral {
+    color: rgba(255, 255, 255, 0.72);
+  }
+  
+  .kpiBadge {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+  }
+  
+  .kpiBadge--green {
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(34, 197, 94, 0.14);
+  }
+  
+  .kpiBadge--yellow {
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(245, 158, 11, 0.14);
+  }
+  
+  .kpiBadge--red {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.14);
+  }
+  
+  /* Overview Grid - Mobile: Single column */
+  .overviewGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  
+  .panelCard {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+  }
+  
+  .panelCard--tight {
+    margin-top: 12px;
+  }
+  
+  .panelCard__header {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+  }
+
+  .panelCard__headerContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .panelCard__restaurantLogo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    flex-shrink: 0;
+  }
+  
+  .panelCard__title {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+  }
+  
+  .panelCard__sub {
+    font-size: 12px;
+    opacity: 0.72;
+  }
+  
+  .panelCard__divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.10);
+    margin: 12px 0;
+  }
+  
+  /* Restaurant Cards */
+  .restaurantList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .restCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 12px;
+  }
+  
+  .restCard__left {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .restCard__nameRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .restCard__logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+  }
+  
+  .restCard__name {
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+  }
+  
+  .restCard__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .restChip {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 0, 0, 0.20);
+    opacity: 0.92;
+  }
+  
+  .restChip--danger {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.10);
+  }
+  
+  .restCard__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .restCard__right .healthBadge {
+    flex-shrink: 0;
+  }
+  
+  .restCard__right .dashBtn {
+    flex-shrink: 0;
+  }
+  
+  .restCard__right .linkBtn {
+    flex-shrink: 0;
+  }
+  
+  .restCard__bottomRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .linkBtn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.90);
+    font-weight: 800;
+    cursor: pointer;
+    padding: 10px 8px;
+    white-space: nowrap;
+    opacity: 0.85;
+    min-height: 44px; /* Touch-friendly */
+    display: inline-flex;
+    align-items: center;
+    text-decoration: underline;
+  }
+  
+  .linkBtn:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  .healthBadge {
+    font-size: 11px;
+    font-weight: 900;
+    padding: 5px 9px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    white-space: nowrap;
+  }
+  
+  .health--green {
+    border-color: rgba(34, 197, 94, 0.35);
+    background: rgba(34, 197, 94, 0.14);
+  }
+  
+  .health--yellow {
+    border-color: rgba(245, 158, 11, 0.35);
+    background: rgba(245, 158, 11, 0.14);
+  }
+  
+  .health--red {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.14);
+  }
+  
+  /* Alerts */
+  .alertsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .alertItem {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  
+  .alertItem__icon {
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 2px;
+    opacity: 0.95;
+    flex-shrink: 0;
+  }
+  
+  .alertItem__title {
+    font-weight: 900;
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+  
+  .alertItem__meta {
+    font-size: 12px;
+    opacity: 0.74;
+  }
+  
+  .alertItem--red {
+    border-color: rgba(239, 68, 68, 0.30);
+  }
+  
+  .alertItem--red .alertItem__icon {
+    color: rgba(239, 68, 68, 0.95);
+  }
+  
+  .alertItem--yellow {
+    border-color: rgba(245, 158, 11, 0.30);
+  }
+  
+  .alertItem--yellow .alertItem__icon {
+    color: rgba(245, 158, 11, 0.95);
+  }
+  
+  .alertItem--green {
+    border-color: rgba(34, 197, 94, 0.25);
+  }
+  
+  .alertItem--green .alertItem__icon {
+    color: rgba(34, 197, 94, 0.95);
+  }
+  
+  /* Trends */
+  .trendStack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .trendCard {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 14px;
+    padding: 12px;
+  }
+  
+  .trendCard__title {
+    font-size: 12px;
+    font-weight: 900;
+    opacity: 0.92;
+    margin-bottom: 8px;
+  }
+  
+  .trendCard__bar {
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+  
+  .trendCard__fill {
+    width: 62%;
+    height: 100%;
+    background: rgba(37, 99, 235, 0.72);
+  }
+  
+  .trendCard__hint {
+    font-size: 11px;
+    opacity: 0.68;
+    margin-top: 8px;
+  }
+  
+  /* Quick Actions */
+  .quickActions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .dashBtn {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(0, 0, 0, 0.20);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    text-align: left;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .dashBtn:hover {
+    transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.32);
+    border-color: rgba(255, 255, 255, 0.26);
+  }
+  
+  .dashBtn--primary {
+    background: rgba(37, 99, 235, 0.82);
+    border-color: rgba(37, 99, 235, 0.95);
+  }
+  
+  .dashBtn--small {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  
+  /* Restaurant Rows - Mobile: Stacked */
+  .restRow {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  /* Restaurant Card Tab - New Layout */
+  .restCardTab {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 12px;
+  }
+
+  /* Row 1: Logo + Name (underlined) + Location below */
+  .restCardTab__row1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .restCardTab__logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    flex-shrink: 0;
+  }
+
+  .restCardTab__nameGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .restCardTab__name {
+    font-weight: 900;
+    font-size: 16px;
+    text-decoration: underline;
+    line-height: 1.3;
+  }
+
+  .restCardTab__location {
+    font-size: 12px;
+    opacity: 0.75;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+  }
+
+  /* Row 2: Sales and Alcohol (split) */
+  /* Row 2: Sales, Alcohol, Labor (3 columns) */
+  .restCardTab__row2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  /* Row 3: Waste, Staff, (empty) (3 columns) */
+  .restCardTab__row3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  /* Row 5: Watch + Award Badge + Open */
+  .restCardTab__row5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 4px;
+  }
+
+  .restCardTab__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+
+  .restCardTab__metricLabel {
+    font-size: 11px;
+    opacity: 0.75;
+    font-weight: 600;
+  }
+
+  .restCardTab__metricValue {
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .restRow__logo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    margin-right: 12px;
+  }
+
+  .restRow__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+
+  .restRow__logo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .restRow__info {
+    flex: 1;
+    min-width: 0;
+    margin-right: 16px;
+  }
+  
+  .restRow__name {
+    font-weight: 900;
+    font-size: 15px;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* Only truncate if absolutely necessary on very small screens */
+    white-space: normal;
+  }
+
+  .restRow__location {
+    font-size: 12px;
+    opacity: 0.7;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .restRow__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-left: auto;
+    padding-right: 5px;
+  }
+
+  .restRow__metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+
+  .restRow__metric {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16.8px; /* 40% increase from 12px */
+    white-space: nowrap;
+  }
+
+  .restRow__metric-label {
+    opacity: 0.82;
+    font-weight: 500;
+  }
+
+  .restRow__metric-value {
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .restRow__trend {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .restRow__trend--up {
+    color: #4ade80; /* Green */
+  }
+
+  .restRow__trend--down {
+    color: #ef4444; /* Red */
+  }
+  
+  .restRow__badge {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .restRow__restaurant-badges {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 200px;
+  }
+  
+  .restRow__action {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  /* Empty / Settings */
+  .emptyState {
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 14px;
+    padding: 14px;
+  }
+  
+  .emptyState__title {
+    font-weight: 900;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+  
+  .emptyState__sub {
+    opacity: 0.74;
+    font-size: 12px;
+  }
+  
+  .settingsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .settingsItem {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .settingsItem__title {
+    font-weight: 900;
+    font-size: 15px;
+  }
+  
+  .settingsItem__sub {
+    font-size: 12px;
+    opacity: 0.72;
+  }
+  
+  /* ===============================
+     TABLET (560px+)
+     =============================== */
+  
+  @media (min-width: 560px) {
+    .kpiStrip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .restCard {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .restCard__nameRow {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .restCard__right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+  
+  /* Mobile-only and Desktop-only visibility classes */
+  .mobile-only {
+    display: block;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+
+  /* ===============================
+     TABLET LARGE (768px+)
+     =============================== */
+  
+  @media (min-width: 768px) {
+    .mobile-only {
+      display: none;
+    }
+    
+    .desktop-only {
+      display: block;
+    }
+    .companyDash {
+      padding: 20px 16px 40px;
+    }
+  
+    .companyDash__header {
+      padding: 10px 6px 0;
+    }
+  
+    .companyDash__title {
+      font-size: 32px;
+    }
+  
+    .companyDash__tabs {
+      gap: 10px;
+    }
+  
+    .companyDash__tab {
+      padding: 7px 12px;
+    }
+  
+    .overviewGrid {
+      grid-template-columns: 1.55fr 0.95fr;
+    }
+  
+    .settingsGrid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  /* ===============================
+     DESKTOP (980px+)
+     =============================== */
+  
+  @media (min-width: 980px) {
+    .companyDash {
+      padding: 22px 18px 46px;
+    }
+  
+    .companyDash__header {
+      max-width: 1200px;
+    }
+  
+    .companyDash__main {
+      max-width: 1200px;
+      padding: 8px 6px 0;
+    }
+  
+    .companyDash__title {
+      font-size: 40px;
+    }
+  
+    .kpiStrip {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  
+    .restRow {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      padding: 14px;
+    }
+
+    .restRow__info {
+      flex: 1;
+      min-width: 200px;
+      max-width: none;
+    }
+
+    .restRow__name {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+
+    .restRow__name {
+      font-size: 16px;
+    }
+
+    .restRow__location {
+      font-size: 13px;
+    }
+
+    .restRow__right {
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .restRow__metrics {
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .restRow__metric {
+      font-size: 16.8px;
+    }
+  }
+  /* Add to src/pages/Dashboards/CompanyDashboard/CompanyDashboard.css */
+
+/* Staff Tab Styles */
+/* Staff Department Sections */
+.staffDepartmentSection {
+  margin-bottom: 24px;
+}
+
+.staffDepartmentSection:last-child {
+  margin-bottom: 0;
+}
+
+.staffDepartmentHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.staffDepartmentTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.staffDepartmentCount {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.staffGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.staffCard {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.staffCard:hover {
+  border-color: #4b5563;
+  background: #374151;
+}
+
+.staffCard__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.staffCard__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.staffCard__avatar--placeholder {
+  background: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.staffCard__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.staffCard__name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.staffCard__role {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.staffCard__badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.staffCard__badge--inactive {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.staffCard__badge--corporate {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+.staffCard__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #374151;
+}
+
+.staffCard__detail {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.staffCard__detailLabel {
+  color: #6b7280;
+  min-width: 80px;
+}
+
+.staffCard__detailValue {
+  color: #ffffff;
+  flex: 1;
+}
+
+.staffCard__actions {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #374151;
+}
+
+/* Input and Select Styles */
+.dashLabel {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dashInput,
+.dashSelect {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashInput:focus,
+.dashSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dashInput::placeholder {
+  color: #6b7280;
+}
+
+.dashSelect {
+  cursor: pointer;
+}
+
+/* Mobile-first responsive */
+@media (min-width: 640px) {
+  .staffGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .staffGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

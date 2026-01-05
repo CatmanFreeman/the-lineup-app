@@ -1,0 +1,90 @@
+[
+  {
+    "name": "The Lineup Bistro",
+    "phone": "(555) 123-4567",
+    "website": "https://thelineupbistro.com",
+    "address": {
+      "line1": "123 Main Street",
+      "line2": "",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "lat": 40.7128,
+    "lng": -74.0060,
+    "cuisines": ["American", "Bistro"],
+    "liveRating": 4.5,
+    "companyId": null,
+    "imageURL": null,
+    "hoursOfOperation": {
+      "Monday": { "openTime": "11:00", "openMeridiem": "AM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Tuesday": { "openTime": "11:00", "openMeridiem": "AM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Wednesday": { "openTime": "11:00", "openMeridiem": "AM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Thursday": { "openTime": "11:00", "openMeridiem": "AM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Friday": { "openTime": "11:00", "openMeridiem": "AM", "closeTime": "11:00", "closeMeridiem": "PM" },
+      "Saturday": { "openTime": "10:00", "openMeridiem": "AM", "closeTime": "11:00", "closeMeridiem": "PM" },
+      "Sunday": { "openTime": "10:00", "openMeridiem": "AM", "closeTime": "9:00", "closeMeridiem": "PM" }
+    },
+    "preferences": {
+      "patioSeating": true,
+      "outdoorSeating": true
+    }
+  },
+  {
+    "name": "Coastal Seafood House",
+    "phone": "(555) 234-5678",
+    "website": "https://coastalseafood.com",
+    "address": {
+      "line1": "456 Ocean Drive",
+      "line2": "Suite 200",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33139"
+    },
+    "lat": 25.7617,
+    "lng": -80.1918,
+    "cuisines": ["Seafood"],
+    "liveRating": 4.8,
+    "companyId": null,
+    "imageURL": null,
+    "hoursOfOperation": {
+      "Monday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Tuesday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Wednesday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Thursday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "10:00", "closeMeridiem": "PM" },
+      "Friday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "11:00", "closeMeridiem": "PM" },
+      "Saturday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "11:00", "closeMeridiem": "PM" },
+      "Sunday": { "openTime": "5:00", "openMeridiem": "PM", "closeTime": "9:00", "closeMeridiem": "PM" }
+    },
+    "preferences": {
+      "oceanView": true,
+      "waterView": true,
+      "patioSeating": true
+    }
+  },
+  {
+    "name": "Mama's Italian Kitchen",
+    "phone": "(555) 345-6789",
+    "website": "https://mamasitalian.com",
+    "address": {
+      "line1": "789 Little Italy Way",
+      "line2": "",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02113"
+    },
+    "lat": 42.3601,
+    "lng": -71.0589,
+    "cuisines": ["Italian"],
+    "liveRating": 4.6,
+    "companyId": null,
+    "imageURL": null
+  }
+]
+
+
+
+
+
+
+

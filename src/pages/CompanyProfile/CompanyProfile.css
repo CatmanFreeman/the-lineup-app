@@ -1,0 +1,440 @@
+/* =========================================================
+   COMPANY PROFILE — BASE
+   ========================================================= */
+
+.company-profile {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 16px 48px;
+}
+
+.company-profile.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+/* =========================================================
+   HERO CARD
+   ========================================================= */
+
+.company-hero {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.company-logo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 14px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-fallback {
+  font-size: 64px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.company-hero h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 6px 0 6px;
+}
+
+.company-cuisine {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.company-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   ACTION BUTTON ROW
+   ========================================================= */
+
+.company-actions {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.company-actions button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.company-actions button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.company-actions button:active {
+  transform: scale(0.98);
+}
+
+.company-actions .primary {
+  background: #2f80ed;
+}
+
+.company-actions .primary:hover {
+  background: #3b8cff;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.company-section {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.company-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.company-section p {
+  font-size: 15px;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+/* Inline link buttons inside sections */
+.company-section .link {
+  background: none;
+  border: none;
+  color: #4eaaff;
+  padding: 0;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.company-section .link:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FOOTER NAV
+   ========================================================= */
+
+.company-footer {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.company-footer .link {
+  background: none;
+  border: none;
+  color: #4eaaff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.company-footer .link:hover {
+  text-decoration: underline;
+}
+.company-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 18px 0 26px;
+}
+
+/* icon-only buttons */
+.company-actions button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* icon sizing */
+.company-actions img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+.company-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.company-footer .link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.company-footer .link:hover {
+  text-decoration: underline;
+}
+/* FORCE icon buttons to be transparent */
+.company-actions button,
+.company-actions button:active,
+.company-actions button:focus,
+.company-actions button:hover {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Force icon size */
+.company-actions img {
+  width: 38px !important;
+  height: 38px !important;
+  background: transparent !important;
+}
+/* Back to Map — force text-only */
+.company-footer button,
+.company-footer .link {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  padding: 0 !important;
+}
+
+.company-footer .link:hover {
+  text-decoration: underline;
+}
+/* Back to Map — force text-only */
+.company-footer button,
+.company-footer .link {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  padding: 0 !important;
+}
+
+.company-footer .link:hover {
+  text-decoration: underline;
+}
+/* FORCE icon buttons to be transparent */
+.company-actions button,
+.company-actions button:active,
+.company-actions button:focus,
+.company-actions button:hover {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Force icon size */
+.company-actions img {
+  width: 38px !important;
+  height: 38px !important;
+  background: transparent !important;
+}
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.profile-icon.large {
+  width: 38px;
+  height: 38px;
+}
+/* Remove default button styling (kills the white boxes) */
+.icon-button {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  line-height: 0 !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+/* Make the emoji icons larger to match reserve/togo sizing */
+.icon-button {
+  font-size: 34px;
+}
+
+/* Optional: tighten spacing so row matches your list view */
+.profile-icons {
+  gap: 14px; /* adjust if needed */
+}
+.company-footer .link,
+.company-footer a {
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.company-footer .link:hover,
+.company-footer a:hover {
+  text-decoration: underline;
+}
+/* =========================================================
+   COMPANY PROFILE — FIXES (targets your actual JSX classes)
+   Keep existing CSS above; this block overrides safely.
+   ========================================================= */
+
+/* Ensure wrapper/inner match site look even if older CSS exists */
+.profile-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.profile-inner {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 20px 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* RATINGS ROW — add space under it */
+.profile-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 5px; /* requested spacing */
+  color: gold;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ICON ROW — add space above it */
+.profile-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 5px; /* requested spacing */
+  margin-bottom: 22px;
+}
+
+/* Emoji icon buttons — kill any box / background everywhere */
+.icon-button,
+.icon-button:active,
+.icon-button:focus,
+.icon-button:hover {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  line-height: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Increase emoji size to match the Reserve / To-Go icon size */
+.icon-button {
+  font-size: 34px;
+}
+
+/* If any emoji still appears inside a box due to inherited styles, force it */
+.icon-button * {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Back to Map should be white */
+.profile-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent !important;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+.company-ratings {
+  margin-bottom: 18px; /* MUST MATCH company-cuisine */
+}
+.company-icons {
+  margin-top: 5;
+}
+/* === FINAL SPACING FIX — DO NOT DUPLICATE === */
+
+/* Cuisine → Ratings spacing */
+.profile-role {
+  margin-bottom: 12px;
+}
+
+/* Ratings → Icons spacing (MATCHES ABOVE) */
+.profile-rating {
+  margin-bottom: 12px;
+}
+
+/* Icons should not add extra top spacing */
+.profile-icons {
+  margin-top: 0;
+}

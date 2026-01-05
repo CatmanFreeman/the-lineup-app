@@ -1,0 +1,165 @@
+/* Outer background: same navy gradient as homepage */
+.live-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* Mobile-first inner column */
+.live-inner {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 16px 20px 16px;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.live-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.live-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.live-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.live-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: underline;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* Rating + shift all on one line */
+.live-rating-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.star-gold {
+  color: gold;
+  font-size: 18px;
+}
+
+.live-rating-value {
+  font-size: 16px;
+}
+
+.live-subtitle {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+.staff-section {
+  margin-top: 18px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* STAFF ROW – mobile-tight grid: [Position] [Icons] [Name] [Rating] [Reviews] */
+.staff-row {
+  display: grid;
+  grid-template-columns: 120px 70px 1fr 60px 70px;
+  align-items: center;
+  column-gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Position */
+.staff-position {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Icons: Tip$ + Reserve slot */
+.staff-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.staff-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Reserve slot keeps uniform spacing even when empty */
+.reserve-slot {
+  width: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Name link – white, underlined */
+.staff-name a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+/* Rating – align right in its grid cell */
+.staff-rating {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: gold;
+  justify-self: end;
+}
+
+/* Reviews link – align right, underlined */
+.reviews-link {
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 14px;
+  justify-self: end;
+  text-align: right;
+}
+
+/* BACK LINKS */
+.back-links {
+  margin-top: 24px;
+}
+
+.back-links a {
+  color: #4eaaff;
+  margin-right: 16px;
+  text-decoration: none;
+}
+.staff-icon-clickable {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.staff-icon-clickable:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}

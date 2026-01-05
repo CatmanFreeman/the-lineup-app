@@ -1,0 +1,277 @@
+/* src/pages/Dashboards/RestaurantDashboard/tabs/ReservationsTab.css */
+
+.reservations-tab {
+  padding: 20px;
+  color: #fff;
+}
+
+.reservations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.reservations-header h2 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.reservations-subtitle {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  background: #4da3ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: #6bb3ff;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reservations-error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.reservations-loading,
+.reservations-empty {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
+.reservations-filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.filter-group select {
+  background: #121826;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #4da3ff;
+}
+
+.waiting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.waiting-list-item {
+  background: #121826;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.waiting-list-item:hover {
+  border-color: #4da3ff;
+  background: #1a2a3a;
+}
+
+.waiting-list-item.checked-in {
+  border-color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.waiting-list-item.overdue {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.waiting-list-item-main {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.waiting-list-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.time-display {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.time-meta {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.waiting-list-info {
+  flex: 1;
+}
+
+.waiting-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.waiting-list-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.waiting-list-badges {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.source-badge {
+  background: #f59e0b;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.status-badge {
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.waiting-list-details {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.waiting-list-notes {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #333;
+}
+
+.waiting-list-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.action-btn {
+  background: #4da3ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background: #6bb3ff;
+}
+
+.check-in-btn {
+  background: #fbbf24;
+}
+
+.check-in-btn:hover {
+  background: #fcd34d;
+}
+
+.seat-btn {
+  background: #4ade80;
+}
+
+.seat-btn:hover {
+  background: #6ee7b7;
+}
+
+.seated-indicator {
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .waiting-list-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .waiting-list-actions {
+    margin-top: 12px;
+    justify-content: stretch;
+  }
+
+  .action-btn {
+    flex: 1;
+  }
+}
+
+
+
+
+
+
+
+
+

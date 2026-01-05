@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root { --color-bg-dark: #0f1115; 
+  --color-card-dark: #171a20;
+  --color-text-primary:#ffffff; 
+  --color-text-muted: #9aa0aa; 
+  --color-accent: #4da3ff; 
+  --color-accent-soft:
+rgba(77,163,255,0.15); } 
+.btn-primary { background: var(--color-accent);
+  color:#ffffff; } 
+  .points-pill { background: var(--color-accent); 
+    color: #ffffff; 
   }
+  /* src/App.css (additions to force white links where needed) */
+a:not(.login-link), a:not(.login-link):visited {
+ color: #ffffff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:not(.login-link):hover {
+ filter: brightness(1.12);
 }

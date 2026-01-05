@@ -1,0 +1,386 @@
+/* src/pages/Reviews/ReviewsPages.css */
+
+/* Mobile-first styling for all review pages */
+
+.reviews-page {
+  min-height: 100vh;
+  background: #0a0e18;
+  color: #fff;
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reviews-header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.back-link {
+  color: #7dd3fc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fecaca;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: #9ca3af;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary,
+.btn-remove {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: rgba(125, 211, 252, 0.2);
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  color: #7dd3fc;
+}
+
+.btn-primary:hover {
+  background: rgba(125, 211, 252, 0.3);
+  border-color: rgba(125, 211, 252, 0.6);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-remove {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fecaca;
+}
+
+.btn-remove:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+/* Reviews List */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.review-card:hover {
+  border-color: rgba(125, 211, 252, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.review-restaurant h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.review-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.review-rating .star-filled {
+  color: #fbbf24;
+  font-size: 18px;
+}
+
+.review-rating .star-empty {
+  color: #4b5563;
+  font-size: 18px;
+}
+
+.review-comment {
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.review-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.view-restaurant-link {
+  color: #7dd3fc;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.view-restaurant-link:hover {
+  opacity: 0.8;
+}
+
+/* Post Review Page */
+.post-review-content {
+  margin-top: 24px;
+}
+
+.section-description {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(125, 211, 252, 0.5);
+}
+
+.search-input::placeholder {
+  color: #6b7280;
+}
+
+.restaurants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.restaurant-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.restaurant-card:hover {
+  border-color: rgba(125, 211, 252, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.restaurant-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.restaurant-address {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.restaurant-card .btn-primary {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Read Reviews Page */
+.reviews-filter {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.reviews-filter label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filter-select {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: rgba(125, 211, 252, 0.5);
+}
+
+/* Favorite Reviewers Page */
+.favorite-reviewers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviewer-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.reviewer-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.reviewer-email {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 0;
+}
+
+.reviewer-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.favorite-reviewer-btn {
+  margin-left: 8px;
+  padding: 4px 8px;
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 4px;
+  color: #fbbf24;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.favorite-reviewer-btn:hover {
+  background: rgba(251, 191, 36, 0.3);
+  border-color: rgba(251, 191, 36, 0.6);
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .reviews-page {
+    padding: 32px;
+  }
+
+  .reviews-header h1 {
+    font-size: 32px;
+  }
+
+  .restaurants-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .reviewer-card {
+    flex-direction: row;
+  }
+
+  .reviewer-actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurants-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

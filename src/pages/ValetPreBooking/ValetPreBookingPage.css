@@ -1,0 +1,264 @@
+/* src/pages/ValetPreBooking/ValetPreBookingPage.css */
+
+.valet-prebooking-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.valet-prebooking-card {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 48px;
+}
+
+.valet-prebooking-card h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.valet-prebooking-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.valet-prebooking-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin: 0 0 32px 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.valet-prebooking-error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.valet-prebooking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.valet-prebooking-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.valet-prebooking-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.valet-prebooking-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.valet-prebooking-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.valet-prebooking-form-group input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.valet-prebooking-form-group input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.valet-prebooking-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.valet-prebooking-form-hint {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  margin: 0;
+}
+
+.valet-prebooking-submit {
+  background: #4a9eff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.valet-prebooking-submit:hover:not(:disabled) {
+  background: #6bb0ff;
+}
+
+.valet-prebooking-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.valet-prebooking-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.valet-prebooking-note {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.valet-prebooking-cancel {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.valet-prebooking-cancel:hover {
+  color: #fff;
+}
+
+.valet-prebooking-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+}
+
+.valet-prebooking-vehicles {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.valet-prebooking-vehicle-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.valet-prebooking-vehicle-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.valet-prebooking-vehicle-card.selected {
+  background: rgba(74, 158, 255, 0.2);
+  border-color: #4a9eff;
+}
+
+.valet-prebooking-vehicle-info {
+  flex: 1;
+}
+
+.valet-prebooking-vehicle-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.valet-prebooking-vehicle-plate {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a9eff;
+  letter-spacing: 1px;
+}
+
+.valet-prebooking-vehicle-details {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.valet-prebooking-vehicle-check {
+  font-size: 24px;
+  color: #10b981;
+  font-weight: bold;
+}
+
+.valet-prebooking-no-vehicles {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.valet-prebooking-no-vehicles p {
+  margin: 0 0 12px 0;
+}
+
+.valet-prebooking-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 16px;
+}
+
+.valet-prebooking-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .valet-prebooking-card {
+    padding: 32px 24px;
+  }
+
+  .valet-prebooking-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+

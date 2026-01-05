@@ -1,0 +1,384 @@
+/* =====================================================
+ LiveLineup.css - MOBILE FIRST
+ ===================================================== */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+   .ll-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 16px 12px 32px;
+    box-sizing: border-box;
+    background:
+      radial-gradient(circle at 50% 14%, rgba(255,255,255,0.08), rgba(0,0,0,0.0) 46%),
+      linear-gradient(180deg, #0b1220 0%, #050914 100%);
+    color: #ffffff;
+  }
+  
+  .ll-shell {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .ll-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .ll-titlebox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .ll-h1 {
+    font-size: 24px;
+    line-height: 1.12;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+  }
+  
+  .ll-sub {
+    font-size: 13px;
+    opacity: 0.85;
+    margin: 0;
+  }
+  
+  .ll-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .ll-linkbtn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 140ms ease, background 140ms ease, opacity 140ms ease;
+    opacity: 0.92;
+    min-height: 44px; /* Touch-friendly */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .ll-linkbtn:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+  
+  .ll-linkbtn:active {
+    transform: translateY(0px);
+  }
+  
+  .ll-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  
+  .ll-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+  }
+  
+  .ll-status--published .ll-dot { background: rgba(80, 255, 180, 0.85); }
+  .ll-status--draft .ll-dot { background: rgba(255, 170, 70, 0.9); }
+  .ll-status--missing .ll-dot { background: rgba(255, 90, 90, 0.9); }
+  
+  .ll-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 14px 0 18px;
+  }
+  
+  .ll-control-left,
+  .ll-control-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .ll-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  }
+  
+  .ll-pill-label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.35px;
+    opacity: 0.92;
+    text-transform: uppercase;
+  }
+  
+  .ll-pill-value {
+    font-size: 14px;
+    font-weight: 800;
+    opacity: 0.92;
+  }
+  
+  .ll-toggle {
+    display: inline-flex;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.03);
+    width: 100%;
+  }
+  
+  .ll-toggle button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: rgba(255,255,255,0.92);
+    font-size: 14px;
+    font-weight: 900;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: background 140ms ease, opacity 140ms ease;
+    opacity: 0.92;
+    flex: 1;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .ll-toggle button:hover { background: rgba(255,255,255,0.08); opacity: 1; }
+  .ll-toggle button.ll-toggle--active { background: rgba(255,255,255,0.12); opacity: 1; }
+  
+  .ll-banner {
+    border-radius: 14px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    margin: 10px 0 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+  }
+  
+  .ll-banner--danger { background: rgba(120, 20, 20, 0.35); border-color: rgba(255, 90, 90, 0.45); }
+  .ll-banner--warning { background: rgba(80, 55, 10, 0.35); border-color: rgba(255, 170, 70, 0.45); }
+  .ll-banner--ok { background: rgba(10, 70, 40, 0.35); border-color: rgba(80, 255, 180, 0.35); }
+  
+  /* Mobile: Single column */
+  .ll-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .ll-colcard {
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.30);
+    box-shadow: 0 18px 55px rgba(0,0,0,0.42);
+    overflow: hidden;
+  }
+  
+  .ll-colhead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+  }
+  
+  .ll-coltitle { display: flex; flex-direction: column; gap: 4px; }
+  .ll-coltitle h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+  }
+  
+  .ll-coltitle p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.82;
+  }
+  
+  .ll-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.25px;
+    align-self: flex-start;
+  }
+  
+  .ll-colbody { padding: 12px 14px 14px; }
+  
+  .ll-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: start;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+    margin-bottom: 10px;
+  }
+  
+  .ll-row:last-child { margin-bottom: 0; }
+  
+  .ll-slot { display: flex; flex-direction: column; gap: 2px; }
+  .ll-slot-name { font-size: 14px; font-weight: 900; letter-spacing: 0.2px; }
+  .ll-slot-sub { font-size: 12px; opacity: 0.82; }
+  .ll-emp { display: flex; flex-direction: column; gap: 2px; }
+  .ll-emp-name { font-size: 14px; font-weight: 900; letter-spacing: 0.2px; }
+  .ll-emp-meta { font-size: 12px; opacity: 0.82; }
+  .ll-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.05);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.25px;
+    white-space: nowrap;
+  }
+  
+  .ll-chip--empty { opacity: 0.75; }
+  .ll-empty { opacity: 0.72; font-style: italic; }
+  
+  .ll-foot {
+    margin-top: 16px;
+    opacity: 0.8;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .ll-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 12px 0; }
+  
+  .ll-linkbtn:focus,
+  .ll-toggle button:focus {
+    outline: 2px solid rgba(255,255,255,0.38);
+    outline-offset: 2px;
+  }
+  
+  .ll-noselect {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* ===============================
+     TABLET (520px+)
+     =============================== */
+  
+  @media (min-width: 520px) {
+    .ll-row {
+      grid-template-columns: 1.4fr 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .ll-actions {
+      flex-direction: row;
+      width: auto;
+    }
+  
+    .ll-linkbtn {
+      width: auto;
+      font-size: 18px;
+    }
+  
+    .ll-controls {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .ll-control-left,
+    .ll-control-right {
+      flex-direction: row;
+      width: auto;
+    }
+  
+    .ll-toggle {
+      width: auto;
+    }
+  }
+  
+  /* ===============================
+     DESKTOP (768px+)
+     =============================== */
+  
+  @media (min-width: 768px) {
+    .ll-page {
+      padding: 24px 18px 40px;
+    }
+  
+    .ll-shell {
+      width: min(1400px, 100%);
+    }
+  
+    .ll-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .ll-h1 {
+      font-size: 32px;
+    }
+  
+    .ll-colhead {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 14px 12px;
+    }
+  }
+  
+  /* ===============================
+     LARGE DESKTOP (920px+)
+     =============================== */
+  
+  @media (min-width: 920px) {
+    .ll-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

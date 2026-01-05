@@ -1,0 +1,151 @@
+/* HR Tab Styles */
+
+.hr-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hr-section-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.hr-nav-badge {
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 6px;
+}
+
+.hr-nav-btn {
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: -10px;
+}
+
+.hr-nav-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px 6px 0 0;
+}
+
+.hr-nav-btn.active {
+  color: #4da3ff;
+  border-bottom-color: #4da3ff;
+  background: rgba(77, 163, 255, 0.1);
+  border-radius: 6px 6px 0 0;
+}
+
+.hr-section-content {
+  min-height: 400px;
+}
+
+.hr-alerts-section {
+  padding: 20px;
+}
+
+.hr-alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hr-alert-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.hr-alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.hr-alert-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hr-alert-time {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hr-alert-message {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.hr-alert-action {
+  color: #4a9eff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hr-alert-action:hover {
+  text-decoration: underline;
+}
+
+.hr-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hr-section-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hr-section-nav {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .hr-nav-btn {
+    width: 100%;
+    text-align: left;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  .hr-nav-btn.active {
+    border-left-color: #4da3ff;
+    border-bottom: none;
+  }
+  
+  .hr-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+

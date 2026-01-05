@@ -1,0 +1,355 @@
+/* src/pages/Dashboards/RestaurantDashboard/pages/ShiftGamesHub.css */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+   .shift-games-hub {
+    color: #fff;
+    padding: 16px;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 20%, #1f2937 0%, #020617 70%);
+  }
+  
+  .hub-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .hub-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  
+  .hub-header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    border: none;
+    font-size: 14px;
+  }
+  
+  .primary-btn {
+    background: rgba(74, 222, 128, 0.2);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    color: #fff;
+  }
+  
+  .primary-btn:hover:not(:disabled) {
+    background: rgba(74, 222, 128, 0.3);
+    border-color: rgba(74, 222, 128, 0.6);
+  }
+  
+  .primary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .secondary-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  .secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .hub-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .hub-filters button {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  
+  .hub-filters button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hub-filters button.active {
+    background: rgba(74, 222, 128, 0.2);
+    border-color: rgba(74, 222, 128, 0.4);
+    color: #4ade80;
+  }
+  
+  .hub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  
+  .games-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .game-category h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  
+  .game-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .game-card {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  
+  .game-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .game-card.active {
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(74, 222, 128, 0.1);
+  }
+  
+  .game-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .game-card-top h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  
+  .duration {
+    font-size: 12px;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+  
+  .description {
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  
+  .teams {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 12px;
+  }
+  
+  .card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .game-editor {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .game-editor label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .game-editor input,
+  .game-editor select,
+  .game-editor textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .game-editor input:focus,
+  .game-editor select:focus,
+  .game-editor textarea:focus {
+    outline: none;
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  /* ===============================
+     TABLET (640px+)
+     =============================== */
+  
+  @media (min-width: 640px) {
+    .shift-games-hub {
+      padding: 20px;
+    }
+  
+    .hub-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .card-actions {
+      flex-direction: row;
+    }
+  }
+  
+  /* ===============================
+     DESKTOP (768px+)
+     =============================== */
+  
+  @media (min-width: 768px) {
+    .shift-games-hub {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+  
+    .game-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* ===============================
+     LARGE DESKTOP (1024px+)
+     =============================== */
+  
+  @media (min-width: 1024px) {
+    .game-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,666 @@
+/* =====================================================
+ Scheduling Tab — MOBILE FIRST
+ ==================================================== */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+   .sched-wrap {
+    width: 100%;
+  }
+  
+  .sched-topbar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  
+  .sched-title .sched-h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 2px;
+  }
+  
+  .sched-title .sched-sub {
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  
+  .sched-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .sched-label {
+    display: grid;
+    gap: 6px;
+    font-size: 12px;
+    opacity: 0.9;
+  }
+  
+  .sched-date {
+    height: 44px; /* Touch-friendly */
+    border-radius: 10px;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .sched-btn {
+    height: 44px; /* Fixed height to match date input */
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sched-btn:hover {
+    background: rgba(255, 255, 255, 0.10);
+  }
+  
+  .sched-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .sched-btn--primary {
+    border-color: rgba(56, 189, 248, 0.6);
+    background: rgba(56, 189, 248, 0.18);
+  }
+  
+  .sched-banner {
+    margin: 10px 0 14px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    background: rgba(56, 189, 248, 0.10);
+    color: #e0f2fe;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  /* Pools */
+  .sched-pool {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px;
+  }
+  
+  .sched-poolHead {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  
+  .sched-poolTitle {
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .sched-poolSub {
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  
+  .sched-poolList {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .sched-emp {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    cursor: grab;
+    user-select: none;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .sched-emp:active {
+    cursor: grabbing;
+  }
+  
+  .sched-empName {
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 15px;
+  }
+  
+  .sched-empSub {
+    font-size: 12px;
+    opacity: 0.75;
+    margin-top: 3px;
+  }
+  
+  .sched-empty {
+    padding: 10px 8px;
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  
+  /* Board */
+  .sched-board {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px;
+  }
+  
+  .sched-boardHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .sched-boardTitle {
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .sched-boardSub {
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  
+  /* Mobile: Single column */
+  .sched-boardCols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .sched-colTitle {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  
+  .sched-colBody {
+    display: grid;
+    gap: 10px;
+  }
+  
+  /* Slot */
+  .sched-slot {
+    border-radius: 14px;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.10);
+    padding: 12px;
+    min-height: 80px;
+  }
+  
+  .sched-slot--over {
+    border-color: rgba(56, 189, 248, 0.70);
+    background: rgba(56, 189, 248, 0.10);
+  }
+  
+  .sched-slot--filled {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  
+  .sched-slotTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+  
+  .sched-slotLabel {
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .sched-clear {
+    border: none;
+    background: transparent;
+    color: #e5e7eb;
+    opacity: 0.85;
+    cursor: pointer;
+    font-weight: 800;
+    padding: 8px;
+    min-height: 44px; /* Touch-friendly */
+    min-width: 44px;
+  }
+  
+  .sched-clear:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  .sched-slotEmpty {
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  
+  .sched-assigned {
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    background: rgba(56, 189, 248, 0.08);
+    padding: 10px 12px;
+    cursor: grab;
+    user-select: none;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .sched-assigned:active {
+    cursor: grabbing;
+  }
+  
+  .sched-assignedName {
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .sched-assignedSub {
+    font-size: 12px;
+    opacity: 0.80;
+    margin-top: 2px;
+  }
+  
+  .sched-note {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.75;
+  }
+  
+  /* ===============================
+     SCHEDULING GRID LAYOUT
+     MOBILE FIRST
+     =============================== */
+  
+  /* Mobile: Single column stack */
+  .sched-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    width: 100%;
+    align-items: start;
+  }
+  
+  .sched-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* Larger gap on mobile for readability */
+  }
+  
+  .sched-center {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sched-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* Larger gap on mobile for readability */
+  }
+  
+  .sched-gap {
+    height: 5px;
+    flex-shrink: 0;
+  }
+  
+  /* Enhanced Employee Cards */
+  .sched-empTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  
+  .sched-empRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .sched-empMeta {
+    font-size: 11px;
+    opacity: 0.75;
+  }
+  
+  .sched-empBadge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  .sched-empStatus {
+    font-size: 11px;
+    font-weight: 700;
+    color: #ef4444;
+  }
+  
+  .sched-empTrend {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .sched-empAttendance {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  
+  .sched-empTraining {
+    font-size: 10px;
+    font-weight: 600;
+    color: #f59e0b;
+  }
+  
+  .sched-emp--unavailable {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.05);
+  }
+  
+  .sched-emp--unavailable:hover {
+    background: rgba(239, 68, 68, 0.05);
+  }
+  
+  /* Employee Preference Indicators */
+  .sched-empPreferences {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .sched-prefRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+  }
+  
+  .sched-prefLabel {
+    font-weight: 600;
+    opacity: 0.7;
+    min-width: 50px;
+  }
+  
+  .sched-prefValue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    flex: 1;
+  }
+  
+  .sched-prefTag {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  
+  .sched-prefTag--preferred {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  
+  .sched-prefTag--avoid {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+  
+  .sched-prefTag--time {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+  
+  .sched-prefEmpty {
+    font-size: 10px;
+    opacity: 0.5;
+    font-style: italic;
+  }
+  
+  /* ===============================
+     MOBILE-SPECIFIC LAYOUTS
+     =============================== */
+
+  /* Mobile: Hide desktop elements */
+  .sched-weekstrip--desktop,
+  .sched-label--desktop,
+  .sched-btn--desktop {
+    display: none !important;
+  }
+
+  /* Mobile: Show mobile elements */
+  .sched-weekstrip--mobile {
+    display: block;
+  }
+  
+  .sched-mobile-row,
+  .sched-mobile-section,
+  .sched-mobile-layout,
+  .sched-btn--mobile {
+    display: block;
+  }
+
+  /* Mobile: Day Slider */
+  .sched-day-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .sched-day-slider__track {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .sched-day-slider__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .sched-day-slider__btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+  }
+
+  .sched-day-slider__btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .sched-day-slider__btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .sched-day-slider__dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .sched-day-slider__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s;
+  }
+
+  .sched-day-slider__dot.active {
+    background: #4da3ff;
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Mobile: Row layout for side-by-side buttons */
+  .sched-mobile-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    align-items: end; /* Align buttons to bottom to match heights */
+  }
+  
+  .sched-mobile-row .sched-btn {
+    height: 44px; /* Ensure consistent height */
+  }
+  
+  .sched-mobile-row .sched-label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile: Sections */
+  .sched-mobile-section {
+    margin-top: 14px;
+    width: 100%;
+  }
+
+  .sched-mobile-performance {
+    margin-top: 16px;
+  }
+
+  .sched-mobile-selector {
+    margin-top: 12px;
+  }
+
+  /* Mobile: Two-column layout (50-50) */
+  .sched-mobile-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .sched-mobile-left,
+  .sched-mobile-right {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  /* Mobile: Hide desktop grid when mobile layout is active */
+  .sched-mobile-layout ~ .sched-grid,
+  .sched-mobile-layout + .sched-grid {
+    display: none !important;
+  }
+
+  /* ===============================
+     TABLET (768px+)
+     =============================== */
+  
+  @media (min-width: 768px) {
+    /* Show desktop elements */
+    .sched-weekstrip--desktop,
+    .sched-label--desktop,
+    .sched-btn--desktop {
+      display: block !important;
+    }
+
+    /* Hide mobile elements */
+    .sched-weekstrip--mobile,
+    .sched-mobile-row,
+    .sched-mobile-section,
+    .sched-mobile-layout,
+    .sched-btn--mobile {
+      display: none !important;
+    }
+
+    /* Show desktop grid when not mobile */
+    .sched-grid {
+      display: grid;
+    }
+    .sched-topbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .sched-controls {
+      flex-direction: row;
+      width: auto;
+    }
+  
+    .sched-boardCols {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .sched-left {
+      gap: 8px;
+    }
+  
+    .sched-right {
+      gap: 8px;
+    }
+  }
+  
+  /* ===============================
+     DESKTOP (1100px+)
+     =============================== */
+  
+  @media (min-width: 1100px) {
+    .sched-grid {
+      grid-template-columns: 320px 1fr 360px;
+      gap: 20px;
+    }
+  
+    .sched-left {
+      gap: 5px;
+    }
+  
+    .sched-right {
+      gap: 5px;
+    }
+  }

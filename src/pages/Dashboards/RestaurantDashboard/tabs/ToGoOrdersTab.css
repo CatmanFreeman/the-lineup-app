@@ -1,0 +1,346 @@
+/* src/pages/Dashboards/RestaurantDashboard/tabs/ToGoOrdersTab.css */
+
+.togo-orders-tab {
+  padding: 20px;
+  color: #fff;
+}
+
+.togo-orders-loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.togo-orders-header {
+  margin-bottom: 20px;
+}
+
+.togo-orders-header h2 {
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+
+.togo-orders-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.togo-orders-filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.togo-orders-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.togo-orders-filter-btn.active {
+  background: #4da3ff;
+  border-color: #4da3ff;
+}
+
+.togo-orders-content {
+  margin-top: 20px;
+}
+
+.togo-orders-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.togo-orders-clear-filter {
+  background: #4da3ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.togo-orders-list {
+  display: grid;
+  gap: 15px;
+}
+
+.togo-orders-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.togo-orders-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.togo-orders-card.selected {
+  border-color: #4da3ff;
+  background: rgba(77, 163, 255, 0.1);
+}
+
+.togo-orders-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.togo-orders-card-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.togo-orders-order-number {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.togo-orders-status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.togo-orders-order-total {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+.togo-orders-card-details {
+  margin-bottom: 15px;
+}
+
+.togo-orders-card-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.togo-orders-customer-name {
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 16px !important;
+}
+
+.togo-orders-order-type {
+  color: #4da3ff !important;
+}
+
+.togo-orders-card-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.togo-orders-item-preview {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.togo-orders-item-more {
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.togo-orders-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.togo-orders-modal {
+  background: #1a1a2e;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #fff;
+}
+
+.togo-orders-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.togo-orders-modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.togo-orders-modal-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.togo-orders-modal-close:hover {
+  color: #ff4444;
+}
+
+.togo-orders-modal-content {
+  padding: 20px;
+}
+
+.togo-orders-modal-section {
+  margin-bottom: 25px;
+}
+
+.togo-orders-modal-section h4 {
+  font-size: 16px;
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+.togo-orders-modal-section p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.togo-orders-modal-items {
+  margin-bottom: 15px;
+}
+
+.togo-orders-modal-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.togo-orders-modal-item:last-child {
+  border-bottom: none;
+}
+
+.togo-orders-modal-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.togo-orders-modal-item-note {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+  margin: 5px 0 0;
+}
+
+.togo-orders-modal-totals {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.togo-orders-modal-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.togo-orders-modal-total-final {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.togo-orders-modal-actions {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.togo-orders-status-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.togo-orders-status-btn {
+  background: #4da3ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.togo-orders-status-btn:hover:not(:disabled) {
+  background: #3d8fdf;
+}
+
+.togo-orders-status-btn:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.togo-orders-status-btn-success {
+  background: #10b981;
+}
+
+.togo-orders-status-btn-success:hover:not(:disabled) {
+  background: #0ea271;
+}
+
+.togo-orders-status-btn-danger {
+  background: #ff4444;
+}
+
+.togo-orders-status-btn-danger:hover:not(:disabled) {
+  background: #ff6666;
+}
+
+
+
+
+
+
+
+

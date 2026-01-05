@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad-employee_of_month" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24dd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#grad-employee_of_month)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="32" y="42" font-size="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif">👑</text>
+</svg>

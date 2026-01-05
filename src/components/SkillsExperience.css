@@ -1,0 +1,320 @@
+/* src/components/SkillsExperience.css */
+
+.skills-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .skills-loading {
+    padding: 2rem;
+    text-align: center;
+    color: #aaa;
+  }
+  
+  .skills-error {
+    background: #d32f2f;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .skills-success {
+    background: #4caf50;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .skills-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills-section-title {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .skills-add-btn {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  
+  .skills-add-btn:hover {
+    background: #45a049;
+  }
+  
+  .skills-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #252525;
+    border-radius: 8px;
+    border: 1px solid #333;
+  }
+  
+  .skills-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  
+  .skills-input,
+  .skills-select,
+  .skills-textarea {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+  }
+  
+  .skills-input:focus,
+  .skills-select:focus,
+  .skills-textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  .skills-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .skills-form-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+  
+  .skills-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .skills-btn-primary {
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  .skills-btn-primary:hover {
+    background: #45a049;
+  }
+  
+  .skills-btn-secondary {
+    background: #333;
+    color: #fff;
+  }
+  
+  .skills-btn-secondary:hover {
+    background: #444;
+  }
+  
+  .skills-empty {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    background: #252525;
+    border-radius: 8px;
+    border: 1px dashed #333;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .skills-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    background: #252525;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: border-color 0.2s;
+  }
+  
+  .skills-item:hover {
+    border-color: #444;
+  }
+  
+  .skills-item-expiring {
+    border-color: #ffa500;
+  }
+  
+  .skills-item-expired {
+    border-color: #d32f2f;
+  }
+  
+  .skills-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .skills-item-name {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .skills-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+  
+  .skills-item-meta span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .skills-item-description {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+  }
+  
+  .skills-level {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .skills-level-beginner {
+    background: #666;
+    color: #fff;
+  }
+  
+  .skills-level-intermediate {
+    background: #2196f3;
+    color: #fff;
+  }
+  
+  .skills-level-advanced {
+    background: #9c27b0;
+    color: #fff;
+  }
+  
+  .skills-level-expert {
+    background: #ff9800;
+    color: #fff;
+  }
+  
+  .skills-years {
+    color: #aaa;
+  }
+  
+  .skills-expiring {
+    color: #ffa500;
+    font-weight: 500;
+  }
+  
+  .skills-expired {
+    color: #d32f2f;
+    font-weight: 500;
+  }
+  
+  .skills-item-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .skills-edit-btn,
+  .skills-delete-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .skills-edit-btn {
+    background: #333;
+    color: #fff;
+  }
+  
+  .skills-edit-btn:hover {
+    background: #444;
+  }
+  
+  .skills-delete-btn {
+    background: #d32f2f;
+    color: #fff;
+  }
+  
+  .skills-delete-btn:hover {
+    background: #b71c1c;
+  }
+  
+  /* Mobile-first responsive */
+  @media (max-width: 768px) {
+    .skills-section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .skills-add-btn {
+      width: 100%;
+    }
+  
+    .skills-form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .skills-item {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .skills-item-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  
+    .skills-edit-btn,
+    .skills-delete-btn {
+      flex: 1;
+    }
+  }

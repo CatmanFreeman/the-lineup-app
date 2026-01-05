@@ -1,0 +1,541 @@
+/* src/pages/Dashboards/RestaurantDashboard/tabs/OrientationTests.css */
+
+/* ===============================
+   MOBILE BASE (320px+)
+   =============================== */
+
+   .orientation-tests {
+    color: #fff;
+    min-height: 100%;
+    padding: 16px;
+  }
+  
+  .ot-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ot-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .ot-close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+    width: 44px; /* Touch-friendly */
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    align-self: flex-end;
+  }
+  
+  .ot-close-btn:hover {
+    opacity: 0.7;
+  }
+  
+  .ot-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+  }
+  
+  .ot-nav-btn {
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .ot-nav-btn:hover {
+    color: #fff;
+  }
+  
+  .ot-nav-btn.active {
+    color: #4ade80;
+    border-bottom-color: #4ade80;
+  }
+  
+  .ot-content {
+    min-height: 400px;
+  }
+  
+  .ot-loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .ot-view {
+    padding: 0;
+  }
+  
+  .ot-view-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .ot-view-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+  }
+  
+  .ot-view-header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+  }
+  
+  .ot-btn-primary {
+    padding: 12px 20px;
+    background: rgba(74, 222, 128, 0.2);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    width: 100%;
+  }
+  
+  .ot-btn-primary:hover:not(:disabled) {
+    background: rgba(74, 222, 128, 0.3);
+    border-color: rgba(74, 222, 128, 0.6);
+  }
+  
+  .ot-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .ot-btn-secondary {
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+    width: 100%;
+  }
+  
+  .ot-btn-secondary:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .ot-btn-small {
+    padding: 8px 14px;
+    background: rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+    min-height: 36px; /* Touch-friendly */
+  }
+  
+  .ot-btn-small:hover {
+    background: rgba(56, 189, 248, 0.3);
+  }
+  
+  .ot-btn-remove {
+    padding: 8px;
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: all 0.2s;
+    min-width: 44px; /* Touch-friendly */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ot-btn-remove:hover {
+    background: rgba(239, 68, 68, 0.3);
+  }
+  
+  .ot-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .ot-filters button {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .ot-filters button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .ot-filters button.active {
+    background: rgba(74, 222, 128, 0.2);
+    border-color: rgba(74, 222, 128, 0.4);
+    color: #4ade80;
+  }
+  
+  /* Orientations - Mobile: Single column */
+  .ot-orientations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .ot-orientation-card {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .ot-orientation-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  
+  .ot-orientation-header h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+  }
+  
+  .ot-orientation-header p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .ot-status-badge {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+  
+  .ot-status-badge.active {
+    background: #10b981;
+    color: #fff;
+  }
+  
+  .ot-status-badge.required {
+    background: #f59e0b;
+    color: #fff;
+  }
+  
+  .ot-status-badge.passed {
+    background: #10b981;
+    color: #fff;
+  }
+  
+  .ot-status-badge.failed {
+    background: #ef4444;
+    color: #fff;
+  }
+  
+  .ot-orientation-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  
+  .ot-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .ot-metric-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .ot-metric-value {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .ot-orientation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Tests - Mobile: Single column */
+  .ot-tests-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .ot-test-card {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 44px; /* Touch-friendly */
+  }
+  
+  .ot-test-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .ot-test-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .ot-test-header h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+  }
+  
+  .ot-test-header p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .ot-test-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Modal */
+  .ot-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 16px;
+  }
+  
+  .ot-modal {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ot-modal-large {
+    max-width: 100%;
+  }
+  
+  .ot-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .ot-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .ot-modal-body {
+    padding: 16px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .ot-modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Form - Add remaining form styles from original file */
+  .ot-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .ot-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .ot-form-group input,
+  .ot-form-group select,
+  .ot-form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    min-height: 44px; /* Touch-friendly */
+    box-sizing: border-box;
+  }
+  
+  .ot-form-group input:focus,
+  .ot-form-group select:focus,
+  .ot-form-group textarea:focus {
+    outline: none;
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  /* ===============================
+     TABLET (640px+)
+     =============================== */
+  
+  @media (min-width: 640px) {
+    .orientation-tests {
+      padding: 20px;
+    }
+  
+    .ot-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .ot-close-btn {
+      align-self: auto;
+    }
+  
+    .ot-view-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .ot-btn-primary,
+    .ot-btn-secondary {
+      width: auto;
+    }
+  
+    .ot-orientation-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .ot-orientation-actions {
+      flex-direction: row;
+    }
+  
+    .ot-test-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .ot-test-meta {
+      flex-direction: row;
+      gap: 12px;
+    }
+  
+    .ot-modal-footer {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+  
+  /* ===============================
+     DESKTOP (768px+)
+     =============================== */
+  
+  @media (min-width: 768px) {
+    .ot-orientations-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  
+    .ot-tests-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  
+    .ot-modal {
+      max-width: 600px;
+    }
+  
+    .ot-modal-large {
+      max-width: 900px;
+    }
+  
+    .ot-modal-header {
+      padding: 20px 24px;
+    }
+  
+    .ot-modal-body {
+      padding: 24px;
+    }
+  
+    .ot-modal-footer {
+      padding: 20px 24px;
+    }
+  }

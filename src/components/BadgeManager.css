@@ -1,0 +1,246 @@
+// src/components/BadgeManager.css
+
+.badge-manager {
+  width: 100%;
+}
+
+.badge-manager-pending {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+}
+
+.badge-manager-pending h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #92400e;
+}
+
+.badge-manager-pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge-manager-pending-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+}
+
+.badge-manager-pending-info {
+  flex: 1;
+}
+
+.badge-manager-pending-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.badge-manager-pending-desc {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.badge-manager-approve-btn {
+  padding: 6px 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.badge-manager-approve-btn:hover {
+  background: #059669;
+}
+
+.badge-manager-available h4 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.badge-manager-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 16px;
+}
+
+.badge-manager-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.badge-manager-item:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.badge-manager-item-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+}
+
+.badge-manager-requires-approval {
+  font-size: 10px;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* Modal */
+.badge-manager-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.badge-manager-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.badge-manager-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge-manager-modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.badge-manager-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.badge-manager-modal-close:hover {
+  background: #f3f4f6;
+}
+
+.badge-manager-modal-body {
+  padding: 24px;
+  text-align: center;
+}
+
+.badge-manager-modal-badge {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.badge-manager-modal-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.badge-manager-modal-info p {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.badge-manager-modal-warning {
+  padding: 8px 12px;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #92400e;
+  text-align: left;
+}
+
+.badge-manager-modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.badge-manager-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.badge-manager-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badge-manager-btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.badge-manager-btn-secondary:hover:not(:disabled) {
+  background: #d1d5db;
+}
+
+.badge-manager-btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.badge-manager-btn-primary:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .badge-manager-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 12px;
+  }
+}

@@ -1,0 +1,387 @@
+/* src/pages/Dashboards/EmployeeDashboard/PerformanceTab.css */
+
+.ed-performance-tab {
+    padding: 16px 12px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .ed-performance-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .ed-performance-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .ed-performance-period {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+  
+  .ed-performance-loading,
+  .ed-performance-error {
+    text-align: center;
+    padding: 40px 20px;
+    color: #9ca3af;
+    font-size: 16px;
+  }
+  
+  .ed-performance-error {
+    color: #ef4444;
+  }
+  
+  .ed-performance-empty {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .ed-empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+  }
+  
+  .ed-performance-empty h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .ed-performance-empty p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+  
+  /* Main Performance Card */
+  .ed-performance-main-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .ed-performance-band-display {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #374151;
+  }
+  
+  .ed-performance-band-icon {
+    font-size: 48px;
+    line-height: 1;
+  }
+  
+  .ed-performance-band-info {
+    flex: 1;
+  }
+  
+  .ed-performance-band-label {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .ed-performance-band-desc {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+  
+  .ed-performance-score-display {
+    text-align: right;
+  }
+  
+  .ed-performance-score-value {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  
+  .ed-performance-score-label {
+    font-size: 12px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .ed-performance-rank-display {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  
+  .ed-performance-rank-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .ed-performance-rank-label {
+    font-size: 12px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .ed-performance-rank-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .ed-performance-trend {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .ed-performance-trend-improving {
+    color: #4ade80;
+  }
+  
+  .ed-performance-trend-declining {
+    color: #f87171;
+  }
+  
+  .ed-performance-trend-stable {
+    color: #9ca3af;
+  }
+  
+  .ed-performance-trend-detail {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  /* Metrics Grid */
+  .ed-performance-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .ed-performance-metric-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.2s;
+  }
+  
+  .ed-performance-metric-card:hover {
+    border-color: #4b5563;
+    background: #374151;
+  }
+  
+  .ed-metric-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .ed-metric-icon {
+    font-size: 24px;
+  }
+  
+  .ed-metric-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .ed-metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  
+  .ed-metric-trend-improving {
+    color: #4ade80;
+  }
+  
+  .ed-metric-trend-declining {
+    color: #f87171;
+  }
+  
+  .ed-metric-trend-stable {
+    color: #9ca3af;
+  }
+  
+  .ed-metric-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .ed-metric-detail-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #9ca3af;
+  }
+  
+  .ed-metric-detail-item span:first-child {
+    color: #6b7280;
+  }
+  
+  .ed-metric-detail-warning {
+    color: #f87171;
+  }
+  
+  .ed-positive {
+    color: #4ade80;
+  }
+  
+  .ed-negative {
+    color: #f87171;
+  }
+  
+  /* Performance History */
+  .ed-performance-history {
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .ed-performance-section-title {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .ed-performance-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .ed-performance-history-item {
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+  }
+  
+  .ed-performance-history-item:hover {
+    border-color: #4b5563;
+    background: #1f2937;
+  }
+  
+  .ed-performance-history-current {
+    border-color: #3b82f6;
+    background: #1e3a8a20;
+  }
+  
+  .ed-history-period {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .ed-history-details {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .ed-history-band {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .ed-history-score,
+  .ed-history-rank {
+    font-size: 13px;
+    color: #9ca3af;
+  }
+  
+  /* Performance Info */
+  .ed-performance-info {
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .ed-performance-info-content {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .ed-performance-info-content p {
+    margin: 0 0 12px 0;
+  }
+  
+  .ed-performance-factors {
+    margin: 12px 0;
+    padding-left: 20px;
+  }
+  
+  .ed-performance-factors li {
+    margin-bottom: 8px;
+  }
+  
+  .ed-performance-info-note {
+    margin-top: 16px !important;
+    padding-top: 16px;
+    border-top: 1px solid #374151;
+    font-size: 12px;
+    color: #6b7280;
+    font-style: italic;
+  }
+  
+  /* Mobile-first responsive */
+  @media (min-width: 640px) {
+    .ed-performance-tab {
+      padding: 24px;
+    }
+  
+    .ed-performance-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .ed-performance-metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .ed-history-details {
+      gap: 24px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .ed-performance-tab {
+      padding: 32px;
+    }
+  
+    .ed-performance-metrics-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .ed-performance-main-card {
+      padding: 32px;
+    }
+  }

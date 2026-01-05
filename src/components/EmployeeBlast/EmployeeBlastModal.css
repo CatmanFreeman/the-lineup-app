@@ -1,0 +1,265 @@
+/* src/components/EmployeeBlast/EmployeeBlastModal.css */
+
+.employee-blast-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.employee-blast-modal {
+  background: #2d2d2d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #fff;
+}
+
+.employee-blast-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.employee-blast-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.employee-blast-modal-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.employee-blast-modal-close:hover {
+  color: #fff;
+}
+
+.employee-blast-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.employee-blast-type-selector {
+  display: flex;
+  gap: 12px;
+}
+
+.employee-blast-type-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.employee-blast-type-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.employee-blast-type-btn.active {
+  background: #4a9eff;
+  border-color: #4a9eff;
+  color: #fff;
+}
+
+.employee-blast-text-section label,
+.employee-blast-video-section label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.employee-blast-text-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.employee-blast-text-input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.employee-blast-char-count {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: right;
+}
+
+.employee-blast-video-options {
+  display: flex;
+  gap: 12px;
+}
+
+.employee-blast-record-btn,
+.employee-blast-upload-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.employee-blast-record-btn:hover,
+.employee-blast-upload-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.employee-blast-recording {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employee-blast-preview-video {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  background: #000;
+}
+
+.employee-blast-stop-btn {
+  background: #ef4444;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.employee-blast-stop-btn:hover {
+  background: #dc2626;
+}
+
+.employee-blast-video-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employee-blast-remove-video {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  color: #ef4444;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.employee-blast-remove-video:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.employee-blast-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  color: #ef4444;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.employee-blast-modal-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.employee-blast-cancel-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.employee-blast-cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.employee-blast-submit-btn {
+  flex: 1;
+  background: #4a9eff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.employee-blast-submit-btn:hover:not(:disabled) {
+  background: #6bb0ff;
+}
+
+.employee-blast-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+

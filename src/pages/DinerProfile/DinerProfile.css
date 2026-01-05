@@ -1,0 +1,424 @@
+/* src/pages/DinerProfile/DinerProfile.css */
+/* Mirror the CompanyProfile / site look: navy gradient + centered column */
+.profile-wrapper {
+ width: 100%;
+ min-height: 100vh;
+ background: radial-gradient(circle at center, #001836 0%, #000c1b 100%);
+ color: white;
+ padding: 20px 0;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+ box-sizing: border-box;
+}
+.profile-inner {
+ width: 100%;
+ max-width: 420px;
+ margin: 0 auto;
+ padding: 30px 20px 40px 20px;
+ text-align: center;
+ box-sizing: border-box;
+}
+.profile-photo {
+ width: 180px;
+ height: 180px;
+ object-fit: cover;
+ border-radius: 24px;
+ margin-bottom: 15px;
+}
+.profile-photo-fallback {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: rgba(255, 255, 255, 0.08);
+ border: 1px solid rgba(255, 255, 255, 0.12);
+ font-size: 64px;
+ font-weight: 700;
+}
+.profile-name {
+ font-size: 26px;
+ font-weight: 600;
+ margin: 5px 0 10px 0;
+}
+.no-wrap {
+ white-space: nowrap;
+}
+.profile-loading,
+.profile-notfound {
+ opacity: 0.9;
+ font-size: 18px;
+ margin-top: 20px;
+}
+/* FROM + HEART */
+.diner-from-row {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ margin: 6px 0 16px;
+}
+.diner-from {
+ font-size: 16px;
+ opacity: 0.9;
+}
+.diner-fav-btn {
+ background: transparent;
+ border: none;
+ padding: 0;
+ cursor: pointer;
+ line-height: 1;
+}
+.diner-fav-btn:disabled {
+ opacity: 0.4;
+ cursor: default;
+}
+.heart {
+ font-size: 22px;
+ color: #ffffff;
+}
+.heart-on {
+ color: #ffffff;
+}
+/* SECTIONS */
+.profile-section {
+ margin-top: 10px;
+ margin-bottom: 25px;
+}
+.section-title {
+ font-size: 20px;
+ margin-bottom: 10px;
+ font-weight: 600;
+}
+.empty-text {
+ opacity: 0.8;
+}
+/* Chips */
+.chip-grid {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ justify-content: center;
+}
+.chip {
+ padding: 6px 10px;
+ border-radius: 999px;
+ background: rgba(255, 255, 255, 0.08);
+ border: 1px solid rgba(255, 255, 255, 0.12);
+ font-size: 14px;
+ max-width: 100%;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+}
+.chip-badge {
+ background: rgba(78, 170, 255, 0.12);
+ border: 1px solid rgba(78, 170, 255, 0.22);
+}
+/* Compact list */
+.list-compact {
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
+ align-items: center;
+}
+.list-row {
+ width: 100%;
+ max-width: 360px;
+ text-align: left;
+ padding: 10px 12px;
+ border-radius: 12px;
+ background: rgba(0, 0, 0, 0.25);
+ border: 1px solid rgba(255, 255, 255, 0.10);
+}
+/* Reviews */
+.review-list {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ margin-top: 8px;
+ align-items: center;
+}
+.review-card {
+ width: 100%;
+ max-width: 360px;
+ text-align: left;
+ padding: 12px 12px;
+ border-radius: 14px;
+ background: rgba(0, 0, 0, 0.28);
+ border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.review-top {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ gap: 10px;
+ margin-bottom: 6px;
+}
+.review-rating {
+ color: gold;
+ font-weight: 700;
+}
+.review-where {
+ opacity: 0.85;
+ font-size: 13px;
+}
+.review-text {
+ opacity: 0.92;
+ font-size: 14px;
+ line-height: 1.35;
+}
+/* Link-style buttons */
+.profile-link-btn,
+.profile-backlink {
+ background: transparent;
+ border: none;
+ color: #ffffff;
+ cursor: pointer;
+ margin-top: 10px;
+ text-decoration: none;
+ font-size: 16px;
+}
+.profile-link-btn {
+ color: #4eaaff;
+}
+.profile-link-btn:hover,
+.profile-backlink:hover {
+ text-decoration: underline;
+}
+/* ========================= */
+/* Diner Profile Image Box */
+/* ========================= */
+
+.diner-image-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px;
+  position: relative;
+}
+
+.diner-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.diner-image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.diner-image-placeholder span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.diner-image-placeholder:hover {
+  border-color: #3b82f6; /* Lineup blue */
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.diner-image-placeholder:hover span {
+  color: #3b82f6;
+}
+.diner-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diner-location {
+  margin-top: 4px;
+}
+
+.diner-hometown {
+  font-size: 13px;
+  opacity: 0.7;
+}
+.diner-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diner-location {
+  margin-top: 4px;
+}
+
+.diner-from {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.diner-hometown {
+  font-size: 13px;
+  opacity: 0.65;
+}
+.diner-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diner-location {
+  margin-top: 4px;
+}
+
+.diner-from {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.diner-hometown {
+  font-size: 13px;
+  opacity: 0.65;
+}
+.diner-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diner-location {
+  margin-top: 4px;
+}
+
+.diner-from {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.diner-hometown {
+  font-size: 13px;
+  opacity: 0.65;
+}
+.profile-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 hard center anchor */
+}
+.diner-image-wrapper {
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.diner-name-row {
+  width: 180px;                 /* SAME WIDTH AS IMAGE */
+  display: flex;
+  align-items: center;
+  justify-content: center;       /* centers name + heart together */
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+.diner-fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.diner-from {
+  width: 180px;           /* SAME WIDTH */
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+.diner-image-placeholder.clickable {
+  cursor: pointer;
+}
+
+.diner-image-placeholder.clickable:hover {
+  border-color: #4da3ff;
+  color: #4da3ff;
+}
+
+.diner-profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+/* ========================= */
+/* PROFILE HEADER ALIGNMENT */
+/* ========================= */
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* Image box already exists, just ensure centering */
+.diner-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Name + heart row */
+.profile-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Name text */
+.profile-name {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Heart button */
+.diner-fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.diner-fav-btn .heart {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.diner-fav-btn .heart-on {
+  color: #ffffff;
+}
+
+/* Location line */
+.diner-from {
+  font-size: 14px;
+  opacity: 0.75;
+  text-align: center;
+}
+.diner-image-placeholder,
+.diner-profile-image {
+  cursor: pointer;
+}
+
+.diner-image-placeholder:hover {
+  border-color: #4da3ff;
+  color: #4da3ff;
+}

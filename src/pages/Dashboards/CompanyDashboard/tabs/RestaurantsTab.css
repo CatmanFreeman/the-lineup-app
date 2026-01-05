@@ -1,0 +1,49 @@
+.restaurants-tab {
+  padding: 24px;
+  color: #ffffff;
+}
+
+.restaurants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.restaurants-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #2563eb;
+  border: none;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.restaurants-empty {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+}
+
+.restaurants-empty p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.restaurants-empty .hint {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.7;
+}

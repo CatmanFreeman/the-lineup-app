@@ -1,0 +1,342 @@
+/* Valet Tab Styles */
+
+.valet-container {
+  padding: 24px;
+  color: #fff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.valet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.valet-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.valet-subtitle {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.valet-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.filter-select:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.valet-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.valet-btn-primary {
+  background: #4da3ff;
+  color: #fff;
+}
+
+.valet-btn-primary:hover {
+  background: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.valet-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.valet-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.valet-btn-action {
+  background: #8b5cf6;
+  color: #fff;
+}
+
+.valet-btn-action:hover {
+  background: #7c3aed;
+}
+
+.valet-btn-success {
+  background: #10b981;
+  color: #fff;
+}
+
+.valet-btn-success:hover {
+  background: #059669;
+}
+
+.valet-btn-complete {
+  background: #6b7280;
+  color: #fff;
+}
+
+.valet-btn-complete:hover {
+  background: #4b5563;
+}
+
+.valet-loading,
+.valet-empty {
+  text-align: center;
+  padding: 60px 20px;
+  opacity: 0.7;
+}
+
+.valet-empty .empty-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.valet-error {
+  padding: 16px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  color: #fca5a5;
+}
+
+/* Form Styles */
+.valet-form-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.valet-form-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4da3ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Ticket Cards */
+.valet-tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.valet-ticket-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.valet-ticket-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ticket-number {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket-label {
+  font-size: 11px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ticket-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4da3ff;
+}
+
+.ticket-status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ticket-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.detail-label {
+  opacity: 0.7;
+}
+
+.detail-value {
+  font-weight: 500;
+}
+
+.ticket-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ticket-actions .valet-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.ticket-photo {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.ticket-photo img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-subtitle {
+  margin: 0 0 20px 0;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.upload-area {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .valet-tickets-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .valet-header {
+    flex-direction: column;
+  }
+  
+  .valet-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
