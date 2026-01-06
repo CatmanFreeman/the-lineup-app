@@ -143,14 +143,32 @@ workflows:
             if [ -n "$APP_BUNDLE" ] && [ -d "$APP_BUNDLE" ]; then
               echo "Found app bundle at $APP_BUNDLE, creating IPA..."
               mkdir -p build/ipa/Payload
-              cp -r "$APP_BUNDLE" build/ipa/Payload/
+              cp -r "$APP_BUNDLE" build/ipa/Payload/App.app
               cd build/ipa
               zip -r ../App.ipa Payload
               cd ../..
               echo "IPA created from found app bundle"
               ls -lh build/App.ipa
+              # Ensure it's in artifacts location
+              mkdir -p build/ios/ipa
+              cp build/App.ipa build/ios/ipa/App.ipa 2>/dev/null || true
+            else
+              echo "FATAL: No app bundle found anywhere! Cannot create IPA."
+              echo "Build will fail - check code signing configuration."
             fi
           fi
+          
+          # Final check - ensure IPA exists
+          if [ ! -f "build/App.ipa" ]; then
+            echo "ERROR: IPA was not created! Build failed."
+            exit 1
+          fi
+          
+          echo "=== IPA Creation Complete ==="
+          echo "IPA location: build/App.ipa"
+          ls -lh build/App.ipa
+          echo "All IPA files found:"
+          find . -name "*.ipa" -type f 2>/dev/null
           
           # Final verification - list all IPAs
           echo "=== FINAL ARTIFACT CHECK ==="
