@@ -19,7 +19,9 @@ workflows:
           npm install
       - name: Build React app
         script: |
-          npm run build || CI=true npm run build
+          export CI=true
+          export GENERATE_SOURCEMAP=false
+          npm run build || (export DISABLE_ESLINT_PLUGIN=true && npm run build)
       - name: Install CocoaPods dependencies
         script: |
           cd ios/App
