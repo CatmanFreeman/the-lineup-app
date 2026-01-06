@@ -9,6 +9,9 @@ workflows:
         XCODE_SCHEME: "App"
         BUNDLE_ID: "com.thelineup.app"
         APP_STORE_CONNECT_TEAM_ID: "595F6SD3L7"
+        APP_STORE_CONNECT_ISSUER_ID: "273d3408-f60f-45c1-810a-4390ce947d14"
+        APP_STORE_CONNECT_KEY_IDENTIFIER: "W3TZ9W8DHB"
+        APP_STORE_CONNECT_PRIVATE_KEY: "YOUR_PRIVATE_KEY_FROM_P8_FILE"
       node: 20.0.0
       xcode: latest
       cocoapods: default
@@ -130,6 +133,11 @@ workflows:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
     publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        beta_groups:
+          - Internal Testing
       email:
         recipients:
           - anthony.doby@gmail.com
