@@ -90,8 +90,10 @@ workflows:
           /usr/libexec/PlistBuddy -c "Set :objects:.*:attributes:TargetAttributes:.*:DevelopmentTeam 595F6SD3L7" App.xcodeproj/project.pbxproj 2>/dev/null || true
           /usr/libexec/PlistBuddy -c "Set :objects:.*:attributes:TargetAttributes:.*:ProvisioningStyle Automatic" App.xcodeproj/project.pbxproj 2>/dev/null || true
           cd ../..
-          # Use Codemagic's code signing
-          xcode-project use-profiles || echo "Code signing profiles setup attempted"
+          # Use Codemagic's code signing - this should handle Apple ID connection
+          xcode-project use-profiles || {
+            echo "WARNING: xcode-project use-profiles failed, continuing anyway..."
+          }
       - name: Build iOS app
         script: |
           echo "=== Starting iOS build ==="
@@ -117,20 +119,29 @@ workflows:
             exit 1
           fi
           echo "✓ Workspace verified"
-          # Build the app with code signing - use Codemagic's automatic signing
+          # Build the app - try with automatic code signing
+          # First, try to use Codemagic's automatic signing
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
             -configuration Release \
             -sdk iphoneos \
             -archivePath ./build/App.xcarchive \
             archive \
-            CODE_SIGN_IDENTITY="Apple Development" \
-            CODE_SIGNING_REQUIRED=YES \
-            CODE_SIGNING_ALLOWED=YES \
             DEVELOPMENT_TEAM="595F6SD3L7" \
-            PROVISIONING_PROFILE_SPECIFIER="" \
+            CODE_SIGN_STYLE=Automatic \
             -allowProvisioningUpdates 2>&1 | tee build.log || {
-            echo "Archive build failed, but continuing to check for app bundle..."
+            echo "Archive build failed with automatic signing, trying without code signing..."
+            # Fallback: Build without code signing (will create unsigned IPA)
+            xcodebuild -workspace App.xcworkspace \
+              -scheme App \
+              -configuration Release \
+              -sdk iphoneos \
+              -archivePath ./build/App.xcarchive \
+              archive \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO \
+              DEVELOPMENT_TEAM="" 2>&1 | tee build.log || true
           }
           
           # Find the app bundle
