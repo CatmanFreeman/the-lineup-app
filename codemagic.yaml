@@ -50,11 +50,30 @@ workflows:
           echo "Build structure created successfully"
       - name: Add iOS platform
         script: |
+          echo "=== Adding iOS platform ==="
           npx cap add ios || echo "iOS platform may already exist"
+          echo "=== Syncing iOS ==="
           npx cap sync ios
+          echo "=== Verifying iOS platform ==="
+          if [ ! -d "ios/App" ]; then
+            echo "ERROR: ios/App directory does not exist!"
+            ls -la ios/ 2>/dev/null || echo "ios/ directory does not exist"
+            exit 1
+          fi
+          if [ ! -f "ios/App/App.xcworkspace/contents.xcworkspacedata" ]; then
+            echo "ERROR: App.xcworkspace does not exist!"
+            ls -la ios/App/ 2>/dev/null
+            exit 1
+          fi
+          echo "✓ iOS platform verified"
           # Fix Podfile deployment target
           cd ios/App
-          sed -i '' 's/platform :ios.*/platform :ios, "15.0"/' Podfile || sed -i 's/platform :ios.*/platform :ios, "15.0"/' Podfile
+          if [ -f "Podfile" ]; then
+            sed -i '' 's/platform :ios.*/platform :ios, "15.0"/' Podfile || sed -i 's/platform :ios.*/platform :ios, "15.0"/' Podfile
+            echo "✓ Podfile updated"
+          else
+            echo "WARNING: Podfile not found"
+          fi
           cd ../..
       - name: Install CocoaPods dependencies
         script: |
@@ -74,7 +93,21 @@ workflows:
           xcode-project use-profiles
       - name: Build iOS app
         script: |
+          echo "=== Starting iOS build ==="
+          echo "Current directory: $(pwd)"
+          echo "Checking iOS platform..."
+          if [ ! -d "ios/App" ]; then
+            echo "ERROR: ios/App directory does not exist!"
+            exit 1
+          fi
+          if [ ! -f "ios/App/App.xcworkspace/contents.xcworkspacedata" ]; then
+            echo "ERROR: App.xcworkspace does not exist!"
+            echo "iOS platform may not have been set up correctly."
+            exit 1
+          fi
           cd ios/App
+          echo "Current directory: $(pwd)"
+          echo "Workspace exists: $(test -f App.xcworkspace/contents.xcworkspacedata && echo 'YES' || echo 'NO')"
           # Build the app with code signing
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
