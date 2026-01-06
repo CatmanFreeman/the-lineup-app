@@ -98,10 +98,16 @@ workflows:
           fi
           
           # Export IPA from archive
-          if [ -d "./build/App.xcarchive" ]; then
-            echo "Archive found, creating IPA..."
-            cd ../..
+          cd ../..
+          echo "Current directory: $(pwd)"
+          echo "Checking for archive..."
+          if [ -d "ios/App/build/App.xcarchive" ]; then
+            echo "Archive found at ios/App/build/App.xcarchive"
+            echo "Archive contents:"
+            ls -la ios/App/build/App.xcarchive/Products/Applications/ 2>/dev/null || echo "Products/Applications not found"
+            
             # Always create IPA manually (more reliable)
+            echo "Creating IPA directory structure..."
             mkdir -p build/ipa/Payload
             if [ -d "ios/App/build/App.xcarchive/Products/Applications/App.app" ]; then
               echo "Copying app bundle to Payload..."
@@ -112,15 +118,24 @@ workflows:
               cd ../..
               echo "IPA created successfully at build/App.ipa"
               ls -lh build/App.ipa || echo "IPA file check failed"
-              # Ensure it's in artifacts location
+              
+              # Create multiple artifact locations to ensure it's found
               mkdir -p build/ios/ipa
               cp build/App.ipa build/ios/ipa/App.ipa 2>/dev/null || true
+              echo "IPA copied to build/ios/ipa/App.ipa"
+              
+              # Also create in root for easy access
+              echo "Final IPA location check:"
+              find . -name "*.ipa" -type f 2>/dev/null | head -10
             else
               echo "ERROR: App.app not found in archive!"
-              find ios/App/build -name "*.app" -type d 2>/dev/null | head -5
+              echo "Searching in archive..."
+              find ios/App/build/App.xcarchive -name "*.app" -type d 2>/dev/null
             fi
           else
-            echo "ERROR: Archive not found!"
+            echo "ERROR: Archive not found at ios/App/build/App.xcarchive!"
+            echo "Searching for archive..."
+            find . -name "*.xcarchive" -type d 2>/dev/null | head -5
             echo "Searching for any .app files..."
             find . -name "*.app" -type d 2>/dev/null | head -5
             # Try to create IPA from any found app
@@ -136,6 +151,13 @@ workflows:
               ls -lh build/App.ipa
             fi
           fi
+          
+          # Final verification - list all IPAs
+          echo "=== FINAL ARTIFACT CHECK ==="
+          echo "IPAs in build/:"
+          ls -lh build/*.ipa 2>/dev/null || echo "No IPAs in build/"
+          echo "IPAs in build/ios/ipa/:"
+          ls -lh build/ios/ipa/*.ipa 2>/dev/null || echo "No IPAs in build/ios/ipa/"
     artifacts:
       - build/App.ipa
       - build/ios/ipa/*.ipa
