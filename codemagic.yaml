@@ -49,6 +49,10 @@ workflows:
           echo "// JS" > build/static/js/main.js
           
           echo "Build structure created successfully"
+      - name: Add iOS platform
+        script: |
+          npx cap add ios || echo "iOS platform may already exist"
+          npx cap sync ios
       - name: Install CocoaPods dependencies
         script: |
           cd ios/App
