@@ -123,7 +123,8 @@ workflows:
             -sdk iphoneos \
             -archivePath ./build/App.xcarchive \
             archive \
-            DEVELOPMENT_TEAM="595F6SD3L7" 2>&1 | tee build.log || true
+            DEVELOPMENT_TEAM="595F6SD3L7" \
+            -allowProvisioningUpdates 2>&1 | tee build.log || true
           
           # Find the app bundle
           APP_BUNDLE=""
