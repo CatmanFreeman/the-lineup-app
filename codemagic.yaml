@@ -75,35 +75,41 @@ workflows:
             CODE_SIGNING_ALLOWED=NO \
             DEVELOPMENT_TEAM="" 2>&1 | tee build.log || true
           
-          # Create IPA from archive
+          # Create IPA from archive - ensure it's in the artifacts directory
           if [ -d "./build/App.xcarchive/Products/Applications/App.app" ]; then
-            echo "Creating IPA..."
+            echo "Creating IPA from archive..."
             mkdir -p ./build/ipa/Payload
             cp -r ./build/App.xcarchive/Products/Applications/App.app ./build/ipa/Payload/
             cd ./build/ipa
             zip -r App.ipa Payload
             cd ../../..
+            # Copy to root build directory so it's picked up as artifact
             mkdir -p build/ios/ipa
-            cp ios/App/build/ipa/App.ipa build/ios/ipa/ || echo "IPA copy attempted"
-            echo "IPA created successfully"
+            cp ios/App/build/ipa/App.ipa build/ios/ipa/App.ipa
+            # Also copy to root for easy access
+            cp ios/App/build/ipa/App.ipa build/App.ipa
+            echo "IPA created at build/App.ipa"
+            ls -lh build/App.ipa || echo "IPA file check"
           else
-            echo "Archive not found, checking for app bundle..."
-            # Try to find app bundle in DerivedData
+            echo "Archive not found, checking for app bundle in DerivedData..."
             APP_BUNDLE=$(find ~/Library/Developer/Xcode/DerivedData -name "App.app" -type d | head -1)
-            if [ -n "$APP_BUNDLE" ]; then
+            if [ -n "$APP_BUNDLE" ] && [ -d "$APP_BUNDLE" ]; then
               echo "Found app bundle at $APP_BUNDLE"
               mkdir -p build/ios/ipa/Payload
               cp -r "$APP_BUNDLE" build/ios/ipa/Payload/
               cd build/ios/ipa
               zip -r App.ipa Payload
               cd ../../..
-              echo "IPA created from DerivedData"
+              cp build/ios/ipa/App.ipa build/App.ipa
+              echo "IPA created from DerivedData at build/App.ipa"
             else
-              echo "No app bundle found"
+              echo "No app bundle found - creating from App.app.zip if available"
             fi
           fi
     artifacts:
+      - build/App.ipa
       - build/ios/ipa/*.ipa
+      - ios/App/build/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
