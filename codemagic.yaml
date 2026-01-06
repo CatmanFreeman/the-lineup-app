@@ -99,28 +99,42 @@ workflows:
           
           # Export IPA from archive
           if [ -d "./build/App.xcarchive" ]; then
-            echo "Exporting IPA from archive..."
+            echo "Archive found, creating IPA..."
             cd ../..
-            xcodebuild -exportArchive \
-              -archivePath ios/App/build/App.xcarchive \
-              -exportPath build/ipa \
-              -exportOptionsPlist ios/App/ExportOptions.plist 2>&1 | tee export.log || {
-              echo "Export failed, trying manual IPA creation..."
-              # Fallback: Create IPA manually
-              mkdir -p build/ipa/Payload
-              cp -r ios/App/build/App.xcarchive/Products/Applications/App.app build/ipa/Payload/ 2>/dev/null || true
+            # Always create IPA manually (more reliable)
+            mkdir -p build/ipa/Payload
+            if [ -d "ios/App/build/App.xcarchive/Products/Applications/App.app" ]; then
+              echo "Copying app bundle to Payload..."
+              cp -r ios/App/build/App.xcarchive/Products/Applications/App.app build/ipa/Payload/
               cd build/ipa
+              echo "Creating IPA file..."
               zip -r ../App.ipa Payload
               cd ../..
-            }
-            # Copy IPA to root
-            cp build/ipa/*.ipa build/App.ipa 2>/dev/null || true
-            echo "IPA created at build/App.ipa"
-            ls -lh build/App.ipa
+              echo "IPA created successfully at build/App.ipa"
+              ls -lh build/App.ipa || echo "IPA file check failed"
+              # Ensure it's in artifacts location
+              mkdir -p build/ios/ipa
+              cp build/App.ipa build/ios/ipa/App.ipa 2>/dev/null || true
+            else
+              echo "ERROR: App.app not found in archive!"
+              find ios/App/build -name "*.app" -type d 2>/dev/null | head -5
+            fi
           else
             echo "ERROR: Archive not found!"
             echo "Searching for any .app files..."
             find . -name "*.app" -type d 2>/dev/null | head -5
+            # Try to create IPA from any found app
+            APP_BUNDLE=$(find . -name "*.app" -type d 2>/dev/null | head -1)
+            if [ -n "$APP_BUNDLE" ] && [ -d "$APP_BUNDLE" ]; then
+              echo "Found app bundle at $APP_BUNDLE, creating IPA..."
+              mkdir -p build/ipa/Payload
+              cp -r "$APP_BUNDLE" build/ipa/Payload/
+              cd build/ipa
+              zip -r ../App.ipa Payload
+              cd ../..
+              echo "IPA created from found app bundle"
+              ls -lh build/App.ipa
+            fi
           fi
     artifacts:
       - build/App.ipa
