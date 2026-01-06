@@ -75,36 +75,37 @@ workflows:
             CODE_SIGNING_ALLOWED=NO \
             DEVELOPMENT_TEAM="" 2>&1 | tee build.log || true
           
-          # Create IPA from archive - ensure it's in the artifacts directory
+          # Find the app bundle
+          APP_BUNDLE=""
           if [ -d "./build/App.xcarchive/Products/Applications/App.app" ]; then
-            echo "Creating IPA from archive..."
-            mkdir -p ./build/ipa/Payload
-            cp -r ./build/App.xcarchive/Products/Applications/App.app ./build/ipa/Payload/
-            cd ./build/ipa
-            zip -r App.ipa Payload
-            cd ../../..
-            # Copy to root build directory so it's picked up as artifact
-            mkdir -p build/ios/ipa
-            cp ios/App/build/ipa/App.ipa build/ios/ipa/App.ipa
-            # Also copy to root for easy access
-            cp ios/App/build/ipa/App.ipa build/App.ipa
-            echo "IPA created at build/App.ipa"
-            ls -lh build/App.ipa || echo "IPA file check"
+            APP_BUNDLE="./build/App.xcarchive/Products/Applications/App.app"
+            echo "Found app bundle in archive"
           else
-            echo "Archive not found, checking for app bundle in DerivedData..."
-            APP_BUNDLE=$(find ~/Library/Developer/Xcode/DerivedData -name "App.app" -type d | head -1)
+            # Try DerivedData
+            APP_BUNDLE=$(find ~/Library/Developer/Xcode/DerivedData -name "App.app" -type d 2>/dev/null | head -1)
             if [ -n "$APP_BUNDLE" ] && [ -d "$APP_BUNDLE" ]; then
-              echo "Found app bundle at $APP_BUNDLE"
-              mkdir -p build/ios/ipa/Payload
-              cp -r "$APP_BUNDLE" build/ios/ipa/Payload/
-              cd build/ios/ipa
-              zip -r App.ipa Payload
-              cd ../../..
-              cp build/ios/ipa/App.ipa build/App.ipa
-              echo "IPA created from DerivedData at build/App.ipa"
-            else
-              echo "No app bundle found - creating from App.app.zip if available"
+              echo "Found app bundle in DerivedData: $APP_BUNDLE"
             fi
+          fi
+          
+          # Create IPA
+          if [ -n "$APP_BUNDLE" ] && [ -d "$APP_BUNDLE" ]; then
+            echo "Creating IPA from $APP_BUNDLE"
+            cd ../..
+            mkdir -p build/ipa/Payload
+            cp -r "ios/App/$APP_BUNDLE" build/ipa/Payload/ 2>/dev/null || cp -r "$APP_BUNDLE" build/ipa/Payload/
+            cd build/ipa
+            zip -r ../App.ipa Payload
+            cd ../..
+            echo "IPA created at build/App.ipa"
+            ls -lh build/App.ipa
+            # Also create in ios/App/build for artifact collection
+            mkdir -p ios/App/build/ipa
+            cp build/App.ipa ios/App/build/ipa/App.ipa
+          else
+            echo "ERROR: App bundle not found!"
+            echo "Searching for any .app files..."
+            find . -name "*.app" -type d 2>/dev/null | head -5
           fi
     artifacts:
       - build/App.ipa
