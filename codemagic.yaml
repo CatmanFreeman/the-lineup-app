@@ -8,6 +8,7 @@ workflows:
         XCODE_WORKSPACE: "ios/App/App.xcworkspace"
         XCODE_SCHEME: "App"
         BUNDLE_ID: "com.thelineup.app"
+        APP_STORE_CONNECT_TEAM_ID: "595F6SD3L7"
       node: 20.0.0
       xcode: latest
       cocoapods: default
@@ -60,20 +61,28 @@ workflows:
           cd ios/App
           pod install
           cd ../..
+      - name: Set up code signing settings on Xcode project
+        script: |
+          # Set Team ID in project.pbxproj
+          cd ios/App
+          sed -i '' "s/DEVELOPMENT_TEAM = \"\";/DEVELOPMENT_TEAM = \"595F6SD3L7\";/g" App.xcodeproj/project.pbxproj || sed -i "s/DEVELOPMENT_TEAM = \"\";/DEVELOPMENT_TEAM = \"595F6SD3L7\";/g" App.xcodeproj/project.pbxproj
+          sed -i '' "s/DEVELOPMENT_TEAM = \"\";/DEVELOPMENT_TEAM = \"595F6SD3L7\";/g" App.xcodeproj/project.pbxproj || sed -i "s/DEVELOPMENT_TEAM = \"\";/DEVELOPMENT_TEAM = \"595F6SD3L7\";/g" App.xcodeproj/project.pbxproj
+          # Enable automatic signing
+          /usr/libexec/PlistBuddy -c "Set :objects:.*:attributes:TargetAttributes:.*:DevelopmentTeam 595F6SD3L7" App.xcodeproj/project.pbxproj 2>/dev/null || true
+          /usr/libexec/PlistBuddy -c "Set :objects:.*:attributes:TargetAttributes:.*:ProvisioningStyle Automatic" App.xcodeproj/project.pbxproj 2>/dev/null || true
+          cd ../..
+          xcode-project use-profiles
       - name: Build iOS app
         script: |
           cd ios/App
-          # Build the app
+          # Build the app with code signing
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
             -configuration Release \
             -sdk iphoneos \
             -archivePath ./build/App.xcarchive \
             archive \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO \
-            DEVELOPMENT_TEAM="" 2>&1 | tee build.log || true
+            DEVELOPMENT_TEAM="595F6SD3L7" 2>&1 | tee build.log || true
           
           # Find the app bundle
           APP_BUNDLE=""
@@ -88,22 +97,28 @@ workflows:
             fi
           fi
           
-          # Create IPA
-          if [ -n "$APP_BUNDLE" ] && [ -d "$APP_BUNDLE" ]; then
-            echo "Creating IPA from $APP_BUNDLE"
+          # Export IPA from archive
+          if [ -d "./build/App.xcarchive" ]; then
+            echo "Exporting IPA from archive..."
             cd ../..
-            mkdir -p build/ipa/Payload
-            cp -r "ios/App/$APP_BUNDLE" build/ipa/Payload/ 2>/dev/null || cp -r "$APP_BUNDLE" build/ipa/Payload/
-            cd build/ipa
-            zip -r ../App.ipa Payload
-            cd ../..
+            xcodebuild -exportArchive \
+              -archivePath ios/App/build/App.xcarchive \
+              -exportPath build/ipa \
+              -exportOptionsPlist ios/App/ExportOptions.plist 2>&1 | tee export.log || {
+              echo "Export failed, trying manual IPA creation..."
+              # Fallback: Create IPA manually
+              mkdir -p build/ipa/Payload
+              cp -r ios/App/build/App.xcarchive/Products/Applications/App.app build/ipa/Payload/ 2>/dev/null || true
+              cd build/ipa
+              zip -r ../App.ipa Payload
+              cd ../..
+            }
+            # Copy IPA to root
+            cp build/ipa/*.ipa build/App.ipa 2>/dev/null || true
             echo "IPA created at build/App.ipa"
             ls -lh build/App.ipa
-            # Also create in ios/App/build for artifact collection
-            mkdir -p ios/App/build/ipa
-            cp build/App.ipa ios/App/build/ipa/App.ipa
           else
-            echo "ERROR: App bundle not found!"
+            echo "ERROR: Archive not found!"
             echo "Searching for any .app files..."
             find . -name "*.app" -type d 2>/dev/null | head -5
           fi
