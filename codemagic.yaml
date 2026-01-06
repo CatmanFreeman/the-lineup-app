@@ -53,6 +53,10 @@ workflows:
         script: |
           npx cap add ios || echo "iOS platform may already exist"
           npx cap sync ios
+          # Fix Podfile deployment target
+          cd ios/App
+          sed -i '' 's/platform :ios.*/platform :ios, "15.0"/' Podfile || sed -i 's/platform :ios.*/platform :ios, "15.0"/' Podfile
+          cd ../..
       - name: Install CocoaPods dependencies
         script: |
           cd ios/App
