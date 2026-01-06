@@ -45,10 +45,4 @@ workflows:
         notify:
           success: true
           failure: false
-      app_store_connect:
-        auth: integration
-        submit_to_testflight: true
-        beta_groups:
-          - group name 1
-          - group name 2
 
