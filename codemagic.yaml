@@ -12,12 +12,6 @@ workflows:
       node: 20.0.0
       xcode: latest
       cocoapods: default
-    integrations:
-      app_store_connect:
-        api_key:
-          key_id: W3TZ9W8DHB
-          issuer_id: 273d3408-f60f-45c1-810a-4390ce947d14
-          key_content: $APP_STORE_CONNECT_PRIVATE_KEY
     scripts:
       - name: Install dependencies
         script: |
@@ -137,7 +131,7 @@ workflows:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
     publishing:
       app_store_connect:
-        auth: integration
+        auth: api_key
         submit_to_testflight: true
         beta_groups:
           - Internal Testing
