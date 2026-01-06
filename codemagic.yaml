@@ -51,7 +51,12 @@ workflows:
       - name: Add iOS platform
         script: |
           echo "=== Adding iOS platform ==="
-          npx cap add ios || echo "iOS platform may already exist"
+          # Remove existing iOS platform if it exists (to ensure clean setup)
+          if [ -d "ios" ]; then
+            echo "Removing existing iOS platform..."
+            rm -rf ios
+          fi
+          npx cap add ios
           echo "=== Syncing iOS ==="
           npx cap sync ios
           echo "=== Verifying iOS platform ==="
@@ -60,12 +65,7 @@ workflows:
             ls -la ios/ 2>/dev/null || echo "ios/ directory does not exist"
             exit 1
           fi
-          if [ ! -f "ios/App/App.xcworkspace/contents.xcworkspacedata" ]; then
-            echo "ERROR: App.xcworkspace does not exist!"
-            ls -la ios/App/ 2>/dev/null
-            exit 1
-          fi
-          echo "✓ iOS platform verified"
+          echo "✓ iOS platform directory exists"
           # Fix Podfile deployment target
           cd ios/App
           if [ -f "Podfile" ]; then
@@ -100,14 +100,22 @@ workflows:
             echo "ERROR: ios/App directory does not exist!"
             exit 1
           fi
-          if [ ! -f "ios/App/App.xcworkspace/contents.xcworkspacedata" ]; then
-            echo "ERROR: App.xcworkspace does not exist!"
-            echo "iOS platform may not have been set up correctly."
-            exit 1
-          fi
           cd ios/App
           echo "Current directory: $(pwd)"
-          echo "Workspace exists: $(test -f App.xcworkspace/contents.xcworkspacedata && echo 'YES' || echo 'NO')"
+          echo "Checking for workspace..."
+          if [ ! -d "App.xcworkspace" ] && [ ! -f "App.xcworkspace/contents.xcworkspacedata" ]; then
+            echo "WARNING: App.xcworkspace not found, checking if we need to run pod install..."
+            if [ -f "Podfile" ]; then
+              echo "Running pod install to create workspace..."
+              pod install
+            fi
+          fi
+          if [ ! -d "App.xcworkspace" ]; then
+            echo "ERROR: App.xcworkspace does not exist after pod install!"
+            ls -la
+            exit 1
+          fi
+          echo "✓ Workspace verified"
           # Build the app with code signing
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
